@@ -4,93 +4,53 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { 
-      platform: 'facebook', 
-      icon: 'fab fa-facebook-f', 
-      url: 'https://facebook.com',
-      label: 'Facebook'
-    },
-    { 
-      platform: 'linkedin', 
-      icon: 'fab fa-linkedin-in', 
-      url: 'https://linkedin.com',
-      label: 'LinkedIn'
-    },
-    { 
-      platform: 'youtube', 
-      icon: 'fab fa-youtube', 
-      url: 'https://youtube.com',
-      label: 'YouTube'
-    }
+    { icon: 'fab fa-facebook-f', url: 'https://facebook.com', label: 'Facebook' },
+    { icon: 'fab fa-linkedin-in', url: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: 'fab fa-youtube', url: 'https://youtube.com', label: 'YouTube' }
   ];
 
   const solutions = [
-    { name: 'Tư Vấn & Đào Tạo', href: '#solutions' },
-    { name: 'Phát Triển Phần Mềm', href: '#solutions' },
-    { name: 'Gia Công Phần Mềm', href: '#solutions' },
-    { name: 'Triển Khai & Vận Hành', href: '#solutions' }
+    'Tư Vấn & Đào Tạo',
+    'Phát Triển Phần Mềm', 
+    'Gia Công Phần Mềm',
+    'Triển Khai & Vận Hành'
   ];
 
   const products = [
-    { name: 'Lean HRM', href: '#products' },
-    { name: 'Lean ERP', href: '#products' },
-    { name: 'Lean WORK', href: '#products' },
-    { name: 'Lean SEARCH', href: '#products' }
-  ];
-
-  const contactInfo = [
-    {
-      icon: 'fas fa-map-marker-alt',
-      content: 'Số 5 Đường số 3, Khu phố 2, Phường An Khánh, Thành phố Thủ Đức, Thành phố Hồ Chí Minh',
-      type: 'address'
-    },
-    {
-      icon: 'fas fa-phone-alt',
-      content: '+84 906 246 489',
-      type: 'phone',
-      href: 'tel:+84906246489'
-    },
-    {
-      icon: 'fas fa-envelope',
-      content: 'info@leantech.vn',
-      type: 'email',
-      href: 'mailto:info@leantech.vn'
-    }
+    'Lean HRM',
+    'Lean ERP', 
+    'Lean WORK',
+    'Lean SEARCH'
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-900 to-gray-800 text-white">
-      {/* Main Footer Content */}
-      <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="bg-gray-900 text-white">
+      <div className="container-custom py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          
           {/* Company Info */}
-          <div className="lg:col-span-1 space-y-6">
-            <div>
-              <a 
-                href="#home" 
-                className="inline-block text-3xl font-bold transition-transform duration-300 hover:scale-105"
-                aria-label="LeanTechCo Homepage"
-              >
+          <div className="lg:col-span-1">
+            <div className="mb-6">
+              <a href="#home" className="text-2xl font-bold">
                 <span className="text-white">lean</span>
                 <span className="text-white">tech</span>
                 <span className="text-blue-400">co.</span>
               </a>
             </div>
             
-            <p className="text-gray-300 leading-relaxed text-sm">
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Giải pháp chuyển đổi số toàn diện & tinh gọn cho doanh nghiệp Việt Nam
             </p>
             
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
+            <div className="flex space-x-3">
+              {socialLinks.map((social, index) => (
                 <a 
-                  key={social.platform}
+                  key={index}
                   href={social.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
-                  aria-label={`Follow us on ${social.label}`}
+                  className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-colors duration-200"
+                  aria-label={social.label}
                 >
                   <i className={social.icon}></i>
                 </a>
@@ -99,20 +59,18 @@ const Footer = () => {
           </div>
 
           {/* Solutions */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-white relative">
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
               Giải pháp
-              <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-blue-400"></div>
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {solutions.map((solution, index) => (
                 <li key={index}>
                   <a 
-                    href={solution.href} 
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm block py-1 hover:translate-x-1 transform transition-transform"
+                    href="#solutions" 
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
-                    <i className="fas fa-chevron-right text-xs mr-2 opacity-60"></i>
-                    {solution.name}
+                    {solution}
                   </a>
                 </li>
               ))}
@@ -120,20 +78,18 @@ const Footer = () => {
           </div>
 
           {/* Products */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-white relative">
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
               Sản phẩm
-              <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-blue-400"></div>
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {products.map((product, index) => (
                 <li key={index}>
                   <a 
-                    href={product.href} 
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm block py-1 hover:translate-x-1 transform transition-transform"
+                    href="#products" 
+                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
-                    <i className="fas fa-chevron-right text-xs mr-2 opacity-60"></i>
-                    {product.name}
+                    {product}
                   </a>
                 </li>
               ))}
@@ -141,63 +97,62 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-white relative">
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
               Liên hệ
-              <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-blue-400"></div>
             </h3>
-            <ul className="space-y-4">
-              {contactInfo.map((contact, index) => (
-                <li key={index} className="flex items-start space-x-3 group">
-                  <div className="w-5 h-5 flex items-center justify-center mt-0.5">
-                    <i className={`${contact.icon} text-blue-400 text-sm group-hover:scale-110 transition-transform duration-300`}></i>
-                  </div>
-                  {contact.href ? (
-                    <a 
-                      href={contact.href} 
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm leading-relaxed flex-1"
-                    >
-                      {contact.content}
-                    </a>
-                  ) : (
-                    <span className="text-gray-300 text-sm leading-relaxed flex-1">
-                      {contact.content}
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <i className="fas fa-map-marker-alt text-blue-400 text-sm mt-1"></i>
+                <span className="text-gray-400 text-sm leading-relaxed">
+                  Số 5 Đường số 3, Khu phố 2, Phường An Khánh, Thành phố Thủ Đức, TP.HCM
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <i className="fas fa-phone-alt text-blue-400 text-sm"></i>
+                <a 
+                  href="tel:+84906246489" 
+                  className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                >
+                  +84 906 246 489
+                </a>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <i className="fas fa-envelope text-blue-400 text-sm"></i>
+                <a 
+                  href="mailto:info@leantech.vn" 
+                  className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                >
+                  info@leantech.vn
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800 bg-gray-900">
-        <div className="container-custom py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2">
-              <p className="text-gray-500 text-sm">
-                &copy; {currentYear} LeanTechCo. Tất cả các quyền được bảo lưu.
-              </p>
-            </div>
-            
-            <div className="flex items-center space-x-8">
+      <div className="border-t border-gray-800">
+        <div className="container-custom py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p className="text-gray-500 text-sm mb-3 md:mb-0">
+              &copy; {currentYear} LeanTechCo. Tất cả các quyền được bảo lưu.
+            </p>
+            <div className="flex space-x-6">
               <a 
-                href="#" 
-                className="text-gray-500 hover:text-blue-400 text-sm transition-colors duration-300 hover:underline"
+                href="#privacy" 
+                className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200"
               >
                 Chính sách bảo mật
               </a>
               <a 
-                href="#" 
-                className="text-gray-500 hover:text-blue-400 text-sm transition-colors duration-300 hover:underline"
+                href="#terms" 
+                className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200"
               >
                 Điều khoản sử dụng
               </a>
-              <div className="hidden md:flex items-center space-x-2 text-gray-500 text-sm">
-                <i className="fas fa-heart text-red-400 text-xs"></i>
-                <span>Made with care in Vietnam</span>
-              </div>
             </div>
           </div>
         </div>

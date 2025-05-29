@@ -106,7 +106,7 @@ const Solutions = () => {
                 <div className="space-y-2">
                   {solution.bullets.map((bullet, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <i className="fas fa-check text-green-600 text-sm mt-1 flex-shrink-0"></i>
+                      <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-700 text-sm leading-relaxed">
                         {bullet}
                       </span>
@@ -127,19 +127,6 @@ const Solutions = () => {
           ))}
         </div>
         
-        {/* Simplified Bottom CTA */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3 bg-primary/5 px-6 py-4 rounded-xl">
-            <i className="fas fa-phone-alt text-primary text-lg"></i>
-            <span className="text-gray-900 font-medium">Cần tư vấn chi tiết?</span>
-            <a 
-              href="#contact"
-              className="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-300 text-sm ml-2"
-            >
-              Liên hệ ngay
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -57,7 +57,7 @@ const Clients = () => {
   const currentClient = clients.find(client => client.id === selectedClient);
 
   return (
-    <section id="clients" className="py-20 bg-gray-50">
+    <section id="clients" className="py-20">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
@@ -95,7 +95,7 @@ const Clients = () => {
         {/* Featured Testimonial Section */}
         {currentClient && (
           <div 
-            className="relative shadow-2xl overflow-hidden"
+            className="shadow-2xl"
             style={{
               borderRadius: '24px',
               backgroundImage: 'url(./assets/images/customer-story-bg.png)',
@@ -108,9 +108,6 @@ const Clients = () => {
               gridColumnGap: '0px'
             }}
           >
-            {/* Background Overlay for better readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-blue-700/80"></div>
-            
             {/* Left Side - Company Info & Stats */}
             <div className="relative z-10 flex flex-col justify-center p-12 text-white">
               {/* Company Logo */}

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/layout/Header';
 import Hero from './components/sections/Hero';
 import Solutions from './components/sections/Solutions';
+import LogoClouds from './components/sections/LogoClouds';
 import Products from './components/sections/Products';
 import WhyUs from './components/sections/WhyUs';
 import Clients from './components/sections/Clients';
@@ -17,8 +18,9 @@ function App() {
       <main>
         <Hero />
         <Solutions />
-        <Products />
         <WhyUs />
+        <Products />
+        <LogoClouds />
         <Clients />
         <CTA />
         {/* <Testimonials /> */}

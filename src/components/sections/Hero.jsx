@@ -121,7 +121,7 @@ const Hero = () => {
         <div className="grid grid-cols-4 gap-4 sm:gap-6">
           <div className="text-center p-3">
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">450+</div>
-            <div className="text-white/70 text-xs sm:text-sm mt-1">Khách hàng doanh nghiệp</div>
+            <div className="text-white/70 text-xs sm:text-sm mt-1">Người dùng</div>
           </div>
           <div className="text-center p-3">
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">98%</div>

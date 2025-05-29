@@ -77,17 +77,16 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-24 bg-primary relative overflow-hidden">
-      {/* Simplified Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary to-blue-900"></div>
+    <section id="products" className="py-24 bg-white relative overflow-hidden">
+      {/* Remove the gradient background div */}
       
       <div className="container-custom relative z-10">
-        {/* Clean Section Header */}
+        {/* Updated Section Header with dark text */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4 leading-tight">
-            LeanTech Ecosystem - <span className="text-blue-200">Hệ Sinh Thái Chuyển Đổi Số</span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+            LeanTech Ecosystem - <span className="text-primary">Hệ Sinh Thái Chuyển Đổi Số</span>
           </h2>
-          <p className="text-lg text-white/80 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             Nền tảng tối ưu hóa toàn diện cho doanh nghiệp hiện đại
           </p>
         </div>
