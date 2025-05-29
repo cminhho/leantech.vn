@@ -49,10 +49,10 @@ const Solutions = () => {
       title: "Triển Khai & Vận Hành",
       description: "Triển khai hệ thống, di chuyển dữ liệu an toàn và tích hợp với hệ thống hiện tại. Hỗ trợ vận hành và bảo trì lâu dài.",
       bullets: [
-        "Triển khai hệ thống an toàn và ổn định",
-        "Di chuyển dữ liệu không gián đoạn",
+        "Triển khai và vận hành Lean Ecosystem toàn diện",
         "Tích hợp với hệ thống hiện tại",
-        "Hỗ trợ vận hành và bảo trì lâu dài"
+        "Hỗ trợ vận hành và bảo trì lâu dài",
+        "Tối ưu hóa quy trình và giám sát hiệu suất"
       ],
       color: "from-blue-800 to-primary",
       delay: "300",
@@ -98,10 +98,6 @@ const Solutions = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
                   {solution.title}
                 </h3>
-                
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {solution.description}
-                </p>
               </div>
               
               {/* Clean Content - Flex grow to push CTA to bottom */}
@@ -109,8 +105,8 @@ const Solutions = () => {
                 {/* Simplified Bullet Points */}
                 <div className="space-y-2">
                   {solution.bullets.map((bullet, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <div key={i} className="flex items-start gap-3">
+                      <i className="fas fa-check text-green-600 text-sm mt-1 flex-shrink-0"></i>
                       <span className="text-gray-700 text-sm leading-relaxed">
                         {bullet}
                       </span>
