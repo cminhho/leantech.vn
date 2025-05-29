@@ -33,14 +33,11 @@ const WhyUs = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-block mb-4">
-            Tại Sao Chọn Chúng Tôi
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-4xl font-bold mt-4 mb-6">
             Tại Sao Chọn <span className="gradient-text">LeanTechCo</span> Làm Đối Tác Công Nghệ?
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Triết lý LEAN trong phát triển phần mềm – Loại bỏ lãng phí, tối ưu hóa giá trị và tăng tốc độ phát triển 
+          <p className="text-base text-gray-600 leading-relaxed">
+            Triết lý LEAN trong phát triển phần mềm – Loại bỏ lãng phí, tối ưa hóa giá trị và tăng tốc độ phát triển 
             giúp doanh nghiệp vận hành hiệu quả hơn
           </p>
         </div>

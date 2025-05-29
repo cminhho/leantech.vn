@@ -25,13 +25,10 @@ const Solutions = () => {
   ];
 
   return (
-    <section id="solutions" className="py-20 bg-gray-50 relative">
+    <section id="solutions" className="py-20 bg-white relative">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6">
-            Giải Pháp
-          </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
             Giải Pháp Toàn Diện <span className="text-primary">Cho Doanh Nghiệp</span>
           </h2>

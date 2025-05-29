@@ -41,17 +41,14 @@ const Clients = () => {
   ];
 
   return (
-    <section id="clients" className="section-padding bg-gray-50">
+    <section id="clients" className="section-padding bg-blue-50">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-block mb-4">
-            Đối Tác
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-4xl font-bold mt-4 mb-6">
             Đối Tác & Khách Hàng <span className="gradient-text">Tiêu Biểu</span>
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base text-gray-600 leading-relaxed">
             Hợp tác bền vững, tạo ra giá trị thực tế và đo lường được
           </p>
         </div>

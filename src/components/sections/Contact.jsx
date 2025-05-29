@@ -35,17 +35,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-gray-50">
+    <section id="contact" className="section-padding bg-gray-100">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-block mb-4">
-            Liên Hệ
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-4xl font-bold mt-4 mb-6">
             Sẵn Sàng <span className="gradient-text">Tối Ưu Hóa</span> Doanh Nghiệp?
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base text-gray-600 leading-relaxed">
             Hãy để đội ngũ chuyên gia của chúng tôi cùng bạn tạo ra giá trị thực tế cho doanh nghiệp trong hành trình tối ưu hóa.
           </p>
         </div>

@@ -57,13 +57,10 @@ const Products = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-block mb-4">
-            Sản phẩm
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-4xl font-bold mt-4 mb-6">
             LeanTech Ecosystem - <span className="gradient-text">Hệ Sinh Thái Chuyển Đổi Số Toàn Diện</span>
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base text-gray-600 leading-relaxed">
             Nền tảng tối ưu hóa toàn diện giúp tăng năng suất 37%, giảm 45% thời gian xử lý, 
             loại bỏ lãng phí và tạo dòng chảy giá trị xuyên suốt doanh nghiệp
           </p>

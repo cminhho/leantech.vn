@@ -44,13 +44,10 @@ const Testimonials = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium inline-block mb-4">
-            Đánh Giá
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+          <h2 className="text-4xl font-bold mt-4 mb-6">
             Câu Chuyện <span className="gradient-text">Thành Công</span>
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-base text-gray-600 leading-relaxed">
             Kết quả thực tế từ đối tác tin cậy của LeanTechCo
           </p>
         </div>
