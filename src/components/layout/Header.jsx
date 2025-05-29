@@ -58,7 +58,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="#contact" className="btn btn-primary text-sm">
+            <a href="#contact" className="btn btn-primary text-sm hover:shadow-lg hover:-translate-y-1">
               Báo giá dịch vụ
             </a>
           </div>
@@ -83,7 +83,7 @@ const Header = () => {
               <a href="#why-us" className="text-white/90 hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}>Về chúng tôi</a>
               <a href="#clients" className="text-white/90 hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}>Đối tác</a>
               <a href="#contact" className="text-white/90 hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}>Liên hệ</a>
-              <a href="#contact" className="btn btn-primary mt-2 w-full justify-center" onClick={() => setIsMenuOpen(false)}>Báo giá dịch vụ</a>
+              <a href="#contact" className="btn btn-primary mt-2 w-full justify-center text-sm hover:shadow-lg hover:-translate-y-1" onClick={() => setIsMenuOpen(false)}>Báo giá dịch vụ</a>
             </nav>
           </div>
         )}

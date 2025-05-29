@@ -5,6 +5,7 @@ import Solutions from './components/sections/Solutions';
 import Products from './components/sections/Products';
 import WhyUs from './components/sections/WhyUs';
 import Clients from './components/sections/Clients';
+import CTA from './components/sections/CTA';
 import Testimonials from './components/sections/Testimonials';
 import Contact from './components/sections/Contact';
 import Footer from './components/layout/Footer';
@@ -19,7 +20,8 @@ function App() {
         <Products />
         <WhyUs />
         <Clients />
-        <Testimonials />
+        <CTA />
+        {/* <Testimonials /> */}
         <Contact />
       </main>
       <Footer />
