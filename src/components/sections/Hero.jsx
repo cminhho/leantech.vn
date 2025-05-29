@@ -88,33 +88,35 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-6 max-w-lg">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-6">
               <div className="text-center glass-card p-3 rounded-xl">
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">450+</div>
-                <div className="text-white/70 text-xs sm:text-sm mt-1">Người dùng hàng ngày</div>
+                <div className="text-white/70 text-xs sm:text-sm mt-1">Khách hàng doanh nghiệp</div>
               </div>
               <div className="text-center glass-card p-3 rounded-xl">
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">98%</div>
-                <div className="text-white/70 text-xs sm:text-sm mt-1">Tỉ lệ hài lòng</div>
+                <div className="text-white/70 text-xs sm:text-sm mt-1">Tỉ lệ duy trì</div>
               </div>
               <div className="text-center glass-card p-3 rounded-xl">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">4</div>
-                <div className="text-white/70 text-xs sm:text-sm mt-1">Sản phẩm chủ lực</div>
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">40%</div>
+                <div className="text-white/70 text-xs sm:text-sm mt-1">Tăng hiệu suất</div>
+              </div>
+              <div className="text-center glass-card p-3 rounded-xl">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">24/7</div>
+                <div className="text-white/70 text-xs sm:text-sm mt-1">Hỗ trợ kỹ thuật</div>
               </div>
             </div>
           </div>
 
           {/* Hero Image */}
           <div className="flex justify-center relative">
-            {/* Simple border for image */}
-            <div className="glass-card p-3 rounded-xl relative z-10">              
-              <img 
-                src={heroImageUrl}
-                alt="Giao diện phần mềm quản trị doanh nghiệp LeanTechCo" 
-                className="max-w-full h-auto rounded-lg relative z-10"
-                loading="eager"
-              />
-            </div>
+            {/* Image without glass-card border */}
+            <img 
+              src={heroImageUrl}
+              alt="Giao diện phần mềm quản trị doanh nghiệp LeanTechCo" 
+              className="max-w-full h-auto rounded-lg relative z-10"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
