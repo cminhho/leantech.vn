@@ -55,7 +55,7 @@ const Hero = () => {
       
       {/* Main content */}
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
           {/* Text Content */}
           <div className="text-white space-y-6">
             {/* Badge */}
@@ -70,10 +70,24 @@ const Hero = () => {
               cho doanh nghiệp
             </h1>
             
-            <p className="text-base text-white/90 leading-relaxed max-w-xl">
-              LeanTechCo cung cấp nền tảng công nghệ tối ưu, giúp doanh nghiệp vận hành hiệu quả với chi phí hợp lý. 
-              Chúng tôi đồng hành cùng doanh nghiệp trong hành trình tối ưu hóa thực tế.
-            </p>
+            <ul className="space-y-2 text-white/90">
+              <li className="flex items-start">
+                <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                <span>Nền tảng công nghệ tối ưu giúp vận hành hiệu quả với chi phí hợp lý</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                <span>Tăng năng suất làm việc và tự động hóa quy trình kinh doanh</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                <span>Hỗ trợ kỹ thuật 24/7 và cập nhật liên tục</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                <span>Đồng hành cùng doanh nghiệp trong hành trình tối ưu hóa thực tế</span>
+              </li>
+            </ul>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -85,26 +99,6 @@ const Hero = () => {
                 <span>Xem giải pháp</span>
                 <i className="fas fa-chevron-right text-xs ml-2"></i>
               </a>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-6">
-              <div className="text-center glass-card p-3 rounded-xl">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">450+</div>
-                <div className="text-white/70 text-xs sm:text-sm mt-1">Khách hàng doanh nghiệp</div>
-              </div>
-              <div className="text-center glass-card p-3 rounded-xl">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">98%</div>
-                <div className="text-white/70 text-xs sm:text-sm mt-1">Tỉ lệ duy trì</div>
-              </div>
-              <div className="text-center glass-card p-3 rounded-xl">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">40%</div>
-                <div className="text-white/70 text-xs sm:text-sm mt-1">Tăng hiệu suất</div>
-              </div>
-              <div className="text-center glass-card p-3 rounded-xl">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">24/7</div>
-                <div className="text-white/70 text-xs sm:text-sm mt-1">Hỗ trợ kỹ thuật</div>
-              </div>
             </div>
           </div>
 
@@ -119,13 +113,29 @@ const Hero = () => {
             />
           </div>
         </div>
-      </div>
 
-      {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" className="fill-white">
-          <path d="M0,32L80,53.3C160,75,320,117,480,122.7C640,128,800,96,960,85.3C1120,75,1280,85,1360,90.7L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-        </svg>
+        {/* Divider line */}
+        <div className="w-full h-px bg-white/20 my-8"></div>
+        
+        {/* Stats Section */}
+        <div className="grid grid-cols-4 gap-4 sm:gap-6">
+          <div className="text-center p-3 rounded-xl bg-white/5">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">450+</div>
+            <div className="text-white/70 text-xs sm:text-sm mt-1">Khách hàng doanh nghiệp</div>
+          </div>
+          <div className="text-center p-3 rounded-xl bg-white/5">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">98%</div>
+            <div className="text-white/70 text-xs sm:text-sm mt-1">Tỉ lệ duy trì</div>
+          </div>
+          <div className="text-center p-3 rounded-xl bg-white/5">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">40%</div>
+            <div className="text-white/70 text-xs sm:text-sm mt-1">Tăng hiệu suất</div>
+          </div>
+          <div className="text-center p-3 rounded-xl bg-white/5">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">24/7</div>
+            <div className="text-white/70 text-xs sm:text-sm mt-1">Hỗ trợ kỹ thuật</div>
+          </div>
+        </div>
       </div>
     </section>
   );
