@@ -31,7 +31,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero-section" className="pt-16 pb-16 md:pt-24 md:pb-20 flex items-center relative overflow-hidden min-h-[70vh]">
+    <section id="hero-section" className="pt-16 pb-8 md:pt-24 md:pb-12 flex items-center relative overflow-hidden min-h-[70vh]">
       {/* Video background */}
       <div className="absolute inset-0 z-0 bg-primary">
         <video
@@ -55,7 +55,7 @@ const Hero = () => {
       
       {/* Main content */}
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-8">
           {/* Text Content */}
           <div className="text-white space-y-6">
             {/* Badge */}
@@ -115,7 +115,7 @@ const Hero = () => {
         </div>
 
         {/* Divider line */}
-        <div className="w-full h-px bg-white/20 my-8"></div>
+        <div className="w-full h-px bg-white/20 my-6"></div>
         
         {/* Stats Section */}
         <div className="grid grid-cols-4 gap-4 sm:gap-6">
