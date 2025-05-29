@@ -7,7 +7,7 @@ const Clients = () => {
     {
       id: 'cicc',
       name: 'CICC',
-      logo: './assets/images/client-cicc.png',
+      logo: '/assets/images/client-cicc.png',
       alt: 'CICC - Improving to Success',
       description: 'Trung tâm Cải tiến và Năng suất Quốc gia',
       testimonial: {
@@ -15,15 +15,15 @@ const Clients = () => {
         author: 'Nguyễn Thanh Diệu',
         position: 'Giám đốc nhân sự, Công ty CICC',
         companyStats: [
-          { label: '100+ Triệu', sublabel: 'Người dùng hoạt động hàng tháng' },
-          { label: 'TB Level', sublabel: 'Băng thông đỉnh cao' }
+          { label: '500+', sublabel: 'Doanh nghiệp được tư vấn' },
+          { label: '15 Năm', sublabel: 'Kinh nghiệm trong ngành' }
         ]
       }
     },
     {
       id: 'ctivn',
       name: 'CTI Vietnam',
-      logo: './assets/images/client-cti.png',
+      logo: '/assets/images/client-ctivn.jpeg',
       alt: 'CTI Vietnam Logo',
       description: 'Viện Công nghệ Thông tin Việt Nam',
       testimonial: {
@@ -31,15 +31,15 @@ const Clients = () => {
         author: 'Nguyễn Thanh Phong',
         position: 'Chief Strategy Officer, CTI Vietnam',
         companyStats: [
-          { label: '50+ Dự án', sublabel: 'Hoàn thành thành công' },
-          { label: '99.9%', sublabel: 'Thời gian hoạt động hệ thống' }
+          { label: '200+', sublabel: 'Giải pháp IT triển khai' },
+          { label: '98.5%', sublabel: 'Độ tin cậy hệ thống' }
         ]
       }
     },
     {
       id: 'artstuff',
       name: 'ArtStuff',
-      logo: './assets/images/client-artstuff.jpeg',
+      logo: '/assets/images/client-artstuffvn.png',
       alt: 'ArtStuff Creative Agency',
       description: 'Công ty Thiết kế Sáng tạo',
       testimonial: {
@@ -47,8 +47,8 @@ const Clients = () => {
         author: 'Trần Văn Minh',
         position: 'Giám đốc điều hành, ArtStuff',
         companyStats: [
-          { label: '200+', sublabel: 'Dự án sáng tạo hoàn thành' },
-          { label: '95%', sublabel: 'Tỷ lệ hài lòng khách hàng' }
+          { label: '120+', sublabel: 'Dự án sáng tạo hoàn thành' },
+          { label: '92%', sublabel: 'Tỷ lệ hài lòng khách hàng' }
         ]
       }
     }
@@ -64,35 +64,29 @@ const Clients = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Đối Tác & Khách Hàng <span className="text-primary">Tiêu Biểu</span>
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
 
         {/* Client Logos Row - Interactive Tabs */}
         <div className="flex justify-center mb-16">
-          <div className="inline-flex bg-gray-100 rounded-xl p-2">
+          <div className="flex w-full border-t border-gray-200">
             {clients.map((client) => (
               <button
                 key={client.id}
                 onClick={() => setSelectedClient(client.id)}
-                className={`flex items-center space-x-4 px-8 py-4 rounded-lg transition-all duration-300 ${
+                className={`flex-1 flex justify-center items-center px-6 py-8 transition-all duration-300 border-t-4 ${
                   selectedClient === client.id 
-                    ? 'bg-primary text-white shadow-md' 
-                    : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                    ? 'border-t-primary text-primary' 
+                    : 'border-t-transparent text-gray-600 hover:text-gray-900 hover:border-t-gray-300'
                 }`}
               >
                 <img 
                   src={client.logo} 
                   alt={client.name}
-                  className={`h-10 w-auto object-contain ${
-                    selectedClient === client.id ? 'filter brightness-0 invert' : ''
-                  }`}
+                  className="h-16 w-auto object-contain"
                   onError={(e) => {
                     e.target.src = `https://placehold.co/80x40/666666/white?text=${encodeURIComponent(client.name)}`;
                   }}
                 />
-                <span className="font-semibold text-base whitespace-nowrap">
-                  {client.name}
-                </span>
               </button>
             ))}
           </div>
@@ -142,9 +136,9 @@ const Clients = () => {
               </div>
 
               {/* Learn More Button */}
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-colors w-fit">
+              <button className="inline-flex items-center px-4 py-2 bg-white text-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors w-fit text-sm">
                 Tìm hiểu thêm
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </button>
