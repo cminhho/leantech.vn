@@ -7,6 +7,7 @@ Testing phase is nearly complete. The website renders correctly and functions as
 1. Documenting testing results
 2. Addressing npm vulnerabilities (where possible without breaking changes)
 3. Preparing for additional browser testing
+4. Enhancing UI/UX of core components (recently completed Hero section and Header improvements)
 
 ## Recent Decisions
 1. Using React with minimal dependencies for better performance
@@ -15,6 +16,12 @@ Testing phase is nearly complete. The website renders correctly and functions as
 4. Using placeholder images that will be replaced with actual client and product images
 5. Creating responsive layouts that work on all device sizes
 6. Documenting npm vulnerabilities rather than forcing fixes that would cause breaking changes
+7. Enhancing the Hero section with a professional, clean design:
+   - Using video background with appropriate opacity
+   - Restructuring content with bullet points and check icons
+   - Moving stats section to bottom with divider
+   - Removing unnecessary visual elements (wave divider, borders)
+8. Making the Header transparent when at top of page, primary color when scrolled
 
 ## Next Steps
 1. Replace placeholder images with real assets
@@ -29,6 +36,7 @@ Testing phase is nearly complete. The website renders correctly and functions as
 4. **Content Integrity**: Vietnamese content and brand messaging are preserved
 5. **User Experience**: Smooth scrolling and intuitive navigation are working properly
 6. **Security**: Some npm audit vulnerabilities exist in development dependencies, but don't affect the production build
+7. **Visual Hierarchy**: Improved through recent Hero section updates, focusing on clean professional look
 
 ## Technical Dependencies
 1. React 18.2.0 - Core framework

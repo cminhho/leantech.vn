@@ -61,7 +61,7 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 mr-2"></span>
-              Giải pháp công nghệ đáng tin cậy
+              Công nghệ tinh gọn, hiệu quả cao
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
@@ -119,19 +119,19 @@ const Hero = () => {
         
         {/* Stats Section */}
         <div className="grid grid-cols-4 gap-4 sm:gap-6">
-          <div className="text-center p-3 rounded-xl bg-white/5">
+          <div className="text-center p-3">
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">450+</div>
             <div className="text-white/70 text-xs sm:text-sm mt-1">Khách hàng doanh nghiệp</div>
           </div>
-          <div className="text-center p-3 rounded-xl bg-white/5">
+          <div className="text-center p-3">
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">98%</div>
             <div className="text-white/70 text-xs sm:text-sm mt-1">Tỉ lệ duy trì</div>
           </div>
-          <div className="text-center p-3 rounded-xl bg-white/5">
+          <div className="text-center p-3">
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">40%</div>
             <div className="text-white/70 text-xs sm:text-sm mt-1">Tăng hiệu suất</div>
           </div>
-          <div className="text-center p-3 rounded-xl bg-white/5">
+          <div className="text-center p-3">
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">24/7</div>
             <div className="text-white/70 text-xs sm:text-sm mt-1">Hỗ trợ kỹ thuật</div>
           </div>

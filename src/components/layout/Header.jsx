@@ -28,10 +28,19 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#home" className="text-xl font-bold">
-              <span className="text-white">lean</span>
-              <span className="text-white">tech</span>
-              <span className="text-secondary">co.</span>
+            <a href="#home" className="flex items-center gap-2">
+              <img 
+                src="/assets/images/logo-icon.svg" 
+                alt="LeanTechCo Icon" 
+                className="h-7 md:h-8 w-auto"
+                width="40"
+                height="40"
+              />
+              <span className="text-xl md:text-2xl font-bold">
+                <span className="text-white">lean</span>
+                <span className="text-white">tech</span>
+                <span className="text-secondary">co.</span>
+              </span>
             </a>
           </div>
 
