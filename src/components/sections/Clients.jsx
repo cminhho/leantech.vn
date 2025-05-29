@@ -67,7 +67,7 @@ const Clients = () => {
         </div>
 
         {/* Client Logos Row - Interactive Tabs */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-4">
           <div className="flex w-full border-t border-gray-200">
             {clients.map((client) => (
               <button

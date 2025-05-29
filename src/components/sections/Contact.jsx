@@ -106,7 +106,7 @@ const Contact = () => {
                       <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-map-marker-alt text-primary group-hover:text-white text-xl"></i>
                       </div>
-                      <div className="pt-1">
+                      <div className="">
                         <h4 className="font-semibold text-gray-900 mb-3">Địa chỉ</h4>
                         <p className="text-gray-600 leading-relaxed">
                           Số 5 Đường số 3, Khu phố 2, Phường An Khánh,<br />
@@ -121,7 +121,7 @@ const Contact = () => {
                       <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-phone-alt text-primary group-hover:text-white text-xl"></i>
                       </div>
-                      <div className="pt-1">
+                      <div className="">
                         <h4 className="font-semibold text-gray-900 mb-3">Điện thoại</h4>
                         <a href="tel:+84906246489" className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg">
                           +84 906 246 489
@@ -135,7 +135,7 @@ const Contact = () => {
                       <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-envelope text-primary group-hover:text-white text-xl"></i>
                       </div>
-                      <div className="pt-1">
+                      <div className="">
                         <h4 className="font-semibold text-gray-900 mb-3">Email</h4>
                         <a href="mailto:info@leantech.vn" className="text-primary hover:text-primary/80 transition-colors font-semibold text-lg">
                           info@leantech.vn
@@ -149,7 +149,7 @@ const Contact = () => {
                       <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-clock text-primary group-hover:text-white text-xl"></i>
                       </div>
-                      <div className="pt-1">
+                      <div className="">
                         <h4 className="font-semibold text-gray-900 mb-3">Giờ làm việc</h4>
                         <p className="text-gray-600 leading-relaxed">
                           Thứ Hai - Thứ Sáu: 8:00 - 17:30<br />
