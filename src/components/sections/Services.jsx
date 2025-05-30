@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Solutions = () => {
+const Services = () => {
   const solutions = [
     {
       icon: "fa-chalkboard-teacher",
@@ -69,11 +69,10 @@ const Solutions = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="section-title">
-            Giải Pháp Công Nghệ Toàn Diện
+            Giải Pháp Công Nghệ
           </h2>
           <p className="section-subtitle-center">
-            Chúng tôi cung cấp các giải pháp công nghệ tinh gọn, từ tư vấn quản trị đến phát triển phần mềm, 
-            giúp doanh nghiệp tối ưu hóa quy trình và nâng cao hiệu quả kinh doanh.
+          Cung cấp các dịch vụ công nghệ thông tin toàn diện, từ tư vấn chiến lược đến phát triển ứng dụng và hỗ trợ kỹ thuật, giúp doanh nghiệp tối ưu hóa hiệu quả hoạt động.
           </p>
         </div>
 
@@ -87,15 +86,13 @@ const Solutions = () => {
             >
               {/* Icon & Badge */}
               <div className="text-center mb-6 relative">
-                {/* Badge */}
-                <div className="absolute -top-2 -right-2">
-                  <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                    {solution.badge}
-                  </span>
-                </div>
-                
-                <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300`}>
-                  <i className={`fas ${solution.icon} text-white text-2xl`}></i>
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <i className={`fas ${solution.icon} text-3xl ${
+                    index === 0 ? 'text-primary' :
+                    index === 1 ? 'text-blue-600' :
+                    index === 2 ? 'text-blue-700' :
+                    'text-blue-800'
+                  }`}></i>
                 </div>
                 <h3 className="card-title text-center group-hover:text-primary transition-colors duration-300">
                   {solution.title}
@@ -134,4 +131,4 @@ const Solutions = () => {
   );
 };
 
-export default Solutions; 
+export default Services; 

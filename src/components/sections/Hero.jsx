@@ -7,6 +7,20 @@ const Hero = () => {
   const heroImageUrl = "/assets/images/hero-image-pure.png";
   const videoUrl = "/assets/videos/hero-background.mp4";
 
+  // Technology and partner logos
+  const techLogos = [
+    { name: "React", icon: "fab fa-react", color: "#61DAFB" },
+    { name: "Node.js", icon: "fab fa-node-js", color: "#339933" },
+    { name: "AWS", icon: "fab fa-aws", color: "#FF9900" },
+    { name: "Docker", icon: "fab fa-docker", color: "#2496ED" },
+    { name: "JavaScript", icon: "fab fa-js-square", color: "#F7DF1E" },
+    { name: "Python", icon: "fab fa-python", color: "#3776AB" },
+    { name: "Microsoft", icon: "fab fa-microsoft", color: "#5E5E5E" },
+    { name: "Google Cloud", icon: "fab fa-google", color: "#4285F4" },
+    { name: "Linux", icon: "fab fa-linux", color: "#FCC624" },
+    { name: "GitHub", icon: "fab fa-github", color: "#181717" },
+  ];
+
   // Preload hero image
   useEffect(() => {
     const img = new Image();
@@ -136,16 +150,16 @@ const Hero = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-4 gap-4 sm:gap-6">
           <div className="text-center p-3">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">450+</div>
-            <div className="text-white/70 text-xs sm:text-sm mt-1">Người dùng</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">100+</div>
+            <div className="text-white/70 text-xs sm:text-sm mt-1">Dự án hoàn thành</div>
           </div>
           <div className="text-center p-3">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">98%</div>
-            <div className="text-white/70 text-xs sm:text-sm mt-1">Tỉ lệ duy trì</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">7+</div>
+            <div className="text-white/70 text-xs sm:text-sm mt-1">Năm kinh nghiệm</div>
           </div>
           <div className="text-center p-3">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">40%</div>
-            <div className="text-white/70 text-xs sm:text-sm mt-1">Tăng hiệu suất</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">50+</div>
+            <div className="text-white/70 text-xs sm:text-sm mt-1">Khách hàng tin tưởng</div>
           </div>
           <div className="text-center p-3">
             <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">24/7</div>

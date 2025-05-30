@@ -102,12 +102,14 @@ const Products = () => {
               {/* Clean Header */}
               <div className="p-6 pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${product.color} rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
-                    <i className={`fas ${product.icon} text-white text-lg`}></i>
+                  <div className="w-12 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    <i className={`fas ${product.icon} text-3xl ${
+                      product.id === 'lean-hrm' ? 'text-primary' :
+                      product.id === 'lean-erp' ? 'text-blue-600' :
+                      product.id === 'lean-work' ? 'text-blue-700' :
+                      'text-blue-800'
+                    }`}></i>
                   </div>
-                  <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                    {product.badge}
-                  </span>
                 </div>
                 
                 <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors duration-300">

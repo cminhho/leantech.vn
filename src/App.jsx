@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './components/layout/Header';
 import Hero from './components/sections/Hero';
-import Solutions from './components/sections/Solutions';
+import AboutUs from './components/sections/AboutUs';
+import Services from './components/sections/Services';
 import TechPartnerships from './components/sections/TechPartnerships';
 import Products from './components/sections/Products';
 import WhyUs from './components/sections/WhyUs';
@@ -16,11 +17,12 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <TechPartnerships />
-        <Solutions />
+        {/* <AboutUs /> */}
+        <Services />
         <Products />
         <WhyUs />
         <Clients />
+        <TechPartnerships />
         <CTA />
         <Contact />
       </main>
