@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/leantech.vn/static/css/main.0fdf13fe.css",
+    "main.js": "/leantech.vn/static/js/main.21d01dc4.js",
+    "index.html": "/leantech.vn/index.html",
+    "main.0fdf13fe.css.map": "/leantech.vn/static/css/main.0fdf13fe.css.map",
+    "main.21d01dc4.js.map": "/leantech.vn/static/js/main.21d01dc4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fdf13fe.css",
+    "static/js/main.21d01dc4.js"
+  ]
+}
