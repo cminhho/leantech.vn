@@ -81,13 +81,14 @@ const Products = () => {
       {/* Remove the gradient background div */}
       
       <div className="container-custom relative z-10">
-        {/* Updated Section Header with dark text */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            LeanTech Ecosystem - <span className="text-primary">Hệ Sinh Thái Chuyển Đổi Số</span>
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="section-title">
+            Sản Phẩm Công Nghệ
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Nền tảng tối ưu hóa toàn diện cho doanh nghiệp hiện đại
+          <p className="section-subtitle-center">
+            Các sản phẩm công nghệ được phát triển dựa trên phương pháp tinh gọn, 
+            tối ưu hóa hiệu quả và giảm thiểu chi phí vận hành cho doanh nghiệp.
           </p>
         </div>
 
@@ -135,7 +136,7 @@ const Products = () => {
               {/* Fixed CTA at bottom */}
               <div className="px-6 pb-6 mt-auto">
                 <div className="border-t border-gray-100 pt-4">
-                  <button className="w-full text-primary hover:text-blue-700 font-medium text-sm transition-colors duration-300 text-center">
+                  <button className="btn btn-text btn-sm btn-wide">
                     Liên hệ
                   </button>
                 </div>

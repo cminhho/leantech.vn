@@ -49,10 +49,10 @@ const Footer = () => {
                   href={social.url} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-colors duration-200"
+                  className="btn btn-ghost btn-icon hover:bg-blue-600 hover:text-white"
                   aria-label={social.label}
                 >
-                  <i className={social.icon}></i>
+                  <i className={`${social.icon} text-gray-400`}></i>
                 </a>
               ))}
             </div>

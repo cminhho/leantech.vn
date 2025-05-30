@@ -84,12 +84,13 @@ const Contact = () => {
     <section id="contact" className="section-padding bg-white">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-16">
+          <h2 className="section-title">
             Liên Hệ Với Chúng Tôi
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Hãy để đội ngũ chuyên gia của chúng tôi cùng bạn tạo ra giá trị thực tế cho doanh nghiệp trong hành trình tối ưu hóa.
+          <p className="section-subtitle-center">
+            Sẵn sàng hỗ trợ bạn 24/7. Liên hệ ngay để được tư vấn miễn phí 
+            về giải pháp phù hợp nhất cho doanh nghiệp.
           </p>
         </div>
 
@@ -98,7 +99,7 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="lg:col-span-2">
               <div className="bg-gray-50 rounded-3xl p-8 h-full">
-                <h3 className="text-2xl font-bold mb-10 text-gray-900">Thông Tin Liên Hệ</h3>
+                <h3 className="section-title-sm mb-10">Thông Tin Liên Hệ</h3>
                 
                 <div className="space-y-8">
                   <div className="group">
@@ -164,13 +165,13 @@ const Contact = () => {
                 <div className="mt-12 pt-8 border-t border-gray-200">
                   <h4 className="font-semibold text-gray-900 mb-6">Kết nối với chúng tôi</h4>
                   <div className="flex space-x-4">
-                    <a href="#" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110 shadow-sm border border-gray-200">
+                    <a href="#" className="btn btn-white btn-icon">
                       <i className="fab fa-facebook-f text-lg"></i>
                     </a>
-                    <a href="#" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110 shadow-sm border border-gray-200">
+                    <a href="#" className="btn btn-white btn-icon">
                       <i className="fab fa-linkedin-in text-lg"></i>
                     </a>
-                    <a href="#" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110 shadow-sm border border-gray-200">
+                    <a href="#" className="btn btn-white btn-icon">
                       <i className="fab fa-youtube text-lg"></i>
                     </a>
                   </div>
@@ -181,7 +182,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <div className="bg-white border border-gray-200 rounded-3xl p-8 lg:p-10 shadow-sm">
-                <h3 className="text-2xl font-bold mb-8 text-gray-900">Gửi Yêu Cầu Tư Vấn</h3>
+                <h3 className="section-title-sm mb-8">Gửi Yêu Cầu Tư Vấn</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name and Email Row */}
@@ -304,7 +305,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full md:w-auto px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1 focus:ring-4 focus:ring-primary/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                      className={`btn btn-primary btn-lg btn-wide ${isSubmitting ? 'btn-loading' : ''}`}
                     >
                       {isSubmitting ? (
                         <>

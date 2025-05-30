@@ -59,11 +59,15 @@ const Clients = () => {
   return (
     <section id="clients" className="py-20">
       <div className="container-custom">
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Đối Tác & Khách Hàng <span className="text-primary">Tiêu Biểu</span>
+          <h2 className="section-title">
+            Khách Hàng Tin Tưởng
           </h2>
+          <p className="section-subtitle-center">
+            Được tin tưởng bởi các doanh nghiệp hàng đầu trong việc 
+            chuyển đổi số và tối ưu hóa quy trình kinh doanh.
+          </p>
         </div>
 
         {/* Client Logos Row - Interactive Tabs */}
@@ -133,9 +137,9 @@ const Clients = () => {
               </div>
 
               {/* Learn More Button */}
-              <button className="inline-flex items-center px-4 py-2 bg-white text-blue-600 rounded-full font-medium hover:bg-blue-50 transition-colors w-fit text-sm">
+              <button className="btn btn-white btn-sm">
                 Tìm hiểu thêm
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </button>

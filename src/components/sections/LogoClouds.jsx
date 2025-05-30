@@ -39,12 +39,12 @@ const LogoClouds = () => {
     <section className="py-12 border">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            Công Nghệ & Đối Tác Tin Cậy
+        <div className="text-center mb-12">
+          <h2 className="section-title-sm">
+            Được Tin Tưởng Bởi
           </h2>
           <p className="text-gray-600">
-            Chúng tôi hợp tác cùng những công nghệ hàng đầu
+            Các doanh nghiệp hàng đầu đã chọn LeanTechCo
           </p>
         </div>
 

@@ -46,22 +46,23 @@ const CTA = () => {
 
       <div className="container-custom relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Main Heading */}
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Sẵn Sàng Tối Ưu Hóa Doanh Nghiệp Của Bạn?
-          </h2>
-          
-          {/* Description */}
-          <p className="text-lg text-blue-100 leading-relaxed mb-10">
-            Hãy để đội ngũ chuyên gia của chúng tôi cùng bạn tạo ra giá trị thực tế cho doanh nghiệp trong hành trình tối ưu hóa.
-          </p>
+          {/* Main Content */}
+          <div className="text-center mb-12">
+            <h2 className="section-title-white">
+              Sẵn Sàng Bắt Đầu Hành Trình Chuyển Đổi Số?
+            </h2>
+            <p className="section-subtitle-white">
+              Liên hệ ngay với chúng tôi để được tư vấn miễn phí về giải pháp 
+              phù hợp nhất cho doanh nghiệp của bạn.
+            </p>
+          </div>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="#contact" className="btn bg-white text-primary border-white text-sm hover:shadow-lg hover:-translate-y-1">
+            <a href="#contact" className="btn btn-white btn-lg">
               Nhận tư vấn miễn phí
             </a>
-            <a href="#solutions" className="btn bg-white/10 text-white border border-white/30 text-sm hover:bg-white/20 hover:-translate-y-1 backdrop-blur-sm">
+            <a href="#solutions" className="btn btn-glass btn-lg">
               Xem Giải Pháp
             </a>
           </div>

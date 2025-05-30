@@ -67,19 +67,17 @@ const WhyUs = () => {
   return (
     <section 
       id="why-us" 
-      className="py-16 relative"
-      style={{
-        backgroundImage: 'linear-gradient(160deg, #1331d2, #438eff)'
-      }}
+      className="py-16 bg-dark-section"
     >
       <div className="container-custom">
-        {/* Simple Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-3">
-            Tại Sao Chọn LeanTechCo?
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="section-title-white">
+            Tại Sao Chọn LeanTechCo
           </h2>
-          <p className="text-white/80">
-            Triết lý LEAN trong phát triển phần mềm
+          <p className="section-subtitle-white">
+            Chúng tôi áp dụng phương pháp tinh gọn và công nghệ hiện đại để mang lại 
+            giá trị thực tế cho từng dự án và đối tác.
           </p>
         </div>
 
@@ -159,7 +157,7 @@ const WhyUs = () => {
 
                 {/* Simple CTA */}
                 <div className="mt-6 pt-4 border-t border-gray-100">
-                  <button className="bg-primary text-white px-4 py-2 rounded-full text-sm hover:bg-primary/90 transition-colors">
+                  <button className="btn btn-primary btn-sm">
                     Tìm hiểu thêm
                   </button>
                 </div>

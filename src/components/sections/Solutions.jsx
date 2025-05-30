@@ -66,13 +66,14 @@ const Solutions = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white"></div>
       
       <div className="container-custom relative z-10">
-        {/* Clean Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 leading-tight">
-            Giải Pháp Toàn Diện <span className="text-primary">Cho Doanh Nghiệp</span>
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="section-title">
+            Giải Pháp Công Nghệ Toàn Diện
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Tối ưu hóa quy trình kinh doanh với công nghệ tinh gọn
+          <p className="section-subtitle-center">
+            Chúng tôi cung cấp các giải pháp công nghệ tinh gọn, từ tư vấn quản trị đến phát triển phần mềm, 
+            giúp doanh nghiệp tối ưu hóa quy trình và nâng cao hiệu quả kinh doanh.
           </p>
         </div>
 
@@ -95,9 +96,12 @@ const Solutions = () => {
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                <h3 className="card-title group-hover:text-primary transition-colors duration-300">
                   {solution.title}
                 </h3>
+                <p className="card-subtitle">
+                  {solution.description}
+                </p>
               </div>
               
               {/* Clean Content - Flex grow to push CTA to bottom */}
@@ -118,7 +122,7 @@ const Solutions = () => {
               {/* Fixed CTA at bottom */}
               <div className="px-6 pb-6 mt-auto">
                 <div className="border-t border-gray-100 pt-4">
-                  <button className="w-full text-primary hover:text-blue-700 font-medium text-sm transition-colors duration-300 text-center">
+                  <button className="btn btn-text btn-sm btn-wide">
                     Liên hệ
                   </button>
                 </div>

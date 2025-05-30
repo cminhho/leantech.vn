@@ -58,18 +58,18 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="#contact" className="btn btn-primary text-sm hover:shadow-lg hover:-translate-y-1">
+            <a href="#contact" className="btn btn-white btn-sm">
               Báo giá dịch vụ
             </a>
           </div>
 
           {/* Mobile menu button */}
           <button 
-            className="md:hidden p-2 rounded-md text-white focus:outline-none"
+            className="btn btn-ghost btn-icon md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Đóng menu" : "Mở menu"}
           >
-            <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
+            <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'} text-xl text-white`}></i>
           </button>
         </div>
 
@@ -83,7 +83,7 @@ const Header = () => {
               <a href="#why-us" className="text-white/90 hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}>Về chúng tôi</a>
               <a href="#clients" className="text-white/90 hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}>Đối tác</a>
               <a href="#contact" className="text-white/90 hover:text-secondary transition-colors" onClick={() => setIsMenuOpen(false)}>Liên hệ</a>
-              <a href="#contact" className="btn btn-primary mt-2 w-full justify-center text-sm hover:shadow-lg hover:-translate-y-1" onClick={() => setIsMenuOpen(false)}>Báo giá dịch vụ</a>
+              <a href="#contact" className="btn btn-white btn-sm btn-wide mt-2" onClick={() => setIsMenuOpen(false)}>Báo giá dịch vụ</a>
             </nav>
           </div>
         )}

@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef(null);
-  const heroImageUrl = "/assets/images/hero-image.png";
+  const heroImageUrl = "/assets/images/hero-image-pure.png";
   const videoUrl = "/assets/videos/hero-background.mp4";
 
   // Preload hero image
@@ -91,13 +91,13 @@ const Hero = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <a href="#contact" className="btn btn-primary text-sm group flex items-center justify-center">
+              <a href="#contact" className="btn btn-primary btn-lg group">
                 <span>Liên hệ tư vấn</span>
-                <i className="fas fa-chevron-right text-xs ml-2"></i>
+                <i className="fas fa-chevron-right text-xs"></i>
               </a>
-              <a href="#solutions" className="btn btn-outline text-sm group flex items-center justify-center backdrop-blur-sm">
+              <a href="#solutions" className="btn btn-glass btn-lg group">
                 <span>Xem giải pháp</span>
-                <i className="fas fa-chevron-right text-xs ml-2"></i>
+                <i className="fas fa-chevron-right text-xs"></i>
               </a>
             </div>
           </div>
