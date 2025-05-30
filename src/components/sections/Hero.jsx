@@ -111,22 +111,6 @@ const Hero = () => {
               className="max-w-full h-auto relative z-10"
               loading="eager"
             />
-            
-            {/* Logo overlay in the center - improved styling */}
-            <div className="absolute inset-0 flex items-start justify-center pt-32 z-20">
-              <div className="transform hover:scale-105 transition-all duration-300">
-                <Logo 
-                  size="3xl" 
-                  variant="white" 
-                  showText={true}
-                  className="drop-shadow-2xl filter-none"
-                  style={{
-                    filter: 'drop-shadow(0 0 20px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.3))',
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)'
-                  }}
-                />
-              </div>
-            </div>
           </div>
         </div>
       </div>

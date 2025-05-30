@@ -16,8 +16,7 @@ const WhyUs = () => {
         'Tối ưu hóa thời gian phát triển',
         'Giảm thiểu lãng phí tài nguyên'
       ],
-      metric: '53%',
-      image: 'https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=400&h=400&fit=crop&crop=center'
+      metric: '53%'
     },
     {
       id: 'value-dev',
@@ -31,8 +30,7 @@ const WhyUs = () => {
         'Phản hồi nhanh từ người dùng',
         'Cải thiện liên tục dựa trên metrics'
       ],
-      metric: '2-4 tuần',
-      image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=400&fit=crop&crop=center'
+      metric: '2-4 tuần'
     },
     {
       id: 'demand-dev',
@@ -46,8 +44,7 @@ const WhyUs = () => {
         'Ưu tiên dựa trên giá trị kinh doanh',
         'Phát triển just-in-time'
       ],
-      metric: '40%',
-      image: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=400&h=400&fit=crop&crop=center'
+      metric: '40%'
     },
     {
       id: 'continuous-dev',
@@ -61,140 +58,85 @@ const WhyUs = () => {
         'Tích hợp và triển khai tự động',
         'Monitoring và alerting 24/7'
       ],
-      metric: '24/7',
-      image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=400&fit=crop&crop=center'
+      metric: '24/7'
     }
   ];
 
   const activeReason = reasons.find(r => r.id === activeTab);
 
   return (
-    <section 
-      id="why-us" 
-      className="py-16 bg-dark-section"
-    >
+    <section id="why-us" className="py-16 bg-dark-section">
       <div className="container-custom">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title-white">
-            Tại Sao Chọn LeanTechCo
-          </h2>
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="section-title-white">Tại Sao Chọn LeanTechCo</h2>
         </div>
 
-        {/* Simplified Layout */}
-        <div className="mx-auto">
-          <div className="grid lg:grid-cols-4 gap-8">
+        {/* Main Content */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-4 gap-6">
             
-            {/* Simple Tabs */}
-            <div className="lg:col-span-1">
-              <div className="space-y-2">
-                {reasons.map((reason) => (
-                  <button
-                    key={reason.id}
-                    onClick={() => setActiveTab(reason.id)}
-                    className={`w-full text-left p-3 transition-colors ${
-                      activeTab === reason.id
-                        ? 'bg-white text-gray-900'
-                        : 'text-white/70 hover:text-white hover:bg-white/10'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 flex items-center justify-center ${
-                        activeTab === reason.id
-                          ? 'bg-primary text-white'
-                          : 'bg-white/20'
-                      }`}>
-                        <i className={`fas ${reason.icon} text-xs`}></i>
-                      </div>
-                      <span className="text-sm font-medium truncate">
-                        {reason.title}
-                      </span>
-                    </div>
-                  </button>
-                ))}
-              </div>
+            {/* Tabs */}
+            <div className="lg:col-span-1 space-y-2">
+              {reasons.map((reason) => (
+                <button
+                  key={reason.id}
+                  onClick={() => setActiveTab(reason.id)}
+                  className={`w-full p-4 text-left transition-all ${
+                    activeTab === reason.id
+                      ? 'bg-white text-gray-900'
+                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <i className={`fas ${reason.icon} ${
+                      activeTab === reason.id ? 'text-primary' : 'text-white/60'
+                    }`}></i>
+                    <span className="font-medium">{reason.title}</span>
+                  </div>
+                </button>
+              ))}
             </div>
 
-            {/* Clean Content */}
-            <div className="lg:col-span-3">
-              <div className="bg-white p-6">
-                
-                {/* Main Content Layout - Header and Content on Left, Image on Right */}
-                <div className="grid md:grid-cols-3 gap-6">
-                  
-                  {/* Left Section - Header and Content (2 columns) */}
-                  <div className="md:col-span-2 space-y-6">
-                    
-                    {/* Simple Header */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-primary flex items-center justify-center">
-                          <i className={`fas ${activeReason.icon} text-white text-sm`}></i>
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-gray-900">
-                            {activeReason.title}
-                          </h3>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-xl font-bold text-primary">
-                          {activeReason.metric}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="space-y-4">
-                      {/* Description */}
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Mô tả</h4>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                          {activeReason.description}
-                        </p>
-                      </div>
-
-                      {/* Features */}
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-3">Tính năng chính</h4>
-                        <div className="space-y-2">
-                          {activeReason.features.map((feature, index) => (
-                            <div key={index} className="flex items-start gap-3">
-                              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-sm text-gray-700 leading-relaxed">
-                                {feature}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* CTA */}
-                      <div className="pt-4">
-                        <button className="btn btn-primary btn-sm">
-                          Tìm hiểu thêm
-                        </button>
-                      </div>
-                    </div>
+            {/* Content */}
+            <div className="lg:col-span-3 bg-white p-8">
+              
+              {/* Header with Metric */}
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-primary flex items-center justify-center text-white">
+                    <i className={`fas ${activeReason.icon}`}></i>
                   </div>
-
-                  {/* Right Section - Image (1 column) */}
-                  <div className="md:col-span-1 flex items-center justify-center">
-                    <div className="w-full">
-                      <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden shadow-sm">
-                        <img 
-                          src={activeReason.image} 
-                          alt={activeReason.title}
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            // Fallback to a placeholder if image fails to load
-                            e.target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='16' fill='%236b7280' text-anchor='middle' dy='.3em'%3E${activeReason.title}%3C/text%3E%3C/svg%3E`;
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {activeReason.title}
+                  </h3>
                 </div>
+                <div className="text-2xl font-bold text-primary">
+                  {activeReason.metric}
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                {activeReason.description}
+              </p>
+
+              {/* Features */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-gray-900">Tính năng chính:</h4>
+                {activeReason.features.map((feature, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <span className="text-gray-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <div className="mt-8">
+                <button className="btn btn-primary">
+                  Tìm hiểu thêm
+                </button>
               </div>
             </div>
           </div>

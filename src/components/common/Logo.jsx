@@ -6,7 +6,8 @@ const Logo = ({
   className = '',
   showText = true,
   iconOnly = false,
-  style = {}
+  style = {},
+  clickable = true
 }) => {
   const sizeClasses = {
     micro: 'h-3 w-3',
@@ -40,23 +41,33 @@ const Logo = ({
     switch (variant) {
       case 'white':
         return {
-          text: 'text-white',
-          accent: 'text-secondary'
+          primary: 'text-white',
+          accent: 'text-secondary',
+          hover: 'group-hover:text-secondary/90'
         };
       case 'dark':
         return {
-          text: 'text-gray-900',
-          accent: 'text-primary'
+          primary: 'text-gray-900',
+          accent: 'text-secondary',
+          hover: 'group-hover:text-primary'
         };
       case 'light':
         return {
-          text: 'text-gray-600',
-          accent: 'text-primary'
+          primary: 'text-gray-600',
+          accent: 'text-secondary',
+          hover: 'group-hover:text-primary'
+        };
+      case 'primary':
+        return {
+          primary: 'text-primary',
+          accent: 'text-secondary',
+          hover: 'group-hover:text-primary/80'
         };
       default:
         return {
-          text: 'text-white',
-          accent: 'text-secondary'
+          primary: 'text-white',
+          accent: 'text-secondary',
+          hover: 'group-hover:text-secondary/90'
         };
     }
   };
@@ -65,28 +76,28 @@ const Logo = ({
 
   if (iconOnly) {
     return (
-      <div className={`flex items-center ${className}`} style={style}>
+      <div className={`flex items-center ${clickable ? 'group cursor-pointer' : ''} ${className}`} style={style}>
         <img 
           src="/assets/images/logo-icon.svg" 
           alt="LeanTechCo Logo" 
-          className={`${sizeClasses[size]} object-contain`}
+          className={`${sizeClasses[size]} object-contain transition-all duration-300 ${clickable ? 'group-hover:scale-110' : ''}`}
         />
       </div>
     );
   }
 
   return (
-    <div className={`flex items-center gap-2 ${className}`} style={style}>
+    <div className={`flex items-center gap-2 ${clickable ? 'group cursor-pointer' : ''} ${className}`} style={style}>
       <img 
         src="/assets/images/logo-icon.svg" 
         alt="LeanTechCo Logo" 
-        className={`${sizeClasses[size]} object-contain`}
+        className={`${sizeClasses[size]} object-contain transition-all duration-300 ${clickable ? 'group-hover:scale-110' : ''}`}
       />
       {showText && (
-        <span className={`${textSizeClasses[size]} font-bold`}>
-          <span className={colors.text}>lean</span>
-          <span className={colors.text}>tech</span>
-          <span className={colors.text}>co</span>
+        <span className={`${textSizeClasses[size]} font-bold tracking-tight transition-all duration-300`}>
+          <span className={`${colors.primary} transition-colors duration-300`}>lean</span>
+          <span className={`${colors.primary} transition-colors duration-300`}>tech</span>
+          <span className={`${colors.accent} transition-colors duration-300 ${colors.hover}`}>co.</span>
         </span>
       )}
     </div>

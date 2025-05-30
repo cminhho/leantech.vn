@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../common/Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,10 +32,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <a href="#home" className="text-2xl font-bold">
-                <span className="text-white">lean</span>
-                <span className="text-white">tech</span>
-                <span className="text-blue-400">co.</span>
+              <a href="#home" className="block">
+                <Logo 
+                  size="xl"
+                  variant="white"
+                  showText={true}
+                  clickable={true}
+                />
               </a>
             </div>
             

@@ -26,7 +26,7 @@ const Clients = () => {
   ];
 
   // Duplicate clients array for seamless infinite scroll
-  const duplicatedClients = [...clients, ...clients, ...clients];
+  const duplicatedClients = [...clients, ...clients, ...clients, ...clients];
 
   return (
     <section id="clients" className="py-20">
@@ -53,17 +53,16 @@ const Clients = () => {
           <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
           
           {/* Scrolling container */}
-          <div className="flex animate-scroll">
+          <div className="flex items-center gap-12 md:gap-16 animate-scroll">
             {duplicatedClients.map((client, index) => (
               <div 
                 key={`${client.id}-${index}`}
-                className="flex-shrink-0 flex items-center justify-center px-4 py-4 mx-4"
-                style={{ minWidth: '200px' }}
+                className="flex-shrink-0 flex items-center justify-center"
               >
                 <img 
                   src={client.logo} 
                   alt={client.alt}
-                  className="h-8 md:h-10 w-auto object-contain opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
+                  className="h-6 md:h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300"
                   onError={(e) => {
                     e.target.src = `https://placehold.co/160x80/e5e7eb/6b7280?text=${encodeURIComponent(client.name)}`;
                   }}
@@ -81,16 +80,12 @@ const Clients = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-33.333%);
+            transform: translateX(-25%);
           }
         }
         
         .animate-scroll {
-          animation: scroll 15s linear infinite;
-        }
-        
-        .animate-scroll:hover {
-          animation-play-state: paused;
+          animation: scroll 20s linear infinite;
         }
       `}</style>
     </section>

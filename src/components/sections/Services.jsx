@@ -73,7 +73,7 @@ const Services = () => {
             {solutions.map((solution, index) => (
               <div 
                 key={index} 
-                className="group bg-white overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-primary/40 cursor-pointer"
+                className="group bg-white overflow-hidden rounded-lg border border-blue-200 hover:border-blue-500 transition-all duration-300 hover:shadow-lg cursor-pointer"
                 style={{ 
                   animationDelay: `${solution.delay}ms` 
                 }}
@@ -83,12 +83,18 @@ const Services = () => {
                   <img 
                     src={solution.image} 
                     alt={solution.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                   />
                   
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-primary/5 to-primary/50 group-hover:from-primary/40 group-hover:via-primary/15 group-hover:to-primary/60 transition-all duration-500"></div>
+                  
+                  {/* Additional hover overlay for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  
                   {/* Simple Category Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-white text-gray-700 text-xs font-medium px-3 py-1 shadow-sm">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-primary text-white text-xs font-medium px-3 py-1 rounded shadow-lg group-hover:bg-primary-dark transition-all duration-300">
                       {solution.category}
                     </span>
                   </div>
@@ -97,7 +103,7 @@ const Services = () => {
                 {/* Content Section - Enhanced */}
                 <div className="p-6 flex flex-col h-64">
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 transition-colors duration-300 leading-tight">
                     {solution.title}
                   </h3>
                   
@@ -107,11 +113,11 @@ const Services = () => {
                   </p>
                   
                   {/* CTA at bottom */}
-                  <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                    <span className="text-primary font-medium text-sm group-hover:text-primary-dark transition-colors duration-300">
+                  <div className="flex items-center justify-between pt-3 border-t border-primary/10">
+                    <span className="text-primary font-medium text-sm transition-colors duration-300">
                       Tìm hiểu thêm
                     </span>
-                    <i className="fas fa-arrow-right text-primary text-sm group-hover:translate-x-1 transition-transform duration-300"></i>
+                    <i className="fas fa-arrow-right text-primary text-sm transition-transform duration-300"></i>
                   </div>
                 </div>
               </div>

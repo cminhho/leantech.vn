@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Logo from '../common/Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,19 +29,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#home" className="flex items-center gap-2">
-              <img 
-                src="/assets/images/logo-icon.svg" 
-                alt="LeanTechCo Icon" 
-                className="h-7 md:h-8 w-auto"
-                width="40"
-                height="40"
+            <a href="#home" className="block">
+              <Logo 
+                size="lg"
+                variant="white"
+                showText={true}
+                clickable={true}
               />
-              <span className="text-xl md:text-2xl font-bold">
-                <span className="text-white">lean</span>
-                <span className="text-white">tech</span>
-                <span className="text-white">co</span>
-              </span>
             </a>
           </div>
 
