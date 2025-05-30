@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogoClouds = () => {
+const TechPartnerships = () => {
   const partners = [
     {
       name: 'Microsoft',
@@ -41,10 +41,10 @@ const LogoClouds = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="section-title-sm">
-            Được Tin Tưởng Bởi
+            Công Nghệ & Đối Tác
           </h2>
           <p className="text-gray-600">
-            Các doanh nghiệp hàng đầu đã chọn LeanTechCo
+            Sử dụng công nghệ hàng đầu và được tin tưởng bởi các doanh nghiệp
           </p>
         </div>
 
@@ -88,4 +88,4 @@ const LogoClouds = () => {
   );
 };
 
-export default LogoClouds; 
+export default TechPartnerships; 

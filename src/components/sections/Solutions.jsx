@@ -62,8 +62,8 @@ const Solutions = () => {
 
   return (
     <section id="solutions" className="py-24 bg-white relative overflow-hidden">
-      {/* Simplified Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white"></div>
+      {/* Subtle Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50/30 to-white"></div>
       
       <div className="container-custom relative z-10">
         {/* Section Header */}
@@ -77,41 +77,41 @@ const Solutions = () => {
           </p>
         </div>
 
-        {/* Clean Solutions Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Solutions Grid - 4 cards in 1 row */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {solutions.map((solution, index) => (
             <div 
               key={index} 
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 overflow-hidden flex flex-col"
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl border border-gray-100 hover:border-primary/20 transition-all duration-300 flex flex-col h-full group"
               style={{ animationDelay: `${solution.delay}ms` }}
             >
-              {/* Clean Header */}
-              <div className="p-6 pb-4">
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
-                    <i className={`fas ${solution.icon} text-white text-lg`}></i>
-                  </div>
+              {/* Icon & Badge */}
+              <div className="text-center mb-6 relative">
+                {/* Badge */}
+                <div className="absolute -top-2 -right-2">
                   <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
                     {solution.badge}
                   </span>
                 </div>
                 
-                <h3 className="card-title group-hover:text-primary transition-colors duration-300">
+                <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300`}>
+                  <i className={`fas ${solution.icon} text-white text-2xl`}></i>
+                </div>
+                <h3 className="card-title text-center group-hover:text-primary transition-colors duration-300">
                   {solution.title}
                 </h3>
-                <p className="card-subtitle">
-                  {solution.description}
-                </p>
               </div>
               
-              {/* Clean Content - Flex grow to push CTA to bottom */}
-              <div className="px-6 pb-4 flex-grow">
-                {/* Simplified Bullet Points */}
-                <div className="space-y-2">
+              {/* Content - Flex grow to push button to bottom */}
+              <div className="flex-grow">
+                {/* Feature List with Checkmarks */}
+                <div className="space-y-3 mb-6">
                   {solution.bullets.map((bullet, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700 text-sm leading-relaxed">
+                      <div className="flex-shrink-0 mt-1">
+                        <i className="fas fa-check text-green-600 text-sm"></i>
+                      </div>
+                      <span className="list-item-text">
                         {bullet}
                       </span>
                     </div>
@@ -119,18 +119,16 @@ const Solutions = () => {
                 </div>
               </div>
 
-              {/* Fixed CTA at bottom */}
-              <div className="px-6 pb-6 mt-auto">
-                <div className="border-t border-gray-100 pt-4">
-                  <button className="btn btn-text btn-sm btn-wide">
-                    Liên hệ
-                  </button>
-                </div>
+              {/* CTA Button at bottom */}
+              <div className="mt-auto pt-4 border-t border-gray-100">
+                <button className="btn btn-outline btn-sm btn-wide group-hover:btn-primary transition-all duration-300">
+                  Liên hệ
+                  <i className="fas fa-arrow-right text-xs"></i>
+                </button>
               </div>
             </div>
           ))}
         </div>
-        
       </div>
     </section>
   );
