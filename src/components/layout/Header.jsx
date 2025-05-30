@@ -26,12 +26,12 @@ const Header = () => {
       isScrolled ? 'bg-primary shadow-md' : 'bg-transparent'
     }`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <a href="#home" className="block">
               <Logo 
-                size="lg"
+                size="xl"
                 variant="white"
                 showText={true}
                 clickable={true}

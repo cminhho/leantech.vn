@@ -88,7 +88,7 @@ const Hero = () => {
             <img 
               src={heroImageUrl}
               alt="Giao diện phần mềm quản trị doanh nghiệp LeanTechCo" 
-              className="max-w-full h-auto relative z-10"
+              className="max-w-lg h-auto relative z-10"
               loading="eager"
             />
           </div>
