@@ -65,15 +65,51 @@ const WhyUs = () => {
   const activeReason = reasons.find(r => r.id === activeTab);
 
   return (
-    <section id="why-us" className="py-16 bg-dark-section">
-      <div className="container-custom">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="section-title-white">Tại Sao Chọn LeanTechCo</h2>
+    <section 
+      id="why-us" 
+      className="py-24 relative overflow-hidden"
+      style={{
+        backgroundImage: 'url(https://gramentheme.com/wp/wotech/wp-content/uploads/2024/02/choose-1.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-primary/80"></div>
+      
+      <div className="container-custom relative z-10">
+        {/* Section Header */}
+        <div className="mb-16">
+          {/* Label */}
+          <div className="mb-6">
+            <span className="text-secondary text-sm font-semibold">
+              TẠI SAO CHỌN CHÚNG TÔI
+            </span>
+          </div>
+          
+          {/* Two Column Layout */}
+          <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
+            {/* Left Side - Title */}
+            <div className="flex-shrink-0">
+              <h2 className="section-title-white">
+                Tại Sao Chọn LeanTechCo
+              </h2>
+            </div>
+            
+            {/* Right Side - Description */}
+            <div className="flex-1">
+              <p className="section-subtitle-white mb-0">
+                Chúng tôi chuyên tối ưu hóa quy trình phát triển phần mềm, 
+                loại bỏ các bước thừa và tập trung xây dựng những giải pháp 
+                mang lại hiệu quả thực tế cho doanh nghiệp của bạn.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Main Content */}
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl">
           <div className="grid lg:grid-cols-4 gap-6">
             
             {/* Tabs */}
