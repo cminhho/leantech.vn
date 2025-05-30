@@ -85,7 +85,7 @@ const Hero = () => {
               </li>
               <li className="flex items-start">
                 <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                <span>Đồng hành cùng doanh nghiệp trong hành trình tối ưu hóa thực tế</span>
+                <span>Đồng hành cùng doanh nghiệp trong hành trình chuyển đổi số</span>
               </li>
             </ul>
 

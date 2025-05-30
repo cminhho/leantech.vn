@@ -110,8 +110,11 @@ const Products = () => {
                 </div>
                 
                 <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors duration-300">
-                  {product.name} <span className="text-gray-600 text-xs font-normal">- {product.tagline}</span>
+                  {product.name}
                 </h3>
+                <p className="text-gray-600 text-xs font-medium">
+                  {product.tagline}
+                </p>
               </div>
               
               {/* Clean Content - Flex grow to push CTA to bottom */}

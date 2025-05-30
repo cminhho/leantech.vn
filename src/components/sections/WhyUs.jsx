@@ -30,7 +30,7 @@ const WhyUs = () => {
         'Phản hồi nhanh từ người dùng',
         'Cải thiện liên tục dựa trên metrics'
       ],
-      metric: '2-4'
+      metric: '2-4 tuần'
     },
     {
       id: 'demand-dev',
@@ -50,11 +50,11 @@ const WhyUs = () => {
       id: 'continuous-dev',
       icon: 'fa-sync-alt',
       title: 'Phát Triển Liên Tục',
-      description: 'Phân tích liên tục và hồi đáp mở để nâng cao chất lượng code.',
+      description: 'Phân tích liên tục và phản hồi mở để nâng cao chất lượng code.',
       features: [
         'Cải tiến dựa trên dữ liệu thực tế',
         'Quy trình phát triển linh hoạt',
-        'Hồi đáp mở và phân tích liên tục',
+        'Phản hồi mở và phân tích liên tục',
         'Tích hợp và triển khai tự động',
         'Monitoring và alerting 24/7'
       ],

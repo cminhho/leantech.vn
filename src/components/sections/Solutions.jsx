@@ -19,7 +19,7 @@ const Solutions = () => {
     {
       icon: "fa-code",
       title: "Phát Triển Phần Mềm",
-      description: "Phát triển ứng dụng tuỳ chỉnh, phần mềm di động, web và kiểm thử chất lượng. Tập trung vào giải pháp tạo giá trị thực tế.",
+      description: "Phát triển ứng dụng tùy chỉnh, phần mềm di động, web và kiểm thử chất lượng. Tập trung vào giải pháp tạo giá trị thực tế.",
       bullets: [
         "Ứng dụng web responsive và hiện đại",
         "Phần mềm di động iOS và Android",

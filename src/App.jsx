@@ -7,7 +7,6 @@ import Products from './components/sections/Products';
 import WhyUs from './components/sections/WhyUs';
 import Clients from './components/sections/Clients';
 import CTA from './components/sections/CTA';
-import Testimonials from './components/sections/Testimonials';
 import Contact from './components/sections/Contact';
 import Footer from './components/layout/Footer';
 
@@ -23,7 +22,6 @@ function App() {
         <LogoClouds />
         <Clients />
         <CTA />
-        {/* <Testimonials /> */}
         <Contact />
       </main>
       <Footer />

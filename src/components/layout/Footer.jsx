@@ -105,7 +105,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <i className="fas fa-map-marker-alt text-blue-400 text-sm mt-1"></i>
                 <span className="text-gray-400 text-sm leading-relaxed">
-                  Số 5 Đường số 3, Khu phố 2, Phường An Khánh, Thành phố Thủ Đức, TP.HCM
+                  Số 5 Đường số 3, Khu phố 2, Phường An Khánh,<br />
+                  Thành phố Thủ Đức, TP. Hồ Chí Minh
                 </span>
               </div>
               
