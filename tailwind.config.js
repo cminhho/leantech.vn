@@ -7,13 +7,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1331d2',
+        primary: '#0a2093',
         secondary: '#00B8FF',
         accent: '#F9FAFB'
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif']
-      }
+      },
+      borderRadius: {
+        'none': '0',
+        'sm': '0',
+        DEFAULT: '0',
+        'md': '0',
+        'lg': '0',
+        'xl': '0',
+        '2xl': '0',
+        '3xl': '0',
+        'full': '0'
+      },
+      animation: {
+        'scroll': 'scroll 30s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
     },
     fontSize: {
       'xs': '12px',

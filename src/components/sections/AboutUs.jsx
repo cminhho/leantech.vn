@@ -28,8 +28,8 @@ const AboutUs = () => {
     <section id="about" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-600/5"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/10 to-transparent blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-600/10 to-transparent blur-3xl"></div>
       
       <div className="container-custom relative z-10">
         {/* Section Header */}
@@ -46,14 +46,14 @@ const AboutUs = () => {
             {/* Left Side - Title */}
             <div className="flex-shrink-0">
               <h2 className="section-title">
-                Về LeanTech
+                Về LeanTechCo
               </h2>
             </div>
             
             {/* Right Side - Description */}
             <div className="flex-1">
               <p className="section-subtitle mb-0">
-                Được thành lập năm 2024, chúng tôi mang đến giải pháp công nghệ tiên tiến và dịch vụ tư vấn chuyên nghiệp, 
+                Được thành lập năm 2018, chúng tôi mang đến giải pháp công nghệ tiên tiến và dịch vụ tư vấn chuyên nghiệp, 
                 giúp doanh nghiệp tối ưu hóa quy trình và nâng cao hiệu quả hoạt động.
               </p>
             </div>

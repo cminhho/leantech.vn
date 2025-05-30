@@ -7,20 +7,6 @@ const Hero = () => {
   const heroImageUrl = "/assets/images/hero-image-pure.png";
   const videoUrl = "/assets/videos/hero-background.mp4";
 
-  // Technology and partner logos
-  const techLogos = [
-    { name: "React", icon: "fab fa-react", color: "#61DAFB" },
-    { name: "Node.js", icon: "fab fa-node-js", color: "#339933" },
-    { name: "AWS", icon: "fab fa-aws", color: "#FF9900" },
-    { name: "Docker", icon: "fab fa-docker", color: "#2496ED" },
-    { name: "JavaScript", icon: "fab fa-js-square", color: "#F7DF1E" },
-    { name: "Python", icon: "fab fa-python", color: "#3776AB" },
-    { name: "Microsoft", icon: "fab fa-microsoft", color: "#5E5E5E" },
-    { name: "Google Cloud", icon: "fab fa-google", color: "#4285F4" },
-    { name: "Linux", icon: "fab fa-linux", color: "#FCC624" },
-    { name: "GitHub", icon: "fab fa-github", color: "#181717" },
-  ];
-
   // Preload hero image
   useEffect(() => {
     const img = new Image();
@@ -74,14 +60,14 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-white space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs mb-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 mr-2"></span>
+            <div className="inline-flex items-center px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs mb-2">
+              <span className="w-1.5 h-1.5 bg-green-400 mr-2"></span>
               Đối tác công nghệ & tư vấn chuyên sâu
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
               <span className="text-gradient">Đối tác chuyển đổi số toàn diện</span>{' '}
-              cho doanh nghiệp Việt Nam
+              cho doanh nghiệp
             </h1>
             
             <ul className="space-y-2 text-white/90">
@@ -118,11 +104,11 @@ const Hero = () => {
 
           {/* Hero Image */}
           <div className="flex justify-center relative">
-            {/* Image without glass-card border */}
+            {/* Image without rounded corners */}
             <img 
               src={heroImageUrl}
               alt="Giao diện phần mềm quản trị doanh nghiệp LeanTechCo" 
-              className="max-w-full h-auto rounded-lg relative z-10"
+              className="max-w-full h-auto relative z-10"
               loading="eager"
             />
             
@@ -130,7 +116,7 @@ const Hero = () => {
             <div className="absolute inset-0 flex items-start justify-center pt-32 z-20">
               <div className="transform hover:scale-105 transition-all duration-300">
                 <Logo 
-                  size="2xl" 
+                  size="3xl" 
                   variant="white" 
                   showText={true}
                   className="drop-shadow-2xl filter-none"
@@ -141,29 +127,6 @@ const Hero = () => {
                 />
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Divider line */}
-        <div className="w-full h-px bg-white/20 my-6"></div>
-        
-        {/* Stats Section */}
-        <div className="grid grid-cols-4 gap-4 sm:gap-6">
-          <div className="text-center p-3">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">100+</div>
-            <div className="text-white/70 text-xs sm:text-sm mt-1">Dự án hoàn thành</div>
-          </div>
-          <div className="text-center p-3">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">7+</div>
-            <div className="text-white/70 text-xs sm:text-sm mt-1">Năm kinh nghiệm</div>
-          </div>
-          <div className="text-center p-3">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">50+</div>
-            <div className="text-white/70 text-xs sm:text-sm mt-1">Khách hàng tin tưởng</div>
-          </div>
-          <div className="text-center p-3">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gradient">24/7</div>
-            <div className="text-white/70 text-xs sm:text-sm mt-1">Hỗ trợ kỹ thuật</div>
           </div>
         </div>
       </div>

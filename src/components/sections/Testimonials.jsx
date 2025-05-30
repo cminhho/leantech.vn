@@ -54,10 +54,10 @@ const Testimonials = () => {
 
         {/* Testimonials Carousel */}
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <div className="relative bg-white shadow-xl p-8 md:p-12">
             {/* Quote icon */}
             <div className="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+              <div className="bg-primary text-white w-12 h-12 flex items-center justify-center shadow-lg">
                 <i className="fas fa-quote-left text-xl"></i>
               </div>
             </div>
@@ -73,7 +73,7 @@ const Testimonials = () => {
                   <img 
                     src={testimonials[activeIndex].avatar} 
                     alt={testimonials[activeIndex].author} 
-                    className="w-16 h-16 rounded-full object-cover"
+                    className="w-16 h-16 object-cover"
                   />
                 </div>
                 <div>
@@ -90,7 +90,7 @@ const Testimonials = () => {
                   <button
                     key={index}
                     onClick={() => goToTestimonial(index)}
-                    className={`w-3 h-3 rounded-full ${
+                    className={`w-3 h-3 ${
                       index === activeIndex ? 'bg-primary' : 'bg-gray-300'
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
@@ -101,14 +101,14 @@ const Testimonials = () => {
               <div className="flex space-x-2">
                 <button 
                   onClick={prevTestimonial}
-                  className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
+                  className="w-10 h-10 border border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
                   aria-label="Previous testimonial"
                 >
                   <i className="fas fa-chevron-left"></i>
                 </button>
                 <button 
                   onClick={nextTestimonial}
-                  className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
+                  className="w-10 h-10 border border-gray-300 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
                   aria-label="Next testimonial"
                 >
                   <i className="fas fa-chevron-right"></i>

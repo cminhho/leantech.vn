@@ -111,11 +111,12 @@
     @apply leading-relaxed;
   }
   
-  /* Base Button Styles */
+  /* Base Button Styles - No Border Radius */
   .btn {
-    @apply px-5 py-2.5 rounded-md font-medium transition-all duration-300 inline-flex items-center gap-2 justify-center;
+    @apply px-5 py-2.5 font-medium transition-all duration-300 inline-flex items-center gap-2 justify-center;
     @apply focus:outline-none focus:ring-4 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
     @apply border text-sm leading-5;
+    border-radius: 0;
   }
   
   /* Button Variants */
@@ -164,25 +165,30 @@
     @apply focus:ring-yellow-200;
   }
   
-  /* Button Sizes - All using rounded-md */
+  /* Button Sizes - No Border Radius */
   .btn-xs {
-    @apply px-3 py-1.5 text-xs rounded-md;
+    @apply px-3 py-1.5 text-xs;
+    border-radius: 0;
   }
   
   .btn-sm {
-    @apply px-4 py-2 text-sm rounded-md;
+    @apply px-4 py-2 text-sm;
+    border-radius: 0;
   }
   
   .btn-md {
-    @apply px-5 py-2.5 text-sm rounded-md;
+    @apply px-5 py-2.5 text-sm;
+    border-radius: 0;
   }
   
   .btn-lg {
-    @apply px-6 py-3 text-base rounded-md;
+    @apply px-6 py-3 text-base;
+    border-radius: 0;
   }
   
   .btn-xl {
-    @apply px-8 py-4 text-lg rounded-full;
+    @apply px-8 py-4 text-lg;
+    border-radius: 0;
   }
   
   /* Button States */
@@ -194,13 +200,14 @@
     content: "";
     @apply absolute inset-0 flex items-center justify-center;
     background: inherit;
-    border-radius: inherit;
+    border-radius: 0;
   }
   
   .btn-loading::before {
     content: "";
     @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
-    @apply w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin;
+    @apply w-4 h-4 border-2 border-current border-t-transparent animate-spin;
+    border-radius: 0;
   }
   
   /* Special Button Styles */
@@ -216,7 +223,8 @@
   }
   
   .btn-icon {
-    @apply w-10 h-10 p-0 rounded-md flex items-center justify-center;
+    @apply w-10 h-10 p-0 flex items-center justify-center;
+    border-radius: 0;
   }
   
   .btn-wide {
@@ -224,19 +232,22 @@
   }
   
   .btn-group {
-    @apply inline-flex rounded-md shadow-sm;
+    @apply inline-flex shadow-sm;
+    border-radius: 0;
   }
   
   .btn-group .btn {
-    @apply rounded-none border-r-0 hover:z-10 focus:z-10;
+    @apply border-r-0 hover:z-10 focus:z-10;
+    border-radius: 0;
   }
   
   .btn-group .btn:first-child {
-    @apply rounded-l-md;
+    border-radius: 0;
   }
   
   .btn-group .btn:last-child {
-    @apply rounded-r-md border-r;
+    @apply border-r;
+    border-radius: 0;
   }
   
   /* Text and Link Styles */
@@ -246,8 +257,9 @@
   }
   
   .btn-text {
-    @apply bg-transparent text-gray-600 border-transparent px-3 py-2 hover:bg-gray-100 hover:text-gray-900 rounded-md;
+    @apply bg-transparent text-gray-600 border-transparent px-3 py-2 hover:bg-gray-100 hover:text-gray-900;
     @apply focus:ring-gray-200 hover:transform-none hover:shadow-none;
+    border-radius: 0;
   }
   
   /* Legacy support - keeping original classes */
@@ -275,25 +287,26 @@
   }
   
   .bg-dark-gradient-alt {
-    background-image: linear-gradient(160deg, #1331d2, #438eff);
+    background-image: linear-gradient(160deg, #0a2093, #438eff);
   }
   
   .bg-dark-gradient-cta {
-    background-image: linear-gradient(90deg, #122796, #3c73ff);
+    background-image: linear-gradient(90deg, #0a2093, #3c73ff);
   }
   
   .bg-dark-section {
-    @apply bg-dark-gradient relative overflow-hidden;
+    background-color: #0a2093;
+    @apply relative overflow-hidden;
   }
 }
 
-/* Glass card styling - simplified */
+/* Glass card styling - No Border Radius */
 .glass-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 

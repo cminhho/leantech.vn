@@ -39,7 +39,7 @@ const Header = () => {
               <span className="text-xl md:text-2xl font-bold">
                 <span className="text-white">lean</span>
                 <span className="text-white">tech</span>
-                <span className="text-secondary">co.</span>
+                <span className="text-white">co</span>
               </span>
             </a>
           </div>

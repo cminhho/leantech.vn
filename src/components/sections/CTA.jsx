@@ -3,18 +3,15 @@ import React from 'react';
 const CTA = () => {
   return (
     <section 
-      className="py-20 relative overflow-hidden"
-      style={{
-        backgroundImage: 'linear-gradient(90deg, #122796, #3c73ff)'
-      }}
+      className="py-20 relative overflow-hidden bg-primary"
     >
       {/* New Decorative Background Pattern */}
       <div className="absolute inset-0">
         {/* Animated floating shapes */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white opacity-5 rounded-full animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white opacity-5 animate-pulse"></div>
         <div className="absolute top-1/4 right-20 w-16 h-16 bg-white opacity-10 transform rotate-45"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white opacity-8 rounded-full"></div>
-        <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-white opacity-15 transform rotate-12"></div>
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white opacity-8"></div>
+        <div className="absolute top-1/2 right-10 w-16 h-16 bg-white opacity-10"></div>
         
         {/* Diagonal lines pattern */}
         <div className="absolute inset-0 opacity-5">

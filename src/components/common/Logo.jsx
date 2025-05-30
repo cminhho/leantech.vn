@@ -9,21 +9,31 @@ const Logo = ({
   style = {}
 }) => {
   const sizeClasses = {
-    xs: 'h-6 w-6',
-    sm: 'h-8 w-8', 
-    md: 'h-10 w-10',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16',
-    '2xl': 'h-20 w-20'
+    micro: 'h-3 w-3',
+    xs: 'h-4 w-4',
+    sm: 'h-5 w-5', 
+    md: 'h-6 w-6',
+    lg: 'h-7 w-7',
+    xl: 'h-8 w-8',
+    '2xl': 'h-10 w-10',
+    '3xl': 'h-12 w-12',
+    '4xl': 'h-16 w-16',
+    '5xl': 'h-20 w-20',
+    '6xl': 'h-24 w-24'
   };
 
   const textSizeClasses = {
+    micro: 'text-xs',
     xs: 'text-sm',
     sm: 'text-lg',
     md: 'text-xl',
     lg: 'text-2xl', 
     xl: 'text-3xl',
-    '2xl': 'text-4xl'
+    '2xl': 'text-4xl',
+    '3xl': 'text-5xl',
+    '4xl': 'text-6xl',
+    '5xl': 'text-7xl',
+    '6xl': 'text-8xl'
   };
 
   const getColorClasses = () => {
@@ -76,7 +86,7 @@ const Logo = ({
         <span className={`${textSizeClasses[size]} font-bold`}>
           <span className={colors.text}>lean</span>
           <span className={colors.text}>tech</span>
-          <span className={colors.accent}>co.</span>
+          <span className={colors.text}>co</span>
         </span>
       )}
     </div>

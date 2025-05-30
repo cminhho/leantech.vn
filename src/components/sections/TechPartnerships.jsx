@@ -27,8 +27,20 @@ const TechPartnerships = () => {
       logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Docker_%28container_engine%29_logo.svg/1024px-Docker_%28container_engine%29_logo.svg.png'
     },
     {
+      name: 'Java',
+      logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1024px-Java_programming_language_logo.svg.png'
+    },
+    {
+      name: 'C#',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/1024px-C_Sharp_wordmark.svg.png'
+    },
+    {
       name: 'PostgreSQL',
       logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1024px-Postgresql_elephant.svg.png'
+    },
+    {
+      name: 'OpenAI',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png'
     }
   ];
 
@@ -40,12 +52,15 @@ const TechPartnerships = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-12">
+          <div className="mb-6">
+            <span className="text-primary text-sm font-semibold">
+              CÔNG NGHỆ
+            </span>
+          </div>
+
           <h2 className="section-title-sm">
-            Công Nghệ & Đối Tác
+            Công Nghệ Của Chúng Tôi
           </h2>
-          <p className="text-gray-600">
-            Sử dụng công nghệ hàng đầu và được tin tưởng bởi các doanh nghiệp
-          </p>
         </div>
 
         {/* Animated Logo Grid */}

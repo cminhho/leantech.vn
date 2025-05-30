@@ -3,28 +3,28 @@ import React from 'react';
 const Services = () => {
   const solutions = [
     {
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=200&fit=crop&auto=format",
+      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       title: "Tư Vấn & Đào Tạo",
       description: "Tư vấn quản trị tinh gọn, TPM, Six Sigma, BSC, KPI, OKR và quản lý dự án. Phương pháp tập trung vào giá trị thực tế và hiệu quả cho doanh nghiệp.",
       category: "Tư vấn",
       delay: "0"
     },
     {
-      image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=200&fit=crop&auto=format",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       title: "Phát Triển Phần Mềm",
       description: "Phát triển ứng dụng tùy chỉnh, phần mềm di động, web và kiểm thử chất lượng. Tập trung vào giải pháp tạo giá trị thực tế và đáp ứng nhu cầu cụ thể.",
       category: "Phát triển",
       delay: "100"
     },
     {
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&auto=format",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       title: "Gia Công Phần Mềm",
       description: "Gia công từng module, toàn bộ dự án và tích hợp tính năng cho hệ thống hiện tại. Đảm bảo chất lượng cao và đúng tiến độ theo yêu cầu khách hàng.",
       category: "Gia công",
       delay: "200"
     },
     {
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&auto=format",
+      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
       title: "Triển Khai & Vận Hành",
       description: "Triển khai hệ thống, di chuyển dữ liệu an toàn và tích hợp với hệ thống hiện tại. Hỗ trợ vận hành và bảo trì lâu dài với đội ngũ chuyên nghiệp.",
       category: "Vận hành",
@@ -69,13 +69,12 @@ const Services = () => {
         {/* Services Grid - Shopify Inspired Layout */}
         <div className="relative">
           {/* Grid Container - Square Professional Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {solutions.map((solution, index) => (
               <div 
                 key={index} 
-                className="group bg-white overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/20 cursor-pointer"
+                className="group bg-white overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-primary/40 cursor-pointer"
                 style={{ 
-                  height: '420px',
                   animationDelay: `${solution.delay}ms` 
                 }}
               >
@@ -89,26 +88,26 @@ const Services = () => {
                   
                   {/* Simple Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="bg-white text-gray-700 text-xs font-medium px-3 py-1 rounded-md shadow-sm">
+                    <span className="bg-white text-gray-700 text-xs font-medium px-3 py-1 shadow-sm">
                       {solution.category}
                     </span>
                   </div>
                 </div>
                 
-                {/* Content Section - Balanced */}
-                <div className="p-6 flex flex-col h-44">
+                {/* Content Section - Enhanced */}
+                <div className="p-6 flex flex-col h-64">
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors duration-300 leading-tight">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 leading-tight">
                     {solution.title}
                   </h3>
                   
-                  {/* Description */}
-                  <p className="text-gray-600 text-sm leading-relaxed flex-grow line-clamp-3">
+                  {/* Description - More space */}
+                  <p className="text-gray-600 text-sm leading-relaxed flex-grow mb-4">
                     {solution.description}
                   </p>
                   
-                  {/* Simple CTA */}
-                  <div className="flex items-center justify-between pt-4 mt-auto">
+                  {/* CTA at bottom */}
+                  <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                     <span className="text-primary font-medium text-sm group-hover:text-primary-dark transition-colors duration-300">
                       Tìm hiểu thêm
                     </span>
@@ -120,27 +119,6 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Call to Action - Enhanced */}
-        <div className="text-center mt-20">
-          <div className="max-w-2xl mx-auto mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              Sẵn sàng bắt đầu dự án của bạn?
-            </h3>
-            <p className="text-gray-600 mb-8">
-              Liên hệ với chúng tôi ngay hôm nay để được tư vấn miễn phí và báo giá chi tiết cho dự án của bạn.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="btn btn-primary btn-lg">
-              Liên hệ tư vấn miễn phí
-              <i className="fas fa-phone text-sm"></i>
-            </button>
-            <button className="btn btn-outline btn-lg">
-              Xem portfolio
-              <i className="fas fa-external-link-alt text-sm"></i>
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -136,7 +136,7 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-md flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-phone-alt text-primary group-hover:text-white text-xl"></i>
                       </div>
                       <div className="">
@@ -150,7 +150,7 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-md flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-envelope text-primary group-hover:text-white text-xl"></i>
                       </div>
                       <div className="">
@@ -164,7 +164,7 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-md flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-clock text-primary group-hover:text-white text-xl"></i>
                       </div>
                       <div className="">
@@ -215,7 +215,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-4 border rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 ${
+                        className={`w-full px-4 py-4 border focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 ${
                           errors.name ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                         }`}
                         placeholder="Nhập họ và tên"
@@ -234,7 +234,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-4 border rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 ${
+                        className={`w-full px-4 py-4 border focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 ${
                           errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                         }`}
                         placeholder="your.email@company.com"
@@ -255,7 +255,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 hover:border-gray-300"
+                        className="w-full px-4 py-4 border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 hover:border-gray-300"
                         placeholder="+84 xxx xxx xxx"
                       />
                     </div>
@@ -270,7 +270,7 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 hover:border-gray-300"
+                        className="w-full px-4 py-4 border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 hover:border-gray-300"
                         placeholder="Tên công ty"
                       />
                     </div>
@@ -286,7 +286,7 @@ const Contact = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-4 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 hover:border-gray-300"
+                      className="w-full px-4 py-4 border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 hover:border-gray-300"
                     >
                       <option value="default" disabled>Chọn dịch vụ quan tâm</option>
                       <option value="consulting">Tư Vấn & Đào Tạo</option>
@@ -309,7 +309,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows="5"
-                      className={`w-full px-4 py-4 border rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 resize-none placeholder-gray-400 ${
+                      className={`w-full px-4 py-4 border focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 resize-none placeholder-gray-400 ${
                         errors.message ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                       }`}
                       placeholder="Mô tả chi tiết nhu cầu của bạn..."
