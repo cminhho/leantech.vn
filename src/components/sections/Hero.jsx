@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import Logo from '../common/Logo';
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -61,42 +62,41 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 mr-2"></span>
-              Công nghệ tinh gọn, hiệu quả cao
+              Đối tác công nghệ & tư vấn chuyên sâu
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              Giải pháp chuyển đổi số{' '}
-              <span className="text-gradient">toàn diện & tinh gọn</span>{' '}
-              cho doanh nghiệp
+              <span className="text-gradient">Đối tác chuyển đổi số toàn diện</span>{' '}
+              cho doanh nghiệp Việt Nam
             </h1>
             
             <ul className="space-y-2 text-white/90">
               <li className="flex items-start">
                 <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                <span>Nền tảng công nghệ tối ưu giúp vận hành hiệu quả với chi phí hợp lý</span>
+                <span>Tư vấn chiến lược & thiết kế giải pháp công nghệ phù hợp</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                <span>Tăng năng suất làm việc và tự động hóa quy trình kinh doanh</span>
+                <span>Sản phẩm phần mềm sẵn có & phát triển tùy chỉnh theo yêu cầu</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                <span>Hỗ trợ kỹ thuật 24/7 và cập nhật liên tục</span>
+                <span>Triển khai & đào tạo đội ngũ với phương pháp hiệu quả</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
-                <span>Đồng hành cùng doanh nghiệp trong hành trình chuyển đổi số</span>
+                <span>Hỗ trợ vận hành 24/7 & tối ưu hóa liên tục</span>
               </li>
             </ul>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a href="#contact" className="btn btn-primary btn-lg group">
-                <span>Liên hệ tư vấn</span>
+                <span>Tư vấn miễn phí</span>
                 <i className="fas fa-chevron-right text-xs"></i>
               </a>
               <a href="#solutions" className="btn btn-glass btn-lg group">
-                <span>Xem giải pháp</span>
+                <span>Xem dịch vụ</span>
                 <i className="fas fa-chevron-right text-xs"></i>
               </a>
             </div>
@@ -111,6 +111,22 @@ const Hero = () => {
               className="max-w-full h-auto rounded-lg relative z-10"
               loading="eager"
             />
+            
+            {/* Logo overlay in the center - improved styling */}
+            <div className="absolute inset-0 flex items-start justify-center pt-32 z-20">
+              <div className="transform hover:scale-105 transition-all duration-300">
+                <Logo 
+                  size="2xl" 
+                  variant="white" 
+                  showText={true}
+                  className="drop-shadow-2xl filter-none"
+                  style={{
+                    filter: 'drop-shadow(0 0 20px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.3))',
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)'
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
 
