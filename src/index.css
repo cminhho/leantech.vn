@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Gray Color Variables */
+    --gray--gray600: #6b7280;
+    --gray--gray700: #374151;
+    --gray--gray800: #1f2937;
+    --gray--gray900: #111827;
+    
+    /* Typography Colors */
+    --section-title-color: #0e101b;
+    --section-description-color: #344054;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Inter", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-optical-sizing: auto;
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Typography System for Sections - Updated with consistent sizes and colors */
+  .section-title {
+    font-size: 40px;
+    color: #0e101b;
+    @apply font-bold mb-6 leading-tight;
+  }
+  
+  .section-title-white {
+    font-size: 40px;
+    @apply font-bold text-white mb-6 leading-tight;
+  }
+  
+  .section-subtitle {
+    font-size: 16px;
+    color: #344054;
+    @apply max-w-3xl mb-12 leading-relaxed text-left;
+  }
+  
+  .section-subtitle-white {
+    font-size: 16px;
+    @apply text-white/90 max-w-3xl mx-auto mb-12 leading-relaxed;
+  }
+  
+  .section-subtitle {
+    font-size: 16px;
+    color: #344054;
+    @apply max-w-3xl mb-12 leading-relaxed text-left;
+  }
+  
+  .section-title-sm {
+    @apply text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight;
+  }
+  
+  .section-title-lg {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight;
+  }
+  
+  /* Card Typography - Updated */
+  .card-title {
+    font-size: 22px;
+    line-height: 1.2;
+    @apply font-bold text-gray-900 mb-3;
+  }
+  
+  .card-subtitle {
+    @apply text-gray-600 leading-relaxed;
+  }
+  
+  /* List Item Text */
+  .list-item-text {
+    color: var(--gray--gray600, #6b7280);
+    font-size: 13px;
+    font-weight: 400;
+    @apply leading-relaxed;
+  }
+  
+  /* Body Text */
+  .body-text {
+    font-size: 14px;
+    @apply leading-relaxed;
+  }
+  
+  /* Base Button Styles - No Border Radius */
+  .btn {
+    @apply px-5 py-2.5 font-medium transition-all duration-300 inline-flex items-center gap-2 justify-center;
+    @apply focus:outline-none focus:ring-4 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply border text-sm leading-5;
+    border-radius: 0;
+  }
+  
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-primary text-white border-primary shadow-md hover:bg-primary/90 hover:shadow-lg hover:-translate-y-1;
+    @apply focus:ring-primary/20;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-primary border-primary shadow-md hover:bg-gray-50 hover:shadow-lg hover:-translate-y-1;
+    @apply focus:ring-primary/20;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent text-primary border-primary hover:bg-primary hover:text-white hover:-translate-y-1;
+    @apply focus:ring-primary/20;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-gray-600 border-transparent hover:bg-gray-100 hover:text-gray-900;
+    @apply focus:ring-gray-200;
+  }
+  
+  .btn-white {
+    @apply bg-white text-primary border-white shadow-md hover:bg-gray-50 hover:shadow-lg hover:-translate-y-1;
+    @apply focus:ring-white/20;
+  }
+  
+  .btn-dark {
+    @apply bg-gray-900 text-white border-gray-900 shadow-md hover:bg-gray-800 hover:shadow-lg hover:-translate-y-1;
+    @apply focus:ring-gray-400/20;
+  }
+  
+  .btn-success {
+    @apply bg-green-600 text-white border-green-600 shadow-md hover:bg-green-700 hover:shadow-lg hover:-translate-y-1;
+    @apply focus:ring-green-200;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 text-white border-red-600 shadow-md hover:bg-red-700 hover:shadow-lg hover:-translate-y-1;
+    @apply focus:ring-red-200;
+  }
+  
+  .btn-warning {
+    @apply bg-yellow-500 text-white border-yellow-500 shadow-md hover:bg-yellow-600 hover:shadow-lg hover:-translate-y-1;
+    @apply focus:ring-yellow-200;
+  }
+  
+  /* Button Sizes - No Border Radius */
+  .btn-xs {
+    @apply px-3 py-1.5 text-xs;
+    border-radius: 0;
+  }
+  
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+    border-radius: 0;
+  }
+  
+  .btn-md {
+    @apply px-5 py-2.5 text-sm;
+    border-radius: 0;
+  }
+  
+  .btn-lg {
+    @apply px-6 py-3 text-base;
+    border-radius: 0;
+  }
+  
+  .btn-xl {
+    @apply px-8 py-4 text-lg;
+    border-radius: 0;
+  }
+  
+  /* Button States */
+  .btn-loading {
+    @apply relative text-transparent transition-none cursor-wait;
+  }
+  
+  .btn-loading::after {
+    content: "";
+    @apply absolute inset-0 flex items-center justify-center;
+    background: inherit;
+    border-radius: 0;
+  }
+  
+  .btn-loading::before {
+    content: "";
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    @apply w-4 h-4 border-2 border-current border-t-transparent animate-spin;
+    border-radius: 0;
+  }
+  
+  /* Special Button Styles */
+  .btn-glass {
+    @apply bg-white/10 text-white border-white/30 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-1;
+    @apply focus:ring-white/20;
+  }
+  
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary to-blue-600 text-white border-transparent shadow-md;
+    @apply hover:from-primary/90 hover:to-blue-600/90 hover:shadow-lg hover:-translate-y-1;
+    @apply focus:ring-primary/20;
+  }
+  
+  .btn-icon {
+    @apply w-10 h-10 p-0 flex items-center justify-center;
+    border-radius: 0;
+  }
+  
+  .btn-wide {
+    @apply w-full justify-center;
+  }
+  
+  .btn-group {
+    @apply inline-flex shadow-sm;
+    border-radius: 0;
+  }
+  
+  .btn-group .btn {
+    @apply border-r-0 hover:z-10 focus:z-10;
+    border-radius: 0;
+  }
+  
+  .btn-group .btn:first-child {
+    border-radius: 0;
+  }
+  
+  .btn-group .btn:last-child {
+    @apply border-r;
+    border-radius: 0;
+  }
+  
+  /* Text and Link Styles */
+  .btn-link {
+    @apply bg-transparent text-primary border-transparent p-0 h-auto hover:text-primary/80 hover:underline;
+    @apply focus:ring-0 hover:transform-none hover:shadow-none;
+  }
+  
+  .btn-text {
+    @apply bg-transparent text-gray-600 border-transparent px-3 py-2 hover:bg-gray-100 hover:text-gray-900;
+    @apply focus:ring-gray-200 hover:transform-none hover:shadow-none;
+    border-radius: 0;
+  }
+  
+  /* Legacy support - keeping original classes */
+  .btn-outline.backdrop-blur-sm {
+    @apply bg-white/10 text-white border-white/30 hover:bg-white/20;
+  }
+  
+  /* Utility Classes */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Modern gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-300 to-secondary bg-clip-text text-transparent;
+  }
+  
+  /* Dark Section Backgrounds */
+  .bg-dark-gradient {
+    background-image: linear-gradient(135deg, #0a2093, #3460ff);
+  }
+  
+  .bg-dark-gradient-alt {
+    background-image: linear-gradient(160deg, #0a2093, #438eff);
+  }
+  
+  .bg-dark-gradient-cta {
+    background-image: linear-gradient(90deg, #0a2093, #3c73ff);
+  }
+  
+  .bg-dark-section {
+    background-color: #0a2093;
+    @apply relative overflow-hidden;
+  }
+}
+
+/* Glass card styling - No Border Radius */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Noise texture background */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* Video background optimization */
+video.object-cover {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Optimize video for performance */
+@media (max-width: 768px) {
+  video.object-cover {
+    display: none;
+  }
+} 
