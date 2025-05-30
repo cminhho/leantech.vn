@@ -82,14 +82,31 @@ const Products = () => {
       
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title">
-            Sản Phẩm Công Nghệ
-          </h2>
-          <p className="section-subtitle-center">
-            Các sản phẩm công nghệ được phát triển dựa trên phương pháp tinh gọn, 
-            tối ưu hóa hiệu quả và giảm thiểu chi phí vận hành cho doanh nghiệp.
-          </p>
+        <div className="mb-16">
+          {/* Products Label */}
+          <div className="mb-6">
+            <span className="text-primary text-sm font-semibold">
+              SẢN PHẨM
+            </span>
+          </div>
+          
+          {/* Two Column Layout */}
+          <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
+            {/* Left Side - Title */}
+            <div className="flex-shrink-0">
+              <h2 className="section-title">
+                Sản Phẩm Công Nghệ
+              </h2>
+            </div>
+            
+            {/* Right Side - Description */}
+            <div className="flex-1">
+              <p className="section-subtitle mb-0">
+                Khám phá các sản phẩm công nghệ được phát triển với chất lượng cao, 
+                tập trung vào trải nghiệm người dùng và hiệu suất tối ưu.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Clean Products Grid */}
@@ -97,7 +114,7 @@ const Products = () => {
           {products.map((product, index) => (
             <div 
               key={product.id}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 overflow-hidden flex flex-col"
+              className="group bg-white shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 overflow-hidden flex flex-col"
             >
               {/* Clean Header */}
               <div className="p-6 pb-4">

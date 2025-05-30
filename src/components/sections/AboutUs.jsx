@@ -33,14 +33,31 @@ const AboutUs = () => {
       
       <div className="container-custom relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title">
-            Về LeanTech
-          </h2>
-          <p className="section-subtitle-center">
-            Đối tác công nghệ chuyên nghiệp, cung cấp dịch vụ tư vấn chuyên sâu và phát triển 
-            các sản phẩm phần mềm tùy chỉnh cho doanh nghiệp Việt Nam.
-          </p>
+        <div className="mb-16">
+          {/* About Us Label */}
+          <div className="mb-6">
+            <span className="text-primary text-sm font-semibold">
+              VỀ CHÚNG TÔI
+            </span>
+          </div>
+          
+          {/* Two Column Layout */}
+          <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
+            {/* Left Side - Title */}
+            <div className="flex-shrink-0">
+              <h2 className="section-title">
+                Về LeanTech
+              </h2>
+            </div>
+            
+            {/* Right Side - Description */}
+            <div className="flex-1">
+              <p className="section-subtitle mb-0">
+                Được thành lập năm 2024, chúng tôi mang đến giải pháp công nghệ tiên tiến và dịch vụ tư vấn chuyên nghiệp, 
+                giúp doanh nghiệp tối ưu hóa quy trình và nâng cao hiệu quả hoạt động.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Values Grid - 4 cards in one row */}
@@ -48,10 +65,10 @@ const AboutUs = () => {
           {values.map((value, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 hover:border-primary/20 transition-all duration-300 group"
+              className="bg-white p-6 shadow-lg hover:shadow-xl border border-gray-100 hover:border-primary/20 transition-all duration-300 group"
             >
               <div className="text-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center mx-auto mb-3 group-hover:scale-105 transition-transform duration-300">
                   <i className={`fas ${value.icon} text-white text-lg`}></i>
                 </div>
                 <h4 className="font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">

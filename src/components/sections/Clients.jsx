@@ -60,14 +60,30 @@ const Clients = () => {
     <section id="clients" className="py-20">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title">
-            Khách Hàng Tin Tưởng
-          </h2>
-          <p className="section-subtitle-center">
-            Được tin tưởng bởi các doanh nghiệp hàng đầu trong việc 
-            chuyển đổi số và tối ưu hóa quy trình kinh doanh.
-          </p>
+        <div className="mb-16">
+          {/* Clients Label */}
+          <div className="mb-6">
+            <span className="text-primary text-sm font-semibold">
+              KHÁCH HÀNG
+            </span>
+          </div>
+          
+          {/* Two Column Layout */}
+          <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
+            {/* Left Side - Title */}
+            <div className="flex-shrink-0">
+              <h2 className="section-title">
+                Khách Hàng Tin Tưởng
+              </h2>
+            </div>
+            
+            {/* Right Side - Description */}
+            <div className="flex-1">
+              <p className="section-subtitle mb-0">
+                Được tin tưởng bởi các doanh nghiệp hàng đầu Việt Nam trong lĩnh vực công nghệ và chuyển đổi số.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Client Logos Row - Interactive Tabs */}
@@ -147,7 +163,7 @@ const Clients = () => {
 
             {/* Right Side - Testimonial Card */}
             <div className="relative z-10 flex items-center justify-center p-8">
-              <div className="bg-white rounded-2xl p-8 shadow-xl w-full max-w-2xl">
+              <div className="bg-white p-8 shadow-xl w-full max-w-2xl">
                 <blockquote className="text-gray-700 text-base leading-relaxed mb-6">
                   "{currentClient.testimonial.content}"
                 </blockquote>

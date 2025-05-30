@@ -84,27 +84,44 @@ const Contact = () => {
     <section id="contact" className="section-padding bg-white">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="section-title">
-            Liên Hệ Với Chúng Tôi
-          </h2>
-          <p className="section-subtitle-center">
-            Sẵn sàng hỗ trợ bạn 24/7. Liên hệ ngay để được tư vấn miễn phí 
-            về giải pháp phù hợp nhất cho doanh nghiệp.
-          </p>
+        <div className="mb-16">
+          {/* Contact Label */}
+          <div className="mb-6">
+            <span className="text-primary text-sm font-semibold">
+              LIÊN HỆ
+            </span>
+          </div>
+          
+          {/* Two Column Layout */}
+          <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
+            {/* Left Side - Title */}
+            <div className="flex-shrink-0">
+              <h2 className="section-title">
+                Liên Hệ Với Chúng Tôi
+              </h2>
+            </div>
+            
+            {/* Right Side - Description */}
+            <div className="flex-1">
+              <p className="section-subtitle mb-0">
+                Sẵn sàng hỗ trợ bạn mọi lúc. Liên hệ với chúng tôi để được tư vấn miễn phí về 
+                các giải pháp công nghệ phù hợp cho doanh nghiệp của bạn.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Contact Info */}
             <div className="lg:col-span-2">
-              <div className="bg-gray-50 rounded-3xl p-8 h-full">
+              <div className="bg-gray-50 p-8 h-full">
                 <h3 className="section-title-sm mb-10">Thông Tin Liên Hệ</h3>
                 
                 <div className="space-y-8">
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-map-marker-alt text-primary group-hover:text-white text-xl"></i>
                       </div>
                       <div className="">
@@ -119,7 +136,7 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-md flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-phone-alt text-primary group-hover:text-white text-xl"></i>
                       </div>
                       <div className="">
@@ -133,7 +150,7 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-md flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-envelope text-primary group-hover:text-white text-xl"></i>
                       </div>
                       <div className="">
@@ -147,7 +164,7 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-md flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                         <i className="fas fa-clock text-primary group-hover:text-white text-xl"></i>
                       </div>
                       <div className="">
@@ -181,7 +198,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
-              <div className="bg-white border border-gray-200 rounded-3xl p-8 lg:p-10 shadow-sm">
+              <div className="bg-white border border-gray-200 p-8 lg:p-10 shadow-sm">
                 <h3 className="section-title-sm mb-8">Gửi Yêu Cầu Tư Vấn</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -198,7 +215,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-4 border rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 ${
+                        className={`w-full px-4 py-4 border rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 ${
                           errors.name ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                         }`}
                         placeholder="Nhập họ và tên"
@@ -217,7 +234,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-4 border rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 ${
+                        className={`w-full px-4 py-4 border rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 ${
                           errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                         }`}
                         placeholder="your.email@company.com"
@@ -238,7 +255,7 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 hover:border-gray-300"
+                        className="w-full px-4 py-4 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 hover:border-gray-300"
                         placeholder="+84 xxx xxx xxx"
                       />
                     </div>
@@ -253,7 +270,7 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 hover:border-gray-300"
+                        className="w-full px-4 py-4 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 placeholder-gray-400 hover:border-gray-300"
                         placeholder="Tên công ty"
                       />
                     </div>
@@ -269,7 +286,7 @@ const Contact = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-4 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 hover:border-gray-300"
+                      className="w-full px-4 py-4 border border-gray-200 rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 hover:border-gray-300"
                     >
                       <option value="default" disabled>Chọn dịch vụ quan tâm</option>
                       <option value="consulting">Tư Vấn & Đào Tạo</option>
@@ -292,7 +309,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows="5"
-                      className={`w-full px-4 py-4 border rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 resize-none placeholder-gray-400 ${
+                      className={`w-full px-4 py-4 border rounded-md focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all duration-300 resize-none placeholder-gray-400 ${
                         errors.message ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                       }`}
                       placeholder="Mô tả chi tiết nhu cầu của bạn..."
