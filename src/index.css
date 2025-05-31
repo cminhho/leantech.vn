@@ -425,6 +425,23 @@
     @apply focus:ring-4 focus:ring-gray-200/50;
   }
   
+  /* Glass Button */
+  .btn-glass {
+    @apply bg-white/10 text-white border-white/30;
+    @apply hover:bg-white/20 hover:border-white/40;
+    @apply active:bg-white/30 active:border-white/50;
+    @apply focus:ring-4 focus:ring-white/20;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 0; /* Angular Design */
+    box-shadow: var(--shadow-elevation-1);
+  }
+  
+  .btn-glass:hover {
+    box-shadow: var(--shadow-elevation-2);
+    transform: translateY(-1px);
+  }
+  
   /* ===========================================
    * COMPONENT TOKENS
    * =========================================== */
