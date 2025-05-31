@@ -23,18 +23,19 @@ const Logo = ({
     '6xl': 'h-24 w-24'
   };
 
+  // Typography system following design tokens
   const textSizeClasses = {
-    micro: 'text-xs',
-    xs: 'text-sm',
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-2xl', 
-    xl: 'text-3xl',
-    '2xl': 'text-4xl',
-    '3xl': 'text-5xl',
-    '4xl': 'text-6xl',
-    '5xl': 'text-7xl',
-    '6xl': 'text-8xl'
+    micro: 'caption font-semibold',
+    xs: 'body-sm font-semibold',
+    sm: 'body-md font-display',
+    md: 'body-lg font-display',
+    lg: 'heading-sm font-display', 
+    xl: 'heading-md font-display',
+    '2xl': 'heading-lg font-display',
+    '3xl': 'display-sm font-display',
+    '4xl': 'display-md font-display',
+    '5xl': 'display-lg font-display',
+    '6xl': 'display-lg font-display'
   };
 
   const getColorClasses = () => {
@@ -74,31 +75,42 @@ const Logo = ({
 
   const colors = getColorClasses();
 
+  // Enhanced interaction states for better UX
+  const interactionClasses = clickable 
+    ? 'group cursor-pointer transition-all duration-normal hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/20' 
+    : '';
+
   if (iconOnly) {
     return (
-      <div className={`flex items-center ${clickable ? 'group cursor-pointer' : ''} ${className}`} style={style}>
+      <div 
+        className={`flex items-center ${interactionClasses} ${className}`} 
+        style={{...style, borderRadius: 0}}
+      >
         <img 
           src={`${process.env.PUBLIC_URL}/assets/images/logo-icon.svg`}
-          alt="LeanTechCo Logo" 
-          className={`${sizeClasses[size]} object-contain transition-all duration-300 ${clickable ? 'group-hover:scale-110' : ''}`}
+          alt="LeanTechCo - Đối tác chuyển đổi số toàn diện" 
+          className={`${sizeClasses[size]} object-contain transition-all duration-normal ${clickable ? 'group-hover:scale-110' : ''}`}
         />
       </div>
     );
   }
 
   return (
-    <div className={`flex items-center gap-2 ${clickable ? 'group cursor-pointer' : ''} ${className}`} style={style}>
+    <div 
+      className={`flex items-center gap-2 ${interactionClasses} ${className}`} 
+      style={{...style, borderRadius: 0}}
+    >
       <img 
         src={`${process.env.PUBLIC_URL}/assets/images/logo-icon.svg`}
         alt="LeanTechCo Logo" 
-        className={`${sizeClasses[size]} object-contain transition-all duration-300 ${clickable ? 'group-hover:scale-110' : ''}`}
+        className={`${sizeClasses[size]} object-contain transition-all duration-normal ${clickable ? 'group-hover:scale-110' : ''}`}
       />
       {showText && (
-        <span className={`${textSizeClasses[size]} font-bold tracking-tight transition-all duration-300`}>
-          <span className={`${colors.primary} transition-colors duration-300`}>lean</span>
-          <span className={`${colors.primary} transition-colors duration-300`}>tech</span>
-          <span className={`${colors.accent} transition-colors duration-300 ${colors.hover}`}>co.</span>
-        </span>
+        <div className={`${textSizeClasses[size]} transition-all duration-normal`}>
+          <span className={`${colors.primary} transition-colors duration-normal font-bold tracking-tight`}>lean</span>
+          <span className={`${colors.primary} transition-colors duration-normal font-bold tracking-tight`}>tech</span>
+          <span className={`${colors.accent} transition-colors duration-normal ${colors.hover} font-bold tracking-normal`}>co.</span>
+        </div>
       )}
     </div>
   );

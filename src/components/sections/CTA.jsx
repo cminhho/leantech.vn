@@ -62,7 +62,7 @@ const CTA = () => {
               Nhận tư vấn miễn phí
             </a>
             <a href="#solutions" className="btn btn-glass btn-lg text-white">
-              Xem Giải Pháp
+              Xem giải pháp
             </a>
           </div>
         </div>

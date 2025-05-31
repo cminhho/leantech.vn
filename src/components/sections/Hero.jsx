@@ -46,9 +46,9 @@ const Hero = () => {
             </div>
             
             {/* Hero Title with proper typography */}
-            <h1 className="hero-title">
-              <span className="text-gradient">Đối tác chuyển đổi số toàn diện</span>{' '}
-              <span className="text-white">cho doanh nghiệp</span>
+            <h1 className="responsive-hero-title font-display text-on-primary leading-none tracking-tight">
+              <span className="text-gradient block">Đối tác chuyển đổi số toàn diện</span>{' '}
+              <span className="text-semantic-inverse block mt-2">cho doanh nghiệp</span>
             </h1>
             
             {/* Feature List with improved spacing and design system compliance */}

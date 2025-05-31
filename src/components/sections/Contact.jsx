@@ -331,7 +331,7 @@ const Contact = () => {
                         </>
                       ) : (
                         <>
-                          Gửi Yêu Cầu
+                          Gửi yêu cầu
                           <i className="fas fa-paper-plane"></i>
                         </>
                       )}
