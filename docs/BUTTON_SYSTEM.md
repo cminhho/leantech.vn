@@ -1,11 +1,11 @@
 # LeanTechCo Button System
 
-Hệ thống button được thiết kế để đảm bảo tính nhất quán trên toàn bộ website. **Tất cả buttons đều sử dụng bo tròn tối đa (rounded-full) để đảm bảo tính nhất quán.**
+Hệ thống button được thiết kế để đảm bảo tính nhất quán trên toàn bộ website. **Tất cả buttons đều sử dụng thiết kế vuông vắn (border-radius: 0) để tạo nên vẻ ngoài chuyên nghiệp và hiện đại.**
 
 ## Base Button
-Tất cả buttons đều bắt đầu với class `.btn` và có border radius tối đa:
+Tất cả buttons đều bắt đầu với class `.btn` và có design vuông vắn:
 ```html
-<button class="btn">Button với bo tròn tối đa</button>
+<button class="btn">Button với thiết kế vuông vắn</button>
 ```
 
 ## Button Variants

@@ -72,26 +72,22 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {solutions.map((solution, index) => (
               <div 
-                key={index} 
-                className="group bg-white overflow-hidden rounded-lg border hover:border-blue-500 transition-all duration-300 hover:shadow-lg cursor-pointer"
+                key={index}
+                className="group bg-white overflow-hidden border hover:border-blue-500 transition-all duration-300 hover:shadow-lg cursor-pointer"
                 style={{ 
                   animationDelay: `${solution.delay}ms` 
                 }}
               >
-                {/* Square Image Section */}
+                {/* Service Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img 
                     src={solution.image} 
                     alt={solution.title}
-                    className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  
-                  {/* Additional hover overlay for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                  
-                  {/* Simple Category Badge */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-primary text-white text-xs font-medium px-3 py-1 rounded shadow-lg group-hover:bg-primary-dark transition-all duration-300">
+                  {/* Simple label in bottom left */}
+                  <div className="absolute bottom-4 left-4">
+                    <span className="bg-primary text-white text-xs font-medium px-3 py-1 shadow-lg group-hover:bg-primary-dark transition-all duration-300">
                       {solution.category}
                     </span>
                   </div>

@@ -122,7 +122,7 @@ const Products = () => {
           {products.map((product, index) => (
             <div 
               key={product.id}
-              className="group bg-white overflow-hidden rounded-lg border hover:border-blue-500 transition-all duration-300 hover:shadow-lg cursor-pointer"
+              className="group bg-white overflow-hidden border hover:border-blue-500 transition-all duration-300 hover:shadow-lg cursor-pointer"
             >
               {/* Product Image */}
               <div className="relative h-48 overflow-hidden">
@@ -134,10 +134,10 @@ const Products = () => {
                 {/* Overlay with Icon */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
                   <div className="absolute bottom-4 left-4">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-2">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm flex items-center justify-center mb-2">
                       <i className={`fas ${product.icon} text-2xl text-white`}></i>
                     </div>
-                    <span className="inline-block bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    <span className="inline-block bg-primary text-white text-xs font-semibold px-3 py-1">
                       {product.badge}
                     </span>
                   </div>
@@ -180,10 +180,10 @@ const Products = () => {
               {/* Enhanced CTA */}
               <div className="px-6 pb-6 mt-auto">
                 <div className="border-t border-gray-100 pt-4 space-y-3">
-                  <button className="w-full bg-gradient-to-r from-primary to-blue-600 text-white font-semibold py-3 px-4 rounded-lg hover:from-primary/90 hover:to-blue-600/90 transition-all duration-300 transform hover:scale-105">
+                  <button className="w-full bg-gradient-to-r from-primary to-blue-600 text-white font-semibold py-3 px-4 hover:from-primary/90 hover:to-blue-600/90 transition-all duration-300 transform hover:scale-105">
                     Tìm hiểu thêm
                   </button>
-                  <button className="w-full text-primary border border-primary/20 font-semibold py-2 px-4 rounded-lg hover:bg-primary/5 transition-all duration-300">
+                  <button className="w-full text-primary border border-primary/20 font-semibold py-2 px-4 hover:bg-primary/5 transition-all duration-300">
                     Liên hệ tư vấn
                   </button>
                 </div>

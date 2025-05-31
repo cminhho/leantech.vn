@@ -111,7 +111,7 @@
     @apply leading-relaxed;
   }
   
-  /* Base Button Styles - No Border Radius */
+  /* Base Button Styles - Sharp Angular Design */
   .btn {
     @apply px-5 py-2.5 font-medium transition-all duration-300 inline-flex items-center gap-2 justify-center;
     @apply focus:outline-none focus:ring-4 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
@@ -165,7 +165,7 @@
     @apply focus:ring-yellow-200;
   }
   
-  /* Button Sizes - No Border Radius */
+  /* Button Sizes - All Sharp Angular */
   .btn-xs {
     @apply px-3 py-1.5 text-xs;
     border-radius: 0;
@@ -281,26 +281,26 @@
     @apply bg-gradient-to-r from-cyan-300 to-secondary bg-clip-text text-transparent;
   }
   
-  /* Dark Section Backgrounds */
+  /* Dark Section Backgrounds - Updated with corrected primary color */
   .bg-dark-gradient {
-    background-image: linear-gradient(135deg, #0a2093, #3460ff);
+    background-image: linear-gradient(135deg, #1331d2, #3460ff);
   }
   
   .bg-dark-gradient-alt {
-    background-image: linear-gradient(160deg, #0a2093, #438eff);
+    background-image: linear-gradient(160deg, #1331d2, #438eff);
   }
   
   .bg-dark-gradient-cta {
-    background-image: linear-gradient(90deg, #0a2093, #3c73ff);
+    background-image: linear-gradient(90deg, #1331d2, #3c73ff);
   }
   
   .bg-dark-section {
-    background-color: #0a2093;
+    background-color: #1331d2;
     @apply relative overflow-hidden;
   }
 }
 
-/* Glass card styling - No Border Radius */
+/* Glass card styling - Sharp Angular Design */
 .glass-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);

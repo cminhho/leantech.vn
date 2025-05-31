@@ -130,16 +130,17 @@ RGB: 220, 38, 38
 
 ### Border Radius Standards
 ```css
-/* Buttons - Maximum radius for modern look */
-rounded-full: 9999px
+/* Sharp Angular Design - No Border Radius */
+All elements: 0px (Sharp, clean lines)
 
 /* Cards & Containers */
-rounded-xl: 12px
-rounded-2xl: 16px  
-rounded-3xl: 24px
+border-radius: 0 (Sharp rectangles)
+
+/* Buttons */
+border-radius: 0 (Sharp rectangular buttons)
 
 /* Form inputs */
-rounded-2xl: 16px
+border-radius: 0 (Clean, professional look)
 ```
 
 ### Shadows
@@ -243,7 +244,7 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 - Use consistent color palette
 - Maintain proper contrast ratios (4.5:1 minimum)
 - Follow typography hierarchy
-- Use rounded-full for all buttons
+- Use sharp, angular design (no border radius)
 - Maintain consistent spacing
 - Include hover/focus states
 - Use semantic HTML

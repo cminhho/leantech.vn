@@ -162,7 +162,7 @@ const WhyUs = () => {
                 <h4 className="font-semibold text-gray-900">Tính năng chính:</h4>
                 {activeReason.features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-primary mt-2"></div>
                     <span className="text-gray-700">{feature}</span>
                   </div>
                 ))}

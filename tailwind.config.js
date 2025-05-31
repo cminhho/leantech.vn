@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0a2093',
+        primary: '#1331d2',
         secondary: '#00B8FF',
         accent: '#F9FAFB'
       },
@@ -38,7 +38,7 @@ module.exports = {
     fontSize: {
       'xs': '12px',
       'sm': '14px',
-      'base': '14px',
+      'base': '16px',
       'lg': '18px',
       'xl': '20px',
       '2xl': '24px',

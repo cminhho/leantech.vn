@@ -70,7 +70,7 @@ module.exports = {
     fontSize: {
       'xs': '12px',
       'sm': '14px', 
-      'base': '14px',     // Customized from default 16px
+      'base': '16px',     // Improved accessibility (was 14px)
       'lg': '18px',
       'xl': '20px',
       '2xl': '24px',
