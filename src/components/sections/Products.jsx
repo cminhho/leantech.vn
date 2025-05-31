@@ -18,7 +18,7 @@ const Products = () => {
         'Báo cáo nhân sự'
       ],
       icon: 'fa-users',
-      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: `${process.env.PUBLIC_URL}/assets/images/product1.jpeg`,
       color: 'from-primary to-blue-600',
       badge: 'HRM'
     },
@@ -38,7 +38,7 @@ const Products = () => {
         'Quản lý báo cáo thống kê'
       ],
       icon: 'fa-cogs',
-      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: `${process.env.PUBLIC_URL}/assets/images/product0.jpeg`,
       color: 'from-blue-600 to-blue-700',
       badge: 'ERP'
     },
@@ -58,7 +58,7 @@ const Products = () => {
         'Báo cáo dự án'
       ],
       icon: 'fa-tasks',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: `${process.env.PUBLIC_URL}/assets/images/product5.jpeg`,
       color: 'from-blue-700 to-blue-800',
       badge: 'Project'
     },
@@ -78,7 +78,7 @@ const Products = () => {
         'Dashboard thống kê'
       ],
       icon: 'fa-search',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+      image: `${process.env.PUBLIC_URL}/assets/images/product4.jpeg`,
       color: 'from-blue-800 to-primary',
       badge: 'AI Search'
     }
@@ -122,7 +122,7 @@ const Products = () => {
           {products.map((product, index) => (
             <div 
               key={product.id}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-primary/30 overflow-hidden flex flex-col transform hover:-translate-y-2"
+              className="group bg-white overflow-hidden rounded-lg border hover:border-blue-500 transition-all duration-300 hover:shadow-lg cursor-pointer"
             >
               {/* Product Image */}
               <div className="relative h-48 overflow-hidden">
