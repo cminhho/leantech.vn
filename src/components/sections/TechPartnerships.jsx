@@ -59,7 +59,7 @@ const TechPartnerships = () => {
           </div>
 
           <h2 className="section-title-sm">
-            Công Nghệ Của Chúng Tôi
+            Nền Tảng Công Nghệ
           </h2>
         </div>
 

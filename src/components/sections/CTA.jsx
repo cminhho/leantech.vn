@@ -5,38 +5,40 @@ const CTA = () => {
     <section 
       className="py-20 relative overflow-hidden bg-primary"
     >
-      {/* New Decorative Background Pattern */}
+      {/* Angular Design Background Pattern */}
       <div className="absolute inset-0">
-        {/* Animated floating shapes */}
+        {/* Animated floating rectangles */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-white opacity-5 animate-pulse"></div>
-        <div className="absolute top-1/4 right-20 w-16 h-16 bg-white opacity-10 transform rotate-45"></div>
+        <div className="absolute top-1/4 right-20 w-16 h-16 bg-white opacity-10"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white opacity-8"></div>
         <div className="absolute top-1/2 right-10 w-16 h-16 bg-white opacity-10"></div>
         
-        {/* Diagonal lines pattern */}
+        {/* Horizontal lines pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-0.5 bg-white transform -rotate-12 origin-left"></div>
-          <div className="absolute top-20 left-0 w-full h-0.5 bg-white transform -rotate-12 origin-left"></div>
-          <div className="absolute top-40 left-0 w-full h-0.5 bg-white transform -rotate-12 origin-left"></div>
-          <div className="absolute top-60 left-0 w-full h-0.5 bg-white transform -rotate-12 origin-left"></div>
+          <div className="absolute top-0 left-0 w-full h-0.5 bg-white"></div>
+          <div className="absolute top-20 left-0 w-full h-0.5 bg-white"></div>
+          <div className="absolute top-40 left-0 w-full h-0.5 bg-white"></div>
+          <div className="absolute top-60 left-0 w-full h-0.5 bg-white"></div>
         </div>
         
-        {/* Hexagonal pattern */}
+        {/* Rectangular grid pattern */}
         <div className="absolute top-1/3 left-1/3 opacity-10">
           <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-            <polygon points="30,5 50,17.5 50,42.5 30,55 10,42.5 10,17.5" stroke="white" strokeWidth="1" fill="none"/>
+            <rect x="10" y="10" width="40" height="40" stroke="white" strokeWidth="1" fill="none"/>
+            <rect x="20" y="20" width="20" height="20" stroke="white" strokeWidth="1" fill="none"/>
           </svg>
         </div>
         <div className="absolute bottom-1/3 right-1/3 opacity-8">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-            <polygon points="20,3 33,10 33,30 20,37 7,30 7,10" stroke="white" strokeWidth="1" fill="none"/>
+            <rect x="5" y="5" width="30" height="30" stroke="white" strokeWidth="1" fill="none"/>
+            <rect x="15" y="15" width="10" height="10" stroke="white" strokeWidth="1" fill="none"/>
           </svg>
         </div>
         
-        {/* Dotted wave pattern */}
+        {/* Straight line pattern */}
         <div className="absolute bottom-0 left-0 w-full opacity-10">
           <svg className="w-full h-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,60 Q300,20 600,60 T1200,60" stroke="white" strokeWidth="2" fill="none" strokeDasharray="5,5"/>
+            <line x1="0" y1="60" x2="1200" y2="60" stroke="white" strokeWidth="2" strokeDasharray="10,10"/>
           </svg>
         </div>
       </div>

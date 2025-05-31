@@ -97,7 +97,7 @@ const Contact = () => {
             {/* Left Side - Title */}
             <div className="flex-shrink-0">
               <h2 className="section-title">
-                Liên Hệ Với Chúng Tôi
+                Liên Hệ Chúng Tôi
               </h2>
             </div>
             

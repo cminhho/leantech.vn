@@ -194,11 +194,12 @@ py-24: 96px (Large sections)
 
 ### Icons
 **Icon Library:** Font Awesome 6
-**Style:** Solid, Regular, Light
+**Style:** Solid, Regular, Light (Angular/Square preferred)
 **Usage:** 
 - Navigation: `fa-bars`, `fa-times`
-- Features: `fa-check-circle`, `fa-cogs`, `fa-rocket`
+- Features: `fa-check`, `fa-cogs`, `fa-rocket`, `fa-square`
 - Social: `fa-facebook-f`, `fa-linkedin-in`, `fa-youtube`
+- Status: `fa-check-square`, `fa-square`, `fa-stop`
 
 ### Gradients
 ```css
