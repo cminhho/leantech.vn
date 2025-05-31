@@ -47,10 +47,10 @@ const CTA = () => {
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Content */}
           <div className="text-center mb-12">
-            <h2 className="section-title-white">
+            <h2 className="text-white">
               Sẵn Sàng Bắt Đầu Hành Trình Chuyển Đổi Số?
             </h2>
-            <p className="section-subtitle-white">
+            <p className="text-white">
               Liên hệ ngay với chúng tôi để được tư vấn miễn phí về giải pháp 
               phù hợp nhất cho doanh nghiệp của bạn.
             </p>
@@ -61,7 +61,7 @@ const CTA = () => {
             <a href="#contact" className="btn btn-white btn-lg">
               Nhận tư vấn miễn phí
             </a>
-            <a href="#solutions" className="btn btn-glass btn-lg">
+            <a href="#solutions" className="btn btn-glass btn-lg text-white">
               Xem Giải Pháp
             </a>
           </div>

@@ -55,11 +55,30 @@ Small: 0.875rem (14px) | font-weight: 400
 
 **Brand Primary**
 ```css
-#1331d2 - Deep Blue
+/* Enterprise Design Token System */
+Brand Core: #1331d2 (brand-500)
 RGB: 19, 49, 210
 HSL: 231°, 83%, 45%
+
+/* Semantic Token Usage */
+--interactive-default: #1331d2
+--text-link: #1331d2
+--border-focus: #1331d2
+
+/* Full Brand Scale */
+brand-50: #f0f4ff   /* Lightest tint */
+brand-100: #e5edff
+brand-200: #d1deff
+brand-300: #b8cbff
+brand-400: #9fb1ff
+brand-500: #1331d2  /* Primary brand color */
+brand-600: #0e24a8  /* Hover state */
+brand-700: #0a1a7f  /* Active state */
+brand-800: #071155
+brand-900: #03082b
+brand-950: #020419  /* Darkest shade */
 ```
-*Usage: CTAs, links, brand accents, headers*
+*Usage: CTAs, links, brand accents, headers, interactive states*
 
 **Brand Secondary**  
 ```css
@@ -309,3 +328,39 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 
 **Brand Guidelines Version 1.0**  
 *Consistent branding across all touchpoints ensures strong brand recognition and professional presentation.* 
+
+## 🏢 **Enterprise Design Token Integration**
+
+LeanTechCo sử dụng **Enterprise Design Token System** với semantic layering để đảm bảo tính nhất quán và khả năng mở rộng.
+
+### Token Architecture
+```mermaid
+graph LR
+    A[Primitive Tokens] --> B[Semantic Tokens] --> C[Component Tokens]
+    
+    A --> D[Brand Colors<br/>Typography<br/>Spacing]
+    B --> E[Text Colors<br/>Backgrounds<br/>Borders]
+    C --> F[Button Styles<br/>Card Styles<br/>Form Styles]
+```
+
+### Key Benefits
+- **Consistency**: Unified design language
+- **Maintainability**: Centralized token management  
+- **Scalability**: Easy to extend and modify
+- **Accessibility**: Built-in accessibility features
+- **Developer Experience**: Semantic naming conventions
+
+### Implementation
+```css
+/* Use semantic tokens instead of hardcoded values */
+.component {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-elevation-1);
+}
+```
+
+> **📋 Reference**: See `docs/DESIGN_TOKENS_ENTERPRISE.md` for complete token documentation.
+
+--- 

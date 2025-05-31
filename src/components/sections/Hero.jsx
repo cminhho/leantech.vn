@@ -40,32 +40,32 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-white space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-xs mb-2">
+            <div className="inline-flex items-center px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 mb-2">
               <span className="w-1.5 h-1.5 bg-green-400 mr-2"></span>
               Đối tác công nghệ & tư vấn chuyên sâu
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className="leading-tight">
               <span className="text-gradient">Đối tác chuyển đổi số toàn diện</span>{' '}
-              cho doanh nghiệp
-            </h1>
+              <span className="text-white">cho doanh nghiệp</span>
+            </h2>
             
             <ul className="space-y-2 text-white/90">
               <li className="flex items-start">
                 <i className="fas fa-check text-green-400 mt-1 mr-2"></i>
-                <span>Quản lý toàn diện quy trình kinh doanh</span>
+                <span>Tư vấn chiến lược & thiết kế giải pháp công nghệ phù hợp</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-check text-green-400 mt-1 mr-2"></i>
-                <span>Tối ưu hóa hiệu quả vận hành</span>
+                <span>Sản phẩm phần mềm sẵn có & phát triển tùy chỉnh theo yêu cầu</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-check text-green-400 mt-1 mr-2"></i>
-                <span>Hỗ trợ 24/7 và đào tạo chuyên sâu</span>
+                <span>Triển khai & đào tạo đội ngũ với phương pháp hiệu quả</span>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-check text-green-400 mt-1 mr-2"></i>
-                <span>Triển khai nhanh chóng trong 2-4 tuần</span>
+                <span>Hỗ trợ vận hành 24/7 & tối ưu hóa liên tục</span>
               </li>
             </ul>
 

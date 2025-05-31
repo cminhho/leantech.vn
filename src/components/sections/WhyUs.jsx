@@ -92,14 +92,14 @@ const WhyUs = () => {
           <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
             {/* Left Side - Title */}
             <div className="flex-shrink-0">
-              <h2 className="section-title-white">
+              <h2 className="text-white">
                 Tại Sao Chọn LeanTechCo
               </h2>
             </div>
             
             {/* Right Side - Description */}
             <div className="flex-1">
-              <p className="section-subtitle-white mb-0">
+              <p className="text-white mb-0">
                 Chúng tôi chuyên tối ưu hóa quy trình phát triển phần mềm, 
                 loại bỏ các bước thừa và tập trung xây dựng những giải pháp 
                 mang lại hiệu quả thực tế cho doanh nghiệp của bạn.
