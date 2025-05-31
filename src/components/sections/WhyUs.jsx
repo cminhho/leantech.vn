@@ -99,7 +99,7 @@ const WhyUs = () => {
             
             {/* Right Side - Description */}
             <div className="flex-1">
-              <p className="text-white mb-0">
+              <p className="text-white/80 mb-0">
                 Chúng tôi chuyên tối ưu hóa quy trình phát triển phần mềm, 
                 loại bỏ các bước thừa và tập trung xây dựng những giải pháp 
                 mang lại hiệu quả thực tế cho doanh nghiệp của bạn.
@@ -159,7 +159,7 @@ const WhyUs = () => {
 
               {/* Features */}
               <div className="space-y-3">
-                <h4 className="font-semibold text-gray-900">Tính năng chính:</h4>
+                <h6 className="text-gray-900">Tính năng chính:</h6>
                 {activeReason.features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary mt-2"></div>

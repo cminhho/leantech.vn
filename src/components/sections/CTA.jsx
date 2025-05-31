@@ -47,10 +47,10 @@ const CTA = () => {
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Content */}
           <div className="text-center mb-12">
-            <h2 className="text-white">
+            <h2 className="text-white/90 mb-8">
               Sẵn Sàng Bắt Đầu Hành Trình Chuyển Đổi Số?
             </h2>
-            <p className="text-white">
+            <p className="text-white/80">
               Liên hệ ngay với chúng tôi để được tư vấn miễn phí về giải pháp 
               phù hợp nhất cho doanh nghiệp của bạn.
             </p>

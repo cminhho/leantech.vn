@@ -81,23 +81,23 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="py-20 bg-white">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="mb-16">
+        <div className="mb-12">
           {/* Contact Label */}
-          <div className="mb-6">
-            <span className="section-badge">
+          <div className="mb-4">
+            <span className="text-primary text-sm font-semibold tracking-wide uppercase">
               LIÊN HỆ
             </span>
           </div>
           
           {/* Two Column Layout */}
-          <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
+          <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-6 lg:gap-12">
             {/* Left Side - Title */}
             <div className="flex-shrink-0">
               <h2 className="section-title">
-              Liên Hệ Chúng Tôi
+                Liên Hệ Chúng Tôi
               </h2>
             </div>
             
@@ -116,17 +116,17 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="lg:col-span-2">
               <div className="bg-gray-50 p-8 h-full">
-                <h3 className="card-header mb-10">Thông Tin Liên Hệ</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-8">Thông Tin Liên Hệ</h3>
                 
-                <div className="space-y-8">
+                <div className="space-y-6">
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <i className="fas fa-map-marker-alt contact-icon group-hover:text-white"></i>
+                      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <i className="fas fa-map-marker-alt text-primary text-lg group-hover:text-white"></i>
                       </div>
-                      <div className="">
-                        <h4 className="contact-label mb-3">Địa chỉ</h4>
-                        <p className="footer-text leading-relaxed">
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Địa chỉ</h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">
                           Số 5 Đường số 3, Khu phố 2, Phường An Khánh,<br />
                           Thành phố Thủ Đức, TP. Hồ Chí Minh
                         </p>
@@ -136,12 +136,12 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <i className="fas fa-phone-alt contact-icon group-hover:text-white"></i>
+                      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <i className="fas fa-phone-alt text-primary text-lg group-hover:text-white"></i>
                       </div>
-                      <div className="">
-                        <h4 className="contact-label mb-3">Điện thoại</h4>
-                        <a href="tel:+84906246489" className="contact-value hover:text-primary/80 transition-colors">
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Điện thoại</h4>
+                        <a href="tel:+84906246489" className="text-gray-600 text-sm hover:text-primary transition-colors">
                           +84 906 246 489
                         </a>
                       </div>
@@ -150,12 +150,12 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <i className="fas fa-envelope contact-icon group-hover:text-white"></i>
+                      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <i className="fas fa-envelope text-primary text-lg group-hover:text-white"></i>
                       </div>
-                      <div className="">
-                        <h4 className="contact-label mb-3">Email</h4>
-                        <a href="mailto:info@leantech.vn" className="contact-value hover:text-primary/80 transition-colors">
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Email</h4>
+                        <a href="mailto:info@leantech.vn" className="text-gray-600 text-sm hover:text-primary transition-colors">
                           info@leantech.vn
                         </a>
                       </div>
@@ -164,12 +164,12 @@ const Contact = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-14 h-14 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <i className="fas fa-clock contact-icon group-hover:text-white"></i>
+                      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <i className="fas fa-clock text-primary text-lg group-hover:text-white"></i>
                       </div>
-                      <div className="">
-                        <h4 className="contact-label mb-3">Giờ làm việc</h4>
-                        <p className="footer-text leading-relaxed">
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Giờ làm việc</h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">
                           Thứ Hai - Thứ Sáu: 8:00 - 17:30<br />
                           Thứ Bảy: 8:00 - 12:00
                         </p>
@@ -179,17 +179,17 @@ const Contact = () => {
                 </div>
 
                 {/* Social Links */}
-                <div className="mt-12 pt-8 border-t border-gray-200">
-                  <h4 className="contact-label mb-6">Kết nối với chúng tôi</h4>
-                  <div className="flex space-x-4">
-                    <button type="button" className="btn btn-white btn-icon" onClick={() => console.log('Facebook link')}>
-                      <i className="fab fa-facebook-f icon-lg"></i>
+                <div className="mt-10 pt-6 border-t border-gray-200">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-4">Kết nối với chúng tôi</h4>
+                  <div className="flex space-x-3">
+                    <button type="button" className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300" onClick={() => console.log('Facebook link')}>
+                      <i className="fab fa-facebook-f text-sm"></i>
                     </button>
-                    <button type="button" className="btn btn-white btn-icon" onClick={() => console.log('LinkedIn link')}>
-                      <i className="fab fa-linkedin-in icon-lg"></i>
+                    <button type="button" className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300" onClick={() => console.log('LinkedIn link')}>
+                      <i className="fab fa-linkedin-in text-sm"></i>
                     </button>
-                    <button type="button" className="btn btn-white btn-icon" onClick={() => console.log('YouTube link')}>
-                      <i className="fab fa-youtube icon-lg"></i>
+                    <button type="button" className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300" onClick={() => console.log('YouTube link')}>
+                      <i className="fab fa-youtube text-sm"></i>
                     </button>
                   </div>
                 </div>
@@ -199,13 +199,13 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <div className="bg-white border border-gray-200 p-8 lg:p-10 shadow-sm">
-                <h3 className="card-header mb-8">Gửi Yêu Cầu Tư Vấn</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6">Gửi Yêu Cầu Tư Vấn</h3>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-5">
                   {/* Name and Email Row */}
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-5">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="form-label">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                         Họ và tên <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -215,16 +215,16 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className={`form-input form-input-text ${
+                        className={`w-full px-4 py-3 border focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors ${
                           errors.name ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                         }`}
                         placeholder="Nhập họ và tên"
                       />
-                      {errors.name && <p className="form-error">{errors.name}</p>}
+                      {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="email" className="form-label">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                         Email <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -234,19 +234,19 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className={`form-input form-input-text ${
+                        className={`w-full px-4 py-3 border focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors ${
                           errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                         }`}
                         placeholder="your.email@company.com"
                       />
-                      {errors.email && <p className="form-error">{errors.email}</p>}
+                      {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                     </div>
                   </div>
 
                   {/* Phone and Company Row */}
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-5">
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="form-label">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                         Số điện thoại
                       </label>
                       <input
@@ -255,13 +255,13 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="form-input form-input-text"
+                        className="w-full px-4 py-3 border border-gray-200 hover:border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                         placeholder="+84 xxx xxx xxx"
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="company" className="form-label">
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-700">
                         Công ty
                       </label>
                       <input
@@ -270,7 +270,7 @@ const Contact = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="form-input form-input-text"
+                        className="w-full px-4 py-3 border border-gray-200 hover:border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                         placeholder="Tên công ty"
                       />
                     </div>
@@ -278,7 +278,7 @@ const Contact = () => {
 
                   {/* Service Selection */}
                   <div className="space-y-2">
-                    <label htmlFor="service" className="form-label">
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700">
                       Dịch vụ quan tâm
                     </label>
                     <select
@@ -286,7 +286,7 @@ const Contact = () => {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="form-input form-input-text"
+                      className="w-full px-4 py-3 border border-gray-200 hover:border-gray-300 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
                     >
                       <option value="default" disabled>Chọn dịch vụ quan tâm</option>
                       <option value="consulting">Tư Vấn & Đào Tạo</option>
@@ -299,7 +299,7 @@ const Contact = () => {
 
                   {/* Message */}
                   <div className="space-y-2">
-                    <label htmlFor="message" className="form-label">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                       Tin nhắn <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -309,20 +309,20 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows="5"
-                      className={`form-input form-input-text resize-none ${
+                      className={`w-full px-4 py-3 border focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none ${
                         errors.message ? 'border-red-300 bg-red-50' : 'border-gray-200 hover:border-gray-300'
                       }`}
                       placeholder="Mô tả chi tiết nhu cầu của bạn..."
                     ></textarea>
-                    {errors.message && <p className="form-error">{errors.message}</p>}
+                    {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                   </div>
 
                   {/* Submit Button */}
-                  <div className="pt-6">
+                  <div className="pt-4">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className={`btn btn-primary btn-lg btn-wide ${isSubmitting ? 'btn-loading' : ''}`}
+                      className={`w-full bg-gradient-to-r from-primary to-blue-600 text-white font-semibold py-3 px-6 hover:from-primary/90 hover:to-blue-600/90 transition-all duration-300 flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'transform hover:scale-105'}`}
                     >
                       {isSubmitting ? (
                         <>
@@ -347,4 +347,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
