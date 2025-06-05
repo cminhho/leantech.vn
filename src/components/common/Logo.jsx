@@ -30,7 +30,7 @@ const Logo = ({
     sm: 'body-md font-display',
     md: 'body-lg font-display',
     lg: 'heading-sm font-display', 
-    xl: 'heading-md font-display',
+    xl: 'heading-lg font-display',
     '2xl': 'heading-lg font-display',
     '3xl': 'display-sm font-display',
     '4xl': 'display-md font-display',
