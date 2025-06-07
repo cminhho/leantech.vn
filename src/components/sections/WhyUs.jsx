@@ -1,7 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const WhyUs = () => {
   const [activeTab, setActiveTab] = useState('lean-dev');
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const reasons = [
     {
@@ -16,7 +37,9 @@ const WhyUs = () => {
         'Tối ưu hóa thời gian phát triển',
         'Giảm thiểu lãng phí tài nguyên'
       ],
-      metric: '53%'
+      metric: '53%',
+      color: 'from-blue-400 to-blue-600',
+      badge: 'LEAN'
     },
     {
       id: 'value-dev',
@@ -30,7 +53,9 @@ const WhyUs = () => {
         'Phản hồi nhanh từ người dùng',
         'Cải thiện liên tục dựa trên metrics'
       ],
-      metric: '2-4 tuần'
+      metric: '2-4 tuần',
+      color: 'from-blue-500 to-blue-700',
+      badge: 'VALUE'
     },
     {
       id: 'demand-dev',
@@ -44,7 +69,9 @@ const WhyUs = () => {
         'Ưu tiên dựa trên giá trị kinh doanh',
         'Phát triển just-in-time'
       ],
-      metric: '40%'
+      metric: '40%',
+      color: 'from-blue-600 to-blue-800',
+      badge: 'DEMAND'
     },
     {
       id: 'continuous-dev',
@@ -58,7 +85,9 @@ const WhyUs = () => {
         'Tích hợp và triển khai tự động',
         'Monitoring và alerting 24/7'
       ],
-      metric: '24/7'
+      metric: '24/7',
+      color: 'from-blue-700 to-primary',
+      badge: 'CONTINUOUS'
     }
   ];
 
@@ -66,6 +95,7 @@ const WhyUs = () => {
 
   return (
     <section 
+      ref={sectionRef}
       id="why-us" 
       className="py-24 relative overflow-hidden"
       style={{
@@ -74,105 +104,180 @@ const WhyUs = () => {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'top right'
       }}
+      aria-labelledby="why-us-heading"
     >
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 "></div>
+      {/* Clean Angular Background Pattern */}
+      <div className="absolute inset-0" aria-hidden="true">
+        {/* Minimal geometric pattern */}
+        <div className={`absolute inset-0 transition-transform duration-1000 ${isVisible ? 'translate-y-0' : 'translate-y-4'}`}>
+          <div className="absolute inset-0 opacity-5">
+            <div 
+              className="w-full h-full"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Crect x='0' y='0' width='1' height='1'/%3E%3C/g%3E%3C/svg%3E")`
+              }}
+            ></div>
+          </div>
+        </div>
+        
+        {/* Clean angular elements */}
+        <div className={`absolute top-1/4 left-1/4 w-12 h-12 bg-white/3 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
+        <div className={`absolute top-3/4 right-1/4 w-20 h-20 bg-white/2 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
+        <div className={`absolute bottom-1/4 left-1/3 w-8 h-8 bg-white/4 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10"></div>
+      </div>
       
       <div className="container-custom relative z-10">
-        {/* Section Header */}
-        <div className="mb-16">
-          {/* Label */}
+        {/* Section Header - Following Exact System Pattern from Services.jsx and Contact.jsx */}
+        <div className={`mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {/* System Badge - Exact same classes as Services.jsx but with white color for dark background */}
           <div className="mb-6">
-            <span className="text-secondary text-sm font-semibold">
+            <span className="text-white text-sm font-semibold tracking-wide uppercase">
               TẠI SAO CHỌN CHÚNG TÔI
             </span>
           </div>
           
-          {/* Two Column Layout */}
+          {/* Two Column Layout - Following exact Services.jsx and Contact.jsx pattern */}
           <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
-            {/* Left Side - Title */}
+            {/* Left Side - Title using exact section-title class */}
             <div className="flex-shrink-0">
-              <h2 className="section-title text-white">
-                Tại Sao Chọn LeanTechCo
+              <h2 id="why-us-heading" className="section-title text-white">
+                Tại Sao Chọn{' '}
+                <span className="text-white font-vietnamese">
+                  LeanTechCo
+                </span>
               </h2>
             </div>
             
-            {/* Right Side - Description */}
+            {/* Right Side - Description using exact section-subtitle class */}
             <div className="flex-1">
-              <p className="text-white/80 mb-0">
+              <p className="section-subtitle mb-0 text-white/90">
                 Chúng tôi chuyên tối ưu hóa quy trình phát triển phần mềm, 
-                loại bỏ các bước thừa và tập trung xây dựng những giải pháp 
-                mang lại hiệu quả thực tế cho doanh nghiệp của bạn.
+                loại bỏ các bước thừa và tập trung xây dựng những{' '}
+                <strong className="font-semibold text-white">giải pháp 
+                mang lại hiệu quả thực tế</strong> cho doanh nghiệp của bạn.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="max-w-6xl">
+        {/* Main Content - Clean Angular Design */}
+        <div className={`max-w-6xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="grid lg:grid-cols-4 gap-6">
             
-            {/* Tabs */}
-            <div className="lg:col-span-1 space-y-2">
-              {reasons.map((reason) => (
+            {/* Clean Angular Tabs */}
+            <div className="lg:col-span-1 space-y-3">
+              {reasons.map((reason, index) => (
                 <button
                   key={reason.id}
                   onClick={() => setActiveTab(reason.id)}
-                  className={`w-full p-4 text-left transition-all ${
+                  className={`w-full p-4 text-left transition-all duration-300 group border ${
                     activeTab === reason.id
-                      ? 'bg-white text-gray-900'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                      ? 'bg-white text-gray-900 border-white'
+                      : 'text-white/80 hover:text-white hover:bg-white/5 border-white/10 hover:border-white/30'
                   }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  aria-pressed={activeTab === reason.id}
+                  role="tab"
                 >
                   <div className="flex items-center gap-3">
-                    <i className={`fas ${reason.icon} ${
-                      activeTab === reason.id ? 'text-primary' : 'text-white/60'
-                    }`}></i>
-                    <span className="font-medium">{reason.title}</span>
+                    <div className={`w-8 h-8 border flex items-center justify-center transition-all duration-300 ${
+                      activeTab === reason.id 
+                        ? 'bg-primary border-primary text-white' 
+                        : 'border-white/30 text-white/70 group-hover:border-white/50 group-hover:text-white'
+                    }`}>
+                      <i className={`fas ${reason.icon} text-xs`}></i>
+                    </div>
+                    <div className="flex-1">
+                      <span className="body-sm font-semibold block leading-tight">
+                        {reason.title}
+                      </span>
+                      <div className={`caption mt-0.5 transition-colors duration-300 ${
+                        activeTab === reason.id ? 'text-primary' : 'text-white/50 group-hover:text-white/70'
+                      }`}>
+                        {reason.badge}
+                      </div>
+                    </div>
+                    <div className={`caption font-bold transition-colors duration-300 ${
+                      activeTab === reason.id ? 'text-primary' : 'text-white/50 group-hover:text-white/70'
+                    }`}>
+                      {reason.metric}
+                    </div>
                   </div>
                 </button>
               ))}
             </div>
 
-            {/* Content */}
-            <div className="lg:col-span-3 bg-white p-8">
+            {/* Clean Angular Content Card */}
+            <div className="lg:col-span-3 card bg-white border border-gray-200">
               
-              {/* Header with Metric */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary flex items-center justify-center text-white">
-                    <i className={`fas ${activeReason.icon}`}></i>
+              {/* Clean Header Section */}
+              <div className="border-b border-gray-100 pb-6 mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className={`w-10 h-10 bg-gradient-to-r ${activeReason.color} border flex items-center justify-center text-white`}>
+                      <i className={`fas ${activeReason.icon} text-lg`}></i>
+                    </div>
+                    <div>
+                      <h3 className="heading-sm text-gray-900 mb-1">
+                        {activeReason.title}
+                      </h3>
+                      <span className="inline-block bg-primary text-white caption font-semibold px-2 py-1">
+                        {activeReason.badge}
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {activeReason.title}
-                  </h3>
+                  <div className="text-right">
+                    <div className="display-sm text-primary mb-0">
+                      {activeReason.metric}
+                    </div>
+                    <div className="caption text-gray-500 font-semibold">
+                      CẢI THIỆN
+                    </div>
+                  </div>
                 </div>
-                <div className="text-2xl font-bold text-primary">
-                  {activeReason.metric}
-                </div>
+
+                {/* Clean Description */}
+                <p className="body-md text-gray-700 leading-relaxed">
+                  {activeReason.description}
+                </p>
               </div>
 
-              {/* Description */}
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {activeReason.description}
-              </p>
-
-              {/* Features */}
-              <div className="space-y-3">
-                <h6 className="text-gray-900">Tính năng chính:</h6>
+              {/* Clean Features Section */}
+              <div className="space-y-3 mb-8">
+                <h4 className="heading-sm text-gray-900 mb-4">
+                  Tính năng chính:
+                </h4>
                 {activeReason.features.map((feature, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary mt-2"></div>
-                    <span className="text-gray-700">{feature}</span>
+                  <div 
+                    key={index} 
+                    className="flex items-start gap-3 group hover:bg-gray-50 p-2 -mx-2 transition-all duration-200"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <div className="w-4 h-4 border border-primary flex items-center justify-center mt-0.5 group-hover:bg-primary transition-all duration-200">
+                      <i className="fas fa-check text-primary text-xs group-hover:text-white"></i>
+                    </div>
+                    <span className="body-sm text-gray-700 flex-1 leading-relaxed">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
 
-              {/* CTA */}
-              <div className="mt-8">
-                <button className="btn btn-primary">
-                  Tìm hiểu thêm
-                </button>
+              {/* Clean CTA Section */}
+              <div className="pt-6 border-t border-gray-100">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button className="btn btn-primary btn-md group flex-1">
+                    <span>Tìm hiểu thêm</span>
+                    <i className="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                  </button>
+                  <button className="btn btn-outline btn-md group">
+                    <span>Liên hệ tư vấn</span>
+                    <i className="fas fa-phone text-sm"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
