@@ -43,60 +43,50 @@ const CTA = () => {
   return (
     <section 
       ref={ctaRef}
-      className="cta-section py-24 relative overflow-hidden bg-gradient-to-br from-primary via-brand-700 to-brand-800"
+      className="py-24 relative overflow-hidden bg-gradient-to-br from-primary via-brand-700 to-brand-800"
       role="banner"
       aria-labelledby="cta-heading"
     >
-      {/* Professional Background Pattern */}
+      {/* Professional Background Pattern - Following Services.jsx pattern */}
       <div className="absolute inset-0" aria-hidden="true">
-        {/* Subtle geometric pattern with parallax effect */}
-        <div className={`cta-grid-pattern absolute inset-0 transition-transform duration-1000 ${isVisible ? 'translate-y-0' : 'translate-y-4'}`}>
-          <svg className="w-full h-full" viewBox="0 0 400 400" preserveAspectRatio="none">
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
+        {/* Subtle geometric pattern */}
+        <div className={`absolute inset-0 transition-transform duration-1000 ${isVisible ? 'translate-y-0' : 'translate-y-4'}`}>
+          <div className="absolute inset-0 opacity-10">
+            <div 
+              className="w-full h-full"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+              }}
+            ></div>
+          </div>
         </div>
         
-        {/* Enhanced floating elements with staggered animations */}
-        <div className={`cta-floating-element absolute top-1/4 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-sm transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
-        <div className={`cta-floating-element absolute top-3/4 right-1/4 w-32 h-32 bg-white/3 rounded-full blur-md transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
-        <div className={`cta-floating-element absolute bottom-1/4 left-1/3 w-20 h-20 bg-white/4 rounded-full blur-sm transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
+        {/* Enhanced floating elements following consistent animation patterns */}
+        <div className={`absolute top-1/4 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-sm transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
+        <div className={`absolute top-3/4 right-1/4 w-32 h-32 bg-white/3 rounded-full blur-md transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
+        <div className={`absolute bottom-1/4 left-1/3 w-20 h-20 bg-white/4 rounded-full blur-sm transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}></div>
         
-        {/* Enhanced gradient overlay with depth */}
+        {/* Enhanced gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-primary/5"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent"></div>
       </div>
 
       <div className="container-custom relative z-10">
         <div className="max-w-5xl mx-auto">
-          {/* Content with enhanced hierarchy and animations */}
+          {/* Content with enhanced hierarchy following Services.jsx pattern */}
           <div className="text-center mb-16">
-            {/* Animated Badge/Label */}
+            {/* Professional Badge following Contact.jsx pattern */}
             <div 
-              className={`cta-badge inline-flex items-center px-6 py-3 rounded-full mb-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
-              role="note"
-              aria-label="Call to action indicator"
+              className={`mb-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
             >
-              <svg className="w-4 h-4 mr-2 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-              <span className="text-white/90 badge-text-pro">Bắt đầu ngay hôm nay</span>
+              <span className="text-white/80 text-sm font-semibold tracking-wide uppercase">
+                BẮT ĐẦU NGAY HÔM NAY
+              </span>
             </div>
             
-            {/* Enhanced Main Heading with Vietnamese typography */}
+            {/* Main Heading following section-title pattern */}
             <h2 
               id="cta-heading"
-              className={`font-vietnamese hero-title-vietnamese hero-title text-white mb-8 leading-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-              style={{
-                fontFeatureSettings: '"kern" 1, "liga" 1, "calt" 1',
-                textRendering: 'optimizeLegibility',
-                WebkitFontSmoothing: 'antialiased',
-                MozOsxFontSmoothing: 'grayscale'
-              }}
+              className={`section-title text-white mb-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
             >
               Sẵn sàng{' '}
               <span className="relative inline-block">
@@ -117,12 +107,11 @@ const CTA = () => {
               ?
             </h2>
             
-            {/* Enhanced Subheading */}
+            {/* Subheading following section-subtitle pattern */}
             <p 
-              className={`font-vietnamese body-vietnamese hero-subtitle text-white/90 mb-10 max-w-4xl mx-auto font-light leading-relaxed transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+              className={`section-subtitle text-white/90 mb-10 max-w-4xl mx-auto transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
               style={{
-                textShadow: '0 2px 4px rgba(0,0,0,0.3)',
-                lineHeight: '1.6'
+                textShadow: '0 2px 4px rgba(0,0,0,0.3)'
               }}
             >
               Để chúng tôi giúp bạn xây dựng{' '}
@@ -131,13 +120,13 @@ const CTA = () => {
               <strong className="font-semibold text-white">tăng trưởng bền vững</strong>.
             </p>
             
-            {/* Enhanced Stats with real counter animation */}
+            {/* Professional Stats following Clients.jsx pattern */}
             <div 
               className={`flex flex-wrap justify-center items-center gap-8 mb-14 text-white/70 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
               role="group"
               aria-label="Thành tựu công ty"
             >
-              <div className="cta-stats-item text-center group cursor-default">
+              <div className="text-center group cursor-default">
                 <div className="display-sm text-white mb-1 group-hover:scale-110 transition-transform duration-300">
                   {counters.projects}+
                 </div>
@@ -147,7 +136,7 @@ const CTA = () => {
               
               <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
               
-              <div className="cta-stats-item text-center group cursor-default">
+              <div className="text-center group cursor-default">
                 <div className="display-sm text-white mb-1 group-hover:scale-110 transition-transform duration-300">
                   {counters.support}
                 </div>
@@ -157,7 +146,7 @@ const CTA = () => {
               
               <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent"></div>
               
-              <div className="cta-stats-item text-center group cursor-default">
+              <div className="text-center group cursor-default">
                 <div className="display-sm text-white mb-1 group-hover:scale-110 transition-transform duration-300">
                   {counters.rating}
                 </div>
@@ -167,7 +156,7 @@ const CTA = () => {
             </div>
           </div>
           
-          {/* Enhanced CTA Buttons with advanced interactions */}
+          {/* Professional CTA Buttons following Button System pattern */}
           <div 
             className={`flex flex-col sm:flex-row gap-6 justify-center items-center transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
             role="group"
@@ -175,25 +164,22 @@ const CTA = () => {
           >
             <a 
               href="#contact" 
-              className="cta-button-primary group relative inline-flex items-center justify-center px-10 py-5 font-semibold rounded-lg focus:outline-none focus:ring-4 focus:ring-white/50 transition-all duration-300 hover:shadow-xl"
+              className="btn btn-white btn-lg group"
               aria-label="Liên hệ để nhận tư vấn miễn phí"
-              role="button"
             >
-              <span className="relative z-10 font-vietnamese btn-text-pro">Nhận tư vấn miễn phí</span>
-              <svg className="ml-3 w-6 h-6 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <span className="font-vietnamese btn-text-pro">Nhận tư vấn miễn phí</span>
+              <svg className="w-5 h-5 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             
             <a 
               href="#solutions" 
-              className="cta-button-secondary group relative inline-flex items-center justify-center px-10 py-5 text-white font-semibold rounded-lg focus:outline-none focus:ring-4 focus:ring-white/50 transition-all duration-300"
+              className="btn btn-glass btn-lg group"
               aria-label="Khám phá các giải pháp của chúng tôi"
-              role="button"
             >
-              <span className="relative z-10 font-vietnamese btn-text-pro">Khám phá giải pháp</span>
-              <svg className="ml-3 w-6 h-6 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <span className="font-vietnamese btn-text-pro">Khám phá giải pháp</span>
+              <svg className="w-5 h-5 transition-all duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </a>
