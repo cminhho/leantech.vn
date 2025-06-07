@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/leantech.vn/static/css/main.ae3e905c.css",
-    "main.js": "/leantech.vn/static/js/main.04ece956.js",
+    "main.css": "/leantech.vn/static/css/main.8ccbd7a1.css",
+    "main.js": "/leantech.vn/static/js/main.425be801.js",
     "index.html": "/leantech.vn/index.html",
-    "main.ae3e905c.css.map": "/leantech.vn/static/css/main.ae3e905c.css.map",
-    "main.04ece956.js.map": "/leantech.vn/static/js/main.04ece956.js.map"
+    "main.8ccbd7a1.css.map": "/leantech.vn/static/css/main.8ccbd7a1.css.map",
+    "main.425be801.js.map": "/leantech.vn/static/js/main.425be801.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae3e905c.css",
-    "static/js/main.04ece956.js"
+    "static/css/main.8ccbd7a1.css",
+    "static/js/main.425be801.js"
   ]
 }
