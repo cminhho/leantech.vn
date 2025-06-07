@@ -2,82 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { BlogLayout } from '../components/content/ContentLayout';
 
-// Mock blog post data - this will be replaced with actual content loading
-const mockBlogPost = {
-  slug: 'digital-transformation-trends-2024',
-  title: 'Digital Transformation Trends Shaping 2024',
-  excerpt: 'Explore the key digital transformation trends that are reshaping businesses in 2024, from AI integration to sustainable technology solutions.',
-  content: `
-    <h2>Introduction</h2>
-    <p>Digital transformation continues to reshape how businesses operate, innovate, and deliver value to customers. As we navigate through 2024, several key trends are emerging that will define the future of enterprise technology and business strategy.</p>
-    
-    <h2>1. AI-Powered Automation and Intelligence</h2>
-    <p>Artificial Intelligence is moving beyond experimental phases into core business operations. Organizations are implementing AI to:</p>
-    <ul>
-      <li>Automate complex decision-making processes</li>
-      <li>Enhance customer experience through personalization</li>
-      <li>Optimize operational efficiency and reduce costs</li>
-      <li>Predict market trends and customer behavior</li>
-    </ul>
-    
-    <h2>2. Cloud-First Strategies</h2>
-    <p>The shift to cloud computing is accelerating, with businesses adopting cloud-first approaches for:</p>
-    <ul>
-      <li>Scalable infrastructure and resources</li>
-      <li>Enhanced collaboration and remote work capabilities</li>
-      <li>Faster deployment of applications and services</li>
-      <li>Better data analytics and insights</li>
-    </ul>
-    
-    <h2>3. Enhanced Cybersecurity Measures</h2>
-    <p>With increasing digital adoption comes the need for robust cybersecurity. Key focus areas include:</p>
-    <ul>
-      <li>Zero-trust security architectures</li>
-      <li>Advanced threat detection and response</li>
-      <li>Data privacy and compliance</li>
-      <li>Employee security training and awareness</li>
-    </ul>
-    
-    <h2>4. Sustainable Technology Solutions</h2>
-    <p>Environmental consciousness is driving the adoption of green technology initiatives:</p>
-    <ul>
-      <li>Energy-efficient data centers and infrastructure</li>
-      <li>Sustainable software development practices</li>
-      <li>Digital solutions that reduce carbon footprint</li>
-      <li>Circular economy principles in technology lifecycle</li>
-    </ul>
-    
-    <h2>Conclusion</h2>
-    <p>These digital transformation trends represent both opportunities and challenges for businesses in 2024. Organizations that proactively embrace these changes while maintaining a focus on security, sustainability, and customer value will be best positioned for success in the digital economy.</p>
-    
-    <p>At LeanTech, we help businesses navigate these complex transformations with tailored solutions that align with their specific goals and requirements. Contact us to learn how we can support your digital transformation journey.</p>
-  `,
-  date: '2024-01-15',
-  author: 'LeanTech Team',
-  category: 'Technology',
-  tags: ['Digital Transformation', 'AI', 'Cloud Computing', 'Cybersecurity'],
-  readTime: 8,
-  image: '/images/blog/digital-transformation-2024.jpg',
-  featured: true
-};
-
-const mockRelatedPosts = [
-  {
-    slug: 'ai-implementation-guide',
-    title: 'AI Implementation Guide for Enterprises',
-    readTime: 6
-  },
-  {
-    slug: 'cloud-migration-best-practices',
-    title: 'Cloud Migration Best Practices',
-    readTime: 7
-  },
-  {
-    slug: 'cybersecurity-trends-2024',
-    title: 'Cybersecurity Trends to Watch in 2024',
-    readTime: 5
-  }
-];
+// Import the actual blog content data
+import blogContentData from '../data/blog-content.json';
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -97,10 +23,22 @@ const BlogPostPage = () => {
     setNotFound(false);
     
     try {
-      // Simulate loading - replace with actual content loading
-      if (slug === 'digital-transformation-trends-2024') {
-        setPost(mockBlogPost);
-        setRelatedPosts(mockRelatedPosts);
+      // Find the post by slug in actual blog data
+      const foundPost = blogContentData.find(post => post.slug === slug);
+      
+      if (foundPost) {
+        setPost(foundPost);
+        
+        // Find related posts from the same category or with similar tags
+        const related = blogContentData
+          .filter(p => p.slug !== slug) // Exclude current post
+          .filter(p => 
+            p.category === foundPost.category || 
+            (p.tags && foundPost.tags && p.tags.some(tag => foundPost.tags.includes(tag)))
+          )
+          .slice(0, 3); // Get first 3 related posts
+          
+        setRelatedPosts(related);
       } else {
         setNotFound(true);
       }
@@ -110,6 +48,21 @@ const BlogPostPage = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  // Helper function to get image URL with fallback
+  const getImageUrl = (imageUrl) => {
+    if (!imageUrl) {
+      return 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+    }
+    
+    // If it's already a full URL, return as is
+    if (imageUrl.startsWith('http')) {
+      return imageUrl;
+    }
+    
+    // Fallback for relative paths
+    return 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
   };
 
   if (loading) {
@@ -128,7 +81,7 @@ const BlogPostPage = () => {
   if (notFound) {
     return (
       <div className="pt-20 min-h-screen bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center py-12">
             <i className="fas fa-exclamation-circle text-4xl text-gray-300 mb-4"></i>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Post Not Found</h1>
@@ -158,7 +111,7 @@ const BlogPostPage = () => {
     <div className="pt-20 min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
             <Link to="/" className="hover:text-blue-600">Home</Link>
             <span>/</span>
@@ -173,7 +126,7 @@ const BlogPostPage = () => {
       
       {/* Navigation to next/previous posts */}
       <div className="bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <Link 
               to="/blog"

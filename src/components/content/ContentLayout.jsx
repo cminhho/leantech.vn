@@ -1,12 +1,13 @@
 import React from 'react';
 import { ContentRenderer } from './MarkdownRenderer';
+import { Link } from 'react-router-dom';
 
 // Base content layout with sidebar
 export const ContentLayout = ({ 
   children, 
   sidebar = null, 
   className = '',
-  containerSize = 'max-w-6xl' // 'max-w-4xl', 'max-w-6xl', 'max-w-7xl'
+  containerSize = 'max-w-7xl' // 'max-w-4xl', 'max-w-6xl', 'max-w-7xl'
 }) => {
   return (
     <div className={`min-h-screen bg-gray-50 ${className}`}>
@@ -59,9 +60,9 @@ export const BlogLayout = ({
             {relatedPosts.slice(0, 3).map((relatedPost, index) => (
               <div key={index} className="border-b border-gray-100 pb-3 last:border-b-0">
                 <h4 className="text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors">
-                  <a href={`/blog/${relatedPost.slug}`}>
+                  <Link to={`/blog/${relatedPost.slug}`}>
                     {relatedPost.title}
-                  </a>
+                  </Link>
                 </h4>
                 <p className="text-xs text-gray-500 mt-1">
                   {relatedPost.readTime} min read
@@ -78,7 +79,7 @@ export const BlogLayout = ({
     <ContentLayout 
       sidebar={sidebar} 
       className={className}
-      containerSize="max-w-6xl"
+      containerSize="max-w-7xl"
     >
       <ContentRenderer 
         item={post} 
@@ -172,7 +173,7 @@ export const ProductLayout = ({
     <ContentLayout 
       sidebar={sidebar} 
       className={className}
-      containerSize="max-w-6xl"
+      containerSize="max-w-7xl"
     >
       <ContentRenderer 
         item={product} 
@@ -278,7 +279,7 @@ export const ServiceLayout = ({
     <ContentLayout 
       sidebar={sidebar} 
       className={className}
-      containerSize="max-w-6xl"
+      containerSize="max-w-7xl"
     >
       <ContentRenderer 
         item={service} 

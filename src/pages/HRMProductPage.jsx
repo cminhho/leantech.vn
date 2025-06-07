@@ -599,7 +599,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="card p-8 lg:p-10 shadow-elevation-2">
               <div className="flex items-center gap-6 mb-8">

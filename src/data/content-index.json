@@ -2,37 +2,88 @@
   "blog": [
     {
       "type": "blog",
-      "title": "Digital Transformation Trends Shaping 2024",
-      "slug": "digital-transformation-trends-2024",
-      "excerpt": "Explore the key digital transformation trends that are revolutionizing businesses in 2024, from AI integration to cloud-native architectures.",
+      "title": "Chuyển Đổi Số Phần Mềm Nhân Sự: Xu Hướng Và Giải Pháp Cho Doanh Nghiệp Việt Nam 2024",
+      "slug": "chuyen-doi-so-phan-mem-nhan-su-viet-nam-2024",
+      "excerpt": "Khám phá các xu hướng chuyển đổi số trong quản lý nhân sự và những giải pháp phần mềm HRM hiện đại giúp doanh nghiệp Việt Nam tối ưu hóa quy trình quản lý nhân sự.",
       "date": "2024-01-15",
       "author": "LeanTech Team",
       "category": "Technology",
       "tags": [
-        "digital transformation",
-        "technology trends",
-        "AI",
-        "cloud computing"
+        "chuyển đổi số",
+        "phần mềm nhân sự",
+        "HRM",
+        "quản lý nhân sự",
+        "Việt Nam"
       ],
       "featured": true,
-      "readTime": 3,
-      "wordCount": 471,
-      "image": "/images/blog/digital-transformation-2024.jpg",
+      "readTime": 7,
+      "wordCount": 1224,
+      "image": "/images/blog/hr-digital-transformation-vietnam.jpg",
       "filePath": "/src/content/blog/posts/2024-01-15-digital-transformation-trends.md"
-    }
-  ],
-  "products": [
+    },
     {
-      "type": "product",
-      "title": "Enterprise Software Solutions",
-      "slug": "enterprise-solutions",
-      "excerpt": "Scalable, secure enterprise software solutions designed to transform your business operations and drive growth.",
-      "category": "software",
-      "readTime": 3,
-      "wordCount": 518,
-      "filePath": "/src/content/products/enterprise-solutions.md"
+      "type": "blog",
+      "title": "Hướng Dẫn Chọn Phần Mềm HRM Phù Hợp Cho Doanh Nghiệp Vừa Và Nhỏ",
+      "slug": "huong-dan-chon-phan-mem-hrm-phu-hop",
+      "excerpt": "Hướng dẫn chi tiết cách lựa chọn phần mềm quản lý nhân sự phù hợp với quy mô và ngân sách của doanh nghiệp vừa và nhỏ tại Việt Nam.",
+      "date": "2024-01-10",
+      "author": "LeanTech Team",
+      "category": "Technology",
+      "tags": [
+        "phần mềm HRM",
+        "doanh nghiệp SME",
+        "lựa chọn công nghệ",
+        "quản lý nhân sự"
+      ],
+      "featured": false,
+      "readTime": 6,
+      "wordCount": 1075,
+      "image": "/images/blog/choosing-hrm-software-sme.jpg",
+      "filePath": "/src/content/blog/posts/2024-01-10-huong-dan-chon-phan-mem-hrm.md"
+    },
+    {
+      "type": "blog",
+      "title": "Phần Mềm Tính Lương Tự Động: Giải Pháp Tối Ưu Cho Doanh Nghiệp Việt Nam",
+      "slug": "phan-mem-tinh-luong-tu-dong-doanh-nghiep-viet-nam",
+      "excerpt": "Khám phá lợi ích và tính năng của phần mềm tính lương tự động, giúp doanh nghiệp Việt Nam tiết kiệm thời gian, giảm sai sót và tuân thủ pháp luật lao động.",
+      "date": "2024-01-08",
+      "author": "LeanTech Team",
+      "category": "Technology",
+      "tags": [
+        "phần mềm tính lương",
+        "tự động hóa",
+        "luật lao động",
+        "payroll software"
+      ],
+      "featured": false,
+      "readTime": 7,
+      "wordCount": 1379,
+      "image": "/images/blog/automated-payroll-software-vietnam.jpg",
+      "filePath": "/src/content/blog/posts/2024-01-08-phan-mem-tinh-luong-tu-dong.md"
+    },
+    {
+      "type": "blog",
+      "title": "AI Trong Quản Lý Nhân Sự: Xu Hướng Công Nghệ Thay Đổi Cách Làm HR",
+      "slug": "ai-trong-quan-ly-nhan-su-xu-huong-2024",
+      "excerpt": "Khám phá cách trí tuệ nhân tạo (AI) đang cách mạng hóa ngành quản lý nhân sự, từ tuyển dụng thông minh đến phân tích hiệu suất và dự đoán xu hướng nhân sự.",
+      "date": "2024-01-05",
+      "author": "LeanTech Team",
+      "category": "Technology",
+      "tags": [
+        "AI",
+        "trí tuệ nhân tạo",
+        "HR technology",
+        "tuyển dụng",
+        "phân tích dữ liệu"
+      ],
+      "featured": false,
+      "readTime": 8,
+      "wordCount": 1533,
+      "image": "/images/blog/ai-hr-management-future.jpg",
+      "filePath": "/src/content/blog/posts/2024-01-05-ai-trong-quan-ly-nhan-su.md"
     }
   ],
+  "products": [],
   "services": [],
   "pages": [],
   "caseStudies": []
