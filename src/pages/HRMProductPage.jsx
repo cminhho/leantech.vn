@@ -320,16 +320,11 @@ const FeaturesOverview = () => {
   );
 };
 
-// Improved Why Choose Section with professional grid layout
+// Improved Why Choose Section with modern layout
 const WhyChooseSection = () => {
   const advantages = [
     {
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clipRule="evenodd" />
-          <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V9a1 1 0 00-1-1h-1v4.5a1.5 1.5 0 01-3 0V8a1 1 0 011-1z" />
-        </svg>
-      ),
+      number: "01",
       title: "Giải pháp Toàn diện",
       description: "Quản lý toàn bộ vòng đời nhân viên trên một nền tảng duy nhất",
       features: [
@@ -340,11 +335,7 @@ const WhyChooseSection = () => {
       ]
     },
     {
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
-        </svg>
-      ),
+      number: "02",
       title: "Nền tảng Số hóa",
       description: "Công nghệ hiện đại với khả năng triển khai linh hoạt",
       features: [
@@ -355,11 +346,7 @@ const WhyChooseSection = () => {
       ]
     },
     {
-      icon: (
-        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-        </svg>
-      ),
+      number: "03",
       title: "Tùy biến Linh hoạt",
       description: "Thiết kế phù hợp đặc thù doanh nghiệp Việt Nam",
       features: [
@@ -372,53 +359,64 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-20 bg-background-secondary">
+    <section className="py-20 lg:py-28 bg-background-secondary overflow-hidden">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-20 lg:mb-24">
           <span className="inline-block px-4 py-2 bg-background-brand-light text-primary text-sm font-semibold uppercase tracking-wide rounded-full mb-6">
             Tại sao chọn Lean HRM
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-text-primary mb-6">
-            3 Ưu thế cạnh tranh vượt trội
+            Ưu thế cạnh tranh vượt trội
           </h2>
-          <p className="section-subtitle text-text-secondary">
-            Giải pháp HR toàn diện với khả năng tùy biến cao theo đặc thù doanh nghiệp
+          <p className="section-subtitle text-text-secondary max-w-2xl mx-auto">
+            Giải pháp HR toàn diện với công nghệ tiên tiến và khả năng tùy biến cao cho doanh nghiệp
           </p>
         </div>
         
         {/* Advantages Grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           {advantages.map((advantage, index) => (
             <div 
               key={index}
-              className="card group p-8 lg:p-10 border-border-primary hover:border-border-focus hover:shadow-elevation-3 transition-all duration-normal"
+              className="group relative"
             >
-              {/* Icon & Title */}
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-background-brand-light flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-text-on-primary transition-all duration-normal flex-shrink-0">
-                  {advantage.icon}
-                </div>
-                <div className="space-y-3">
-                  <h3 className="heading-lg text-text-primary group-hover:text-primary transition-colors">
-                    {advantage.title}
-                  </h3>
-                  <p className="body-md text-text-secondary">
-                    {advantage.description}
-                  </p>
-                </div>
-              </div>
-              
-              {/* Features List */}
-              <div className="space-y-4 ml-22">
-                {advantage.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 bg-primary mt-2.5 flex-shrink-0 group-hover:bg-secondary transition-colors"></div>
-                    <span className="body-sm text-text-secondary">
-                      {feature}
-                    </span>
+              {/* Background Card */}
+              <div className="relative bg-background-primary p-8 lg:p-10 h-full border border-border-primary group-hover:border-border-focus transition-all duration-300 group-hover:shadow-elevation-3 group-hover:-translate-y-2">
+                
+                {/* Number Badge */}
+                <div className="absolute -top-6 left-8">
+                  <div className="w-12 h-12 bg-primary text-text-on-primary flex items-center justify-center text-sm font-bold">
+                    {advantage.number}
                   </div>
-                ))}
+                </div>
+                
+                {/* Content */}
+                <div className="space-y-6 pt-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-text-primary mb-4 group-hover:text-primary transition-colors">
+                      {advantage.title}
+                    </h3>
+                    <p className="text-text-secondary leading-relaxed">
+                      {advantage.description}
+                    </p>
+                  </div>
+                  
+                  {/* Features List */}
+                  <div className="space-y-3">
+                    {advantage.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-start gap-3">
+                        <div className="w-1.5 h-1.5 bg-primary mt-2.5 flex-shrink-0 group-hover:bg-secondary transition-colors"></div>
+                        <span className="text-sm text-text-secondary leading-relaxed">
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Bottom Accent */}
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}

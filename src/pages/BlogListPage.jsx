@@ -163,7 +163,7 @@ const BlogListPage = () => {
   const [selectedTag, setSelectedTag] = useState(tag || '');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const postsPerPage = 6; // Better for clean 3-column grid
+  const postsPerPage = 9; // Better for 3-column grid
 
   // Categories and tags
   const categories = ['Technology', 'Business', 'Cybersecurity', 'Cloud Computing', 'Software Development', 'Data Analytics', 'Mobile Development', 'AI Ethics', 'Blockchain', 'Customer Service', 'Network Management', 'Business Strategy'];
@@ -254,167 +254,121 @@ const BlogListPage = () => {
     });
   };
 
-  const sidebar = (
-    <div className="space-y-8">
-      {/* Search */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Search
-        </h3>
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search articles..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-10 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          <i className="fas fa-search absolute left-3 top-4 text-gray-400 text-sm"></i>
+  return (
+    <div className="pt-20 min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="py-16 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Insights & Innovation
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Discover the latest trends in technology, digital transformation, and business strategy from our team of experts.
+          </p>
         </div>
-      </div>
 
-      {/* Most Popular */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Most Popular
-        </h3>
-        <div className="space-y-4">
-          {mockBlogPosts.slice(0, 3).map((post, index) => (
-            <div key={post.slug} className="flex items-start gap-3">
-              <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">
-                {index + 1}
-              </span>
-              <div className="flex-1 min-w-0">
-                <h4 className="text-sm font-medium text-gray-900 line-clamp-2 leading-tight mb-1">
-                  <Link to={`/blog/${post.slug}`} className="hover:text-blue-600">
-                    {post.title}
-                  </Link>
-                </h4>
-                <p className="text-xs text-gray-500">{formatDate(post.date)}</p>
+        {/* Search & Filters Bar */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Search */}
+            <div className="lg:col-span-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Search Articles</label>
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search by title or content..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-3 pl-12 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                />
+                <i className="fas fa-search absolute left-4 top-4 text-gray-400"></i>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
 
-      {/* Newsletter */}
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
-        <div className="text-center">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Newsletter</h3>
-          <p className="text-sm text-gray-600 mb-4">
-            Subscribe to our newsletter and stay up to date.
-          </p>
-          <button className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
-            Subscribe
-          </button>
-        </div>
-      </div>
+            {/* Categories */}
+            <div className="lg:col-span-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => handleCategoryFilter(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+              >
+                <option value="">All Categories</option>
+                {categories.map((cat) => (
+                  <option key={cat} value={cat}>{cat}</option>
+                ))}
+              </select>
+            </div>
 
-      {/* Categories */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Categories
-        </h3>
-        <div className="space-y-2">
-          <button
-            onClick={() => handleCategoryFilter('')}
-            className={`block w-full text-left px-3 py-2 rounded text-sm ${
-              !selectedCategory 
-                ? 'bg-blue-50 text-blue-700 font-medium' 
-                : 'text-gray-600 hover:bg-gray-50'
-            }`}
-          >
-            All Categories
-          </button>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => handleCategoryFilter(cat)}
-              className={`block w-full text-left px-3 py-2 rounded text-sm ${
-                selectedCategory === cat 
-                  ? 'bg-blue-50 text-blue-700 font-medium' 
-                  : 'text-gray-600 hover:bg-gray-50'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Tags */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">
-          Tags
-        </h3>
-        <div className="flex flex-wrap gap-2">
-          {popularTags.map((tagName) => (
-            <button
-              key={tagName}
-              onClick={() => handleTagFilter(tagName)}
-              className={`px-3 py-1 rounded-full text-sm ${
-                selectedTag === tagName 
-                  ? 'bg-blue-100 text-blue-800 font-medium' 
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {tagName}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-
-  return (
-    <div className="pt-20 min-h-screen bg-white">
-      <ContentLayout sidebar={sidebar} containerSize="max-w-7xl">
-        {/* Header */}
-        <div className="mb-12">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Blogs
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Latest thoughts & tech insights.
-            </p>
+            {/* Popular Tags */}
+            <div className="lg:col-span-1">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Popular Tags</label>
+              <div className="flex flex-wrap gap-2">
+                {popularTags.map((tagName) => (
+                  <button
+                    key={tagName}
+                    onClick={() => handleTagFilter(tagName)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedTag === tagName 
+                        ? 'bg-blue-600 text-white' 
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {tagName}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Filter Summary */}
+          {/* Active Filters */}
           {(selectedCategory || selectedTag || searchQuery) && (
-            <div className="flex flex-wrap items-center gap-2 justify-center mb-6">
-              <span className="text-sm text-gray-500">Filtering by:</span>
-              {selectedCategory && (
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                  {selectedCategory}
-                  <button onClick={() => handleCategoryFilter('')} className="ml-1 hover:text-blue-600">
-                    <i className="fas fa-times text-xs"></i>
-                  </button>
-                </span>
-              )}
-              {selectedTag && (
-                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                  {selectedTag}
-                  <button onClick={() => handleTagFilter('')} className="ml-1 hover:text-purple-600">
-                    <i className="fas fa-times text-xs"></i>
-                  </button>
-                </span>
-              )}
-              {searchQuery && (
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                  "{searchQuery}"
-                  <button onClick={() => setSearchQuery('')} className="ml-1 hover:text-green-600">
-                    <i className="fas fa-times text-xs"></i>
-                  </button>
-                </span>
-              )}
+            <div className="mt-6 pt-6 border-t border-gray-100">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-sm font-medium text-gray-700">Active filters:</span>
+                {selectedCategory && (
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-lg text-sm font-medium flex items-center gap-2">
+                    Category: {selectedCategory}
+                    <button onClick={() => handleCategoryFilter('')} className="hover:text-blue-600">
+                      <i className="fas fa-times text-xs"></i>
+                    </button>
+                  </span>
+                )}
+                {selectedTag && (
+                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-lg text-sm font-medium flex items-center gap-2">
+                    Tag: {selectedTag}
+                    <button onClick={() => handleTagFilter('')} className="hover:text-purple-600">
+                      <i className="fas fa-times text-xs"></i>
+                    </button>
+                  </span>
+                )}
+                {searchQuery && (
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-lg text-sm font-medium flex items-center gap-2">
+                    Search: "{searchQuery}"
+                    <button onClick={() => setSearchQuery('')} className="hover:text-green-600">
+                      <i className="fas fa-times text-xs"></i>
+                    </button>
+                  </span>
+                )}
+                <button
+                  onClick={() => {
+                    setSearchQuery('');
+                    setSelectedCategory('');
+                    setSelectedTag('');
+                    navigate('/blog');
+                  }}
+                  className="text-sm text-gray-500 hover:text-gray-700 underline ml-2"
+                >
+                  Clear all
+                </button>
+              </div>
             </div>
           )}
         </div>
 
         {/* Loading state */}
         {loading && (
-          <div className="text-center py-16">
+          <div className="text-center py-20">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-600 border-t-transparent"></div>
             <p className="mt-4 text-gray-600">Loading articles...</p>
           </div>
@@ -422,11 +376,13 @@ const BlogListPage = () => {
 
         {/* No posts found */}
         {!loading && posts.length === 0 && (
-          <div className="text-center py-16">
+          <div className="text-center py-20">
             <div className="max-w-md mx-auto">
-              <i className="fas fa-search text-6xl text-gray-300 mb-6"></i>
+              <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i className="fas fa-search text-3xl text-gray-400"></i>
+              </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">No Articles Found</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-8">
                 {searchQuery ? `No articles match "${searchQuery}"` : 'No articles match the selected filters.'}
               </p>
               <button
@@ -436,7 +392,7 @@ const BlogListPage = () => {
                   setSelectedTag('');
                   navigate('/blog');
                 }}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors"
               >
                 Clear Filters
               </button>
@@ -444,48 +400,58 @@ const BlogListPage = () => {
           </div>
         )}
 
-        {/* Blog Posts Grid */}
+        {/* Blog Posts */}
         {!loading && posts.length > 0 && (
           <>
             {/* Featured Post */}
             {currentPage === 1 && posts.length > 0 && posts[0].featured && (
-              <div className="mb-12">
-                <article className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-                  <div className="md:flex">
-                    <div className="md:w-1/2">
-                      <div className="aspect-w-16 aspect-h-10">
+              <div className="mb-16">
+                <article className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+                  <div className="lg:flex">
+                    <div className="lg:w-3/5">
+                      <div className="relative overflow-hidden">
                         <img 
                           src={posts[0].image} 
                           alt={posts[0].title}
-                          className="w-full h-64 md:h-full object-cover"
+                          className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
                         />
+                        <div className="absolute top-6 left-6">
+                          <span className="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                            Featured
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="md:w-1/2 p-8">
+                    <div className="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center">
                       <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium">
+                        <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg font-medium">
                           {posts[0].category}
                         </span>
                         <time>{formatDate(posts[0].date)}</time>
+                        <span className="flex items-center gap-1">
+                          <i className="fas fa-clock text-xs"></i>
+                          {posts[0].readTime} min read
+                        </span>
                       </div>
                       
-                      <h2 className="section-title text-gray-900 mb-4 leading-tight">
-                        <Link to={`/blog/${posts[0].slug}`} className="hover:text-blue-600">
+                      <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                        <Link to={`/blog/${posts[0].slug}`} className="hover:text-blue-600 transition-colors">
                           {posts[0].title}
                         </Link>
                       </h2>
                       
-                      <p className="text-gray-600 mb-6 leading-relaxed">
+                      <p className="text-gray-600 mb-6 leading-relaxed text-lg">
                         {posts[0].excerpt}
                       </p>
                       
-                      <div className="flex items-center justify-end">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-500">By {posts[0].author}</span>
                         <Link 
                           to={`/blog/${posts[0].slug}`}
-                          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+                          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold group"
                         >
-                          Read More
-                          <i className="fas fa-arrow-right text-sm"></i>
+                          Read Article
+                          <i className="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
                         </Link>
                       </div>
                     </div>
@@ -495,26 +461,32 @@ const BlogListPage = () => {
             )}
 
             {/* Grid Layout */}
-            <div className="grid gap-8 md:grid-cols-2 mb-12">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16">
               {(currentPage === 1 && posts[0].featured ? posts.slice(1) : posts).map((post) => (
-                <article key={post.slug} className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow group">
-                  <div className="aspect-w-16 aspect-h-9">
+                <article key={post.slug} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 group">
+                  <div className="relative overflow-hidden">
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-lg text-sm font-medium">
+                        {post.category}
+                      </span>
+                    </div>
                   </div>
                   
                   <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                      <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded font-medium">
-                        {post.category}
-                      </span>
+                    <div className="flex items-center gap-4 text-xs text-gray-500 mb-3">
                       <time>{formatDate(post.date)}</time>
+                      <span className="flex items-center gap-1">
+                        <i className="fas fa-clock"></i>
+                        {post.readTime} min
+                      </span>
                     </div>
                     
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors">
                       <Link to={`/blog/${post.slug}`} className="line-clamp-2">
                         {post.title}
                       </Link>
@@ -523,6 +495,16 @@ const BlogListPage = () => {
                     <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3 text-sm">
                       {post.excerpt}
                     </p>
+
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                      <span className="text-xs text-gray-500">By {post.author}</span>
+                      <Link 
+                        to={`/blog/${post.slug}`}
+                        className="text-blue-600 hover:text-blue-800 font-medium text-sm group-hover:underline"
+                      >
+                        Read more
+                      </Link>
+                    </div>
                   </div>
                 </article>
               ))}
@@ -530,34 +512,36 @@ const BlogListPage = () => {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center space-x-1">
+              <div className="flex justify-center items-center space-x-2 pb-16">
                 <button
                   onClick={() => handlePageChange(currentPage - 1)}
                   disabled={currentPage === 1}
-                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   <i className="fas fa-chevron-left text-xs"></i>
                   Previous
                 </button>
                 
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <button
-                    key={page}
-                    onClick={() => handlePageChange(page)}
-                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
-                      currentPage === page
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-700 bg-white border border-gray-200 hover:bg-gray-50'
-                    }`}
-                  >
-                    {page}
-                  </button>
-                ))}
+                <div className="flex space-x-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`px-4 py-3 text-sm font-medium rounded-xl transition-colors ${
+                        currentPage === page
+                          ? 'bg-blue-600 text-white'
+                          : 'text-gray-700 bg-white border border-gray-200 hover:bg-gray-50'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                </div>
                 
                 <button
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage === totalPages}
-                  className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex items-center gap-2 px-4 py-3 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 >
                   Next
                   <i className="fas fa-chevron-right text-xs"></i>
@@ -566,7 +550,7 @@ const BlogListPage = () => {
             )}
           </>
         )}
-      </ContentLayout>
+      </div>
     </div>
   );
 };
