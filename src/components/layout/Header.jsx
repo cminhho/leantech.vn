@@ -51,7 +51,7 @@ const Header = () => {
     { to: '/', label: 'Trang chủ', type: 'link' },
     { to: '/#solutions', label: 'Giải pháp', type: 'anchor' },
     { to: '/#products', label: 'Sản phẩm', type: 'anchor' },
-    { to: '/blog', label: 'Blog', type: 'link' },
+    // { to: '/blog', label: 'Blog', type: 'link' },
     { to: '/#why-us', label: 'Về chúng tôi', type: 'anchor' },
     { to: '/#clients', label: 'Đối tác', type: 'anchor' },
     { to: '/#contact', label: 'Liên hệ', type: 'anchor' }
