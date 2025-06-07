@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const products = [
@@ -9,11 +10,11 @@ const Products = () => {
       description: 'Giải pháp quản lý nhân sự toàn diện với công nghệ AI tiên tiến cho doanh nghiệp',
       features: [
         'Quản lý hồ sơ nhân viên',
+        'Quản lý chấm công',
+        'Quản lý lương thưởng',
+        'Quản lý thủ tục',
         'Quản lý tuyển dụng',
         'Quản lý đánh giá hiệu suất',
-        'Quản lý chấm công',
-        'Quản lý nghỉ phép',
-        'Quản lý lương thưởng',
         'Đào tạo và phát triển',
         'Báo cáo nhân sự'
       ],
@@ -51,8 +52,8 @@ const Products = () => {
         'Quản lý dự án',
         'Quản lý công việc',
         'Quản lý thời gian',
-        'Quản lý tài nguyên',
         'Quản lý tiến độ',
+        'Quản lý tài nguyên',
         'Quản lý rủi ro',
         'Quản lý team',
         'Báo cáo dự án'
@@ -182,9 +183,18 @@ const Products = () => {
                 {/* CTA Buttons */}
                 <div className="px-6 pb-6 mt-auto">
                   <div className="border-t border-gray-100 pt-4 space-y-3">
+                    {product.id === 'lean-hrm' ? (
+                      <Link 
+                        to="/products/lean-hrm" 
+                        className="block w-full bg-gradient-to-r from-primary to-blue-600 text-white font-semibold py-3 px-4 hover:from-primary/90 hover:to-blue-600/90 transition-all duration-300 transform hover:scale-105 text-center"
+                      >
+                        Tìm hiểu thêm
+                      </Link>
+                    ) : (
                     <button className="w-full bg-gradient-to-r from-primary to-blue-600 text-white font-semibold py-3 px-4 hover:from-primary/90 hover:to-blue-600/90 transition-all duration-300 transform hover:scale-105">
                       Tìm hiểu thêm
                     </button>
+                    )}
                     <button className="w-full text-primary border border-primary/20 font-semibold py-2 px-4 hover:bg-primary/5 transition-all duration-300">
                       Liên hệ tư vấn
                     </button>

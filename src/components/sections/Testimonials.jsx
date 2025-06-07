@@ -44,7 +44,7 @@ const Testimonials = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold mt-4 mb-6">
+          <h2 className="section-title mt-4 mb-6">
             Câu Chuyện <span className="gradient-text">Thành Công</span>
           </h2>
           <p className="text-base text-gray-600 leading-relaxed">

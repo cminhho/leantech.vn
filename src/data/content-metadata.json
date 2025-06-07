@@ -1,0 +1,28 @@
+{
+  "generated": "2025-06-05T07:59:51.604Z",
+  "stats": {
+    "blog": 1,
+    "products": 1,
+    "services": 0,
+    "pages": 0,
+    "caseStudies": 0,
+    "total": 2
+  },
+  "categories": [
+    "Technology",
+    "software"
+  ],
+  "tags": [
+    "AI",
+    "cloud computing",
+    "digital transformation",
+    "technology trends"
+  ],
+  "types": [
+    "blog",
+    "products",
+    "services",
+    "pages",
+    "caseStudies"
+  ]
+}

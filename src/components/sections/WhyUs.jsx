@@ -69,14 +69,14 @@ const WhyUs = () => {
       id="why-us" 
       className="py-24 relative overflow-hidden"
       style={{
-        backgroundImage: 'url(https://gramentheme.com/wp/wotech/wp-content/uploads/2024/02/choose-1.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundColor: '#002fa6',
+        backgroundImage: 'url(https://htmldemo.net/mitech/assets/images/bg/mitech-processing-contact-bg.webp)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'top right'
       }}
     >
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-primary/80"></div>
+      <div className="absolute inset-0 "></div>
       
       <div className="container-custom relative z-10">
         {/* Section Header */}
@@ -92,7 +92,7 @@ const WhyUs = () => {
           <div className="flex flex-wrap sm:flex-nowrap sm:items-baseline gap-8 lg:gap-16">
             {/* Left Side - Title */}
             <div className="flex-shrink-0">
-              <h2 className="text-white">
+              <h2 className="section-title text-white">
                 Tại Sao Chọn LeanTechCo
               </h2>
             </div>

@@ -1,0 +1,39 @@
+{
+  "blog": [
+    {
+      "type": "blog",
+      "title": "Digital Transformation Trends Shaping 2024",
+      "slug": "digital-transformation-trends-2024",
+      "excerpt": "Explore the key digital transformation trends that are revolutionizing businesses in 2024, from AI integration to cloud-native architectures.",
+      "date": "2024-01-15",
+      "author": "LeanTech Team",
+      "category": "Technology",
+      "tags": [
+        "digital transformation",
+        "technology trends",
+        "AI",
+        "cloud computing"
+      ],
+      "featured": true,
+      "readTime": 3,
+      "wordCount": 471,
+      "image": "/images/blog/digital-transformation-2024.jpg",
+      "filePath": "/src/content/blog/posts/2024-01-15-digital-transformation-trends.md"
+    }
+  ],
+  "products": [
+    {
+      "type": "product",
+      "title": "Enterprise Software Solutions",
+      "slug": "enterprise-solutions",
+      "excerpt": "Scalable, secure enterprise software solutions designed to transform your business operations and drive growth.",
+      "category": "software",
+      "readTime": 3,
+      "wordCount": 518,
+      "filePath": "/src/content/products/enterprise-solutions.md"
+    }
+  ],
+  "services": [],
+  "pages": [],
+  "caseStudies": []
+}

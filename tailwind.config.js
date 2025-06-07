@@ -12,17 +12,17 @@ module.exports = {
       colors: {
         // Brand Core Colors
         brand: {
-          50: '#f0f4ff',
-          100: '#e5edff',
-          200: '#d1deff',
-          300: '#b8cbff',
-          400: '#9fb1ff',
-          500: '#1331d2', // Primary brand color
-          600: '#0e24a8',
-          700: '#0a1a7f',
-          800: '#071155',
-          900: '#03082b',
-          950: '#020419',
+          50: '#f0f2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#002fa6', // Primary brand color - changed to rgb(0, 47, 166)
+          600: '#002591',
+          700: '#001f7a',
+          800: '#001960',
+          900: '#001346',
+          950: '#000d2e',
         },
         
         // Semantic Colors
@@ -98,7 +98,7 @@ module.exports = {
         // ===========================================
         
         // UI Semantic Colors
-        primary: '#1331d2',           // Main brand action
+        primary: '#002fa6',           // Main brand action - changed to rgb(0, 47, 166)
         secondary: '#00B8FF',         // Secondary actions
         accent: '#F9FAFB',           // Highlight/accent
         
@@ -109,8 +109,8 @@ module.exports = {
           tertiary: '#6b7280',        // Helper text
           inverse: '#ffffff',         // Text on dark backgrounds
           disabled: '#a3a3a3',        // Disabled text
-          link: '#1331d2',           // Link text
-          'link-hover': '#0e24a8',    // Link hover
+          link: '#002fa6',           // Link text - changed to rgb(0, 47, 166)
+          'link-hover': '#002591',    // Link hover - updated to darker shade
           'link-visited': '#7c3aed',  // Visited links
           muted: '#9ca3af',          // Muted/subtle text
           'on-primary': '#ffffff',    // Text on primary backgrounds
@@ -131,9 +131,9 @@ module.exports = {
           'glass-dark': 'rgba(0,0,0,0.1)',
           elevated: '#ffffff',        // Elevated surfaces
           sunken: '#f8fafc',         // Sunken/inset areas
-          brand: '#1331d2',          // Brand background
-          'brand-light': '#f0f4ff',   // Light brand background
-          'brand-dark': '#0a1a7f',    // Dark brand background
+          brand: '#002fa6',          // Brand background - changed to rgb(0, 47, 166)
+          'brand-light': '#f0f2ff',   // Light brand background - updated to match new primary
+          'brand-dark': '#001f7a',    // Dark brand background - updated to match new primary
         },
         
         // Border Semantic Colors
@@ -141,7 +141,7 @@ module.exports = {
           primary: '#e5e7eb',         // Default borders
           secondary: '#d1d5db',       // Stronger borders
           tertiary: '#f3f4f6',        // Subtle borders
-          focus: '#1331d2',          // Focus states
+          focus: '#002fa6',          // Focus states - changed to rgb(0, 47, 166)
           error: '#ef4444',          // Error borders
           success: '#22c55e',        // Success borders
           warning: '#f59e0b',        // Warning borders
@@ -164,21 +164,21 @@ module.exports = {
           'elevated-1': '#ffffff',
           'elevated-2': '#fefefe',
           'elevated-3': '#fdfdfd',
-          brand: '#1331d2',
-          'brand-subtle': '#f0f4ff',
-          'brand-muted': '#e5edff',
+          brand: '#002fa6',
+          'brand-subtle': '#f0f2ff',
+          'brand-muted': '#e0e7ff',
           dark: '#111827',
           'dark-elevated': '#1f2937',
         },
         
         // Interactive States (Comprehensive)
         interactive: {
-          default: '#1331d2',
-          hover: '#0e24a8',
-          active: '#0a1a7f',
+          default: '#002fa6',
+          hover: '#002591',
+          active: '#001f7a',
           disabled: '#d1d5db',
-          focus: '#1331d2',
-          'focus-ring': 'rgba(19, 49, 210, 0.1)',
+          focus: '#002fa6',
+          'focus-ring': 'rgba(0, 47, 166, 0.1)',
           
           // Secondary Interactive States
           'secondary-default': '#6b7280',
@@ -194,8 +194,8 @@ module.exports = {
           
           // Ghost Interactive States
           'ghost-default': 'transparent',
-          'ghost-hover': 'rgba(19, 49, 210, 0.1)',
-          'ghost-active': 'rgba(19, 49, 210, 0.2)',
+          'ghost-hover': 'rgba(0, 47, 166, 0.1)',
+          'ghost-active': 'rgba(0, 47, 166, 0.2)',
           'ghost-disabled': 'transparent',
         },
         
@@ -255,11 +255,11 @@ module.exports = {
         // Component-specific Semantic Colors
         component: {
           // Button Colors
-          'button-primary-bg': '#1331d2',
-          'button-primary-bg-hover': '#0e24a8',
-          'button-primary-bg-active': '#0a1a7f',
+          'button-primary-bg': '#002fa6',
+          'button-primary-bg-hover': '#002591',
+          'button-primary-bg-active': '#001f7a',
           'button-primary-text': '#ffffff',
-          'button-primary-border': '#1331d2',
+          'button-primary-border': '#002fa6',
           
           'button-secondary-bg': '#ffffff',
           'button-secondary-bg-hover': '#f9fafb',
@@ -268,17 +268,17 @@ module.exports = {
           'button-secondary-border': '#d1d5db',
           
           'button-outline-bg': 'transparent',
-          'button-outline-bg-hover': '#f0f4ff',
-          'button-outline-bg-active': '#e5edff',
-          'button-outline-text': '#1331d2',
-          'button-outline-border': '#1331d2',
+          'button-outline-bg-hover': '#f0f2ff',
+          'button-outline-bg-active': '#e0e7ff',
+          'button-outline-text': '#002fa6',
+          'button-outline-border': '#002fa6',
           
           // Form Colors
           'form-bg': '#ffffff',
           'form-bg-disabled': '#f9fafb',
           'form-border': '#d1d5db',
           'form-border-hover': '#9ca3af',
-          'form-border-focus': '#1331d2',
+          'form-border-focus': '#002fa6',
           'form-text': '#111827',
           'form-text-placeholder': '#9ca3af',
           'form-text-disabled': '#d1d5db',
@@ -296,9 +296,9 @@ module.exports = {
           'nav-border': '#e5e7eb',
           'nav-link-text': '#374151',
           'nav-link-text-hover': '#111827',
-          'nav-link-text-active': '#1331d2',
+          'nav-link-text-active': '#002fa6',
           'nav-link-bg-hover': '#f3f4f6',
-          'nav-link-bg-active': '#f0f4ff',
+          'nav-link-bg-active': '#f0f2ff',
           
           // Table Colors
           'table-bg': '#ffffff',
@@ -321,12 +321,12 @@ module.exports = {
         
         // Accessibility Colors
         accessibility: {
-          'focus-visible': '#1331d2',
-          'focus-ring': 'rgba(19, 49, 210, 0.2)',
+          'focus-visible': '#002fa6',
+          'focus-ring': 'rgba(0, 47, 166, 0.2)',
           'high-contrast-text': '#000000',
           'high-contrast-bg': '#ffffff',
           'high-contrast-border': '#000000',
-          'skip-link-bg': '#1331d2',
+          'skip-link-bg': '#002fa6',
           'skip-link-text': '#ffffff',
         },
         
@@ -371,28 +371,28 @@ module.exports = {
         '9xl': ['128px', { lineHeight: '132px', letterSpacing: '-0.1em' }],
         
         // Semantic Typography (Enhanced with Responsive Values)
-        'display-lg': ['clamp(48px, 5vw, 60px)', { lineHeight: '1.1', letterSpacing: '-0.075em', fontWeight: '700' }],
-        'display-md': ['clamp(36px, 4vw, 48px)', { lineHeight: '1.1', letterSpacing: '-0.05em', fontWeight: '700' }],
-        'display-sm': ['clamp(30px, 3.5vw, 36px)', { lineHeight: '1.2', letterSpacing: '-0.05em', fontWeight: '600' }],
+        'display-lg': ['clamp(40px, 4.5vw, 52px)', { lineHeight: '1.1', letterSpacing: '-0.075em', fontWeight: '700' }],
+        'display-md': ['clamp(32px, 3.5vw, 42px)', { lineHeight: '1.1', letterSpacing: '-0.05em', fontWeight: '700' }],
+        'display-sm': ['clamp(28px, 3vw, 34px)', { lineHeight: '1.2', letterSpacing: '-0.05em', fontWeight: '600' }],
         
-        'heading-lg': ['clamp(24px, 2.5vw, 30px)', { lineHeight: '1.2', letterSpacing: '-0.025em', fontWeight: '600' }],
-        'heading-md': ['clamp(20px, 2vw, 24px)', { lineHeight: '1.3', letterSpacing: '-0.025em', fontWeight: '600' }],
-        'heading-sm': ['clamp(18px, 1.5vw, 20px)', { lineHeight: '1.4', letterSpacing: '0em', fontWeight: '600' }],
+        'heading-lg': ['clamp(22px, 2.2vw, 28px)', { lineHeight: '1.2', letterSpacing: '-0.025em', fontWeight: '600' }],
+        'heading-md': ['clamp(18px, 1.8vw, 22px)', { lineHeight: '1.3', letterSpacing: '-0.025em', fontWeight: '600' }],
+        'heading-sm': ['clamp(16px, 1.4vw, 18px)', { lineHeight: '1.4', letterSpacing: '0em', fontWeight: '600' }],
         
-        'body-lg': ['clamp(16px, 1.2vw, 18px)', { lineHeight: '1.6', letterSpacing: '0em', fontWeight: '400' }],
-        'body-md': ['16px', { lineHeight: '1.5', letterSpacing: '0em', fontWeight: '400' }],
-        'body-sm': ['14px', { lineHeight: '1.5', letterSpacing: '0.025em', fontWeight: '400' }],
-        'caption': ['12px', { lineHeight: '1.3', letterSpacing: '0.025em', fontWeight: '400' }],
+        'body-lg': ['clamp(15px, 1.1vw, 17px)', { lineHeight: '1.6', letterSpacing: '0em', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '1.5', letterSpacing: '0em', fontWeight: '400' }],
+        'body-sm': ['13px', { lineHeight: '1.5', letterSpacing: '0.025em', fontWeight: '400' }],
+        'caption': ['11px', { lineHeight: '1.3', letterSpacing: '0.025em', fontWeight: '400' }],
         
         // Specialized Typography
-        'hero-title': ['clamp(32px, 6vw, 72px)', { lineHeight: '1.1', letterSpacing: '-0.075em', fontWeight: '700' }],
-        'hero-subtitle': ['clamp(16px, 2vw, 20px)', { lineHeight: '1.6', letterSpacing: '0em', fontWeight: '400' }],
+        'hero-title': ['clamp(30px, 5.5vw, 62px)', { lineHeight: '1.1', letterSpacing: '-0.075em', fontWeight: '700' }],
+        'hero-subtitle': ['clamp(15px, 1.8vw, 18px)', { lineHeight: '1.6', letterSpacing: '0em', fontWeight: '400' }],
         
-        'section-title': ['clamp(28px, 4vw, 40px)', { lineHeight: '1.2', letterSpacing: '-0.025em', fontWeight: '600' }],
-        'section-subtitle': ['clamp(14px, 1.5vw, 18px)', { lineHeight: '1.6', letterSpacing: '0em', fontWeight: '400' }],
+        'section-title': ['38px', { lineHeight: '1.2', letterSpacing: '-0.025em', fontWeight: '600' }],
+        'section-subtitle': ['clamp(13px, 1.3vw, 16px)', { lineHeight: '1.6', letterSpacing: '0em', fontWeight: '400' }],
         
-        'card-title': ['clamp(18px, 1.8vw, 22px)', { lineHeight: '1.3', letterSpacing: '0em', fontWeight: '600' }],
-        'card-body': ['clamp(13px, 1.2vw, 15px)', { lineHeight: '1.5', letterSpacing: '0.025em', fontWeight: '400' }],
+        'card-title': ['clamp(16px, 1.6vw, 20px)', { lineHeight: '1.3', letterSpacing: '0em', fontWeight: '600' }],
+        'card-body': ['clamp(12px, 1.1vw, 14px)', { lineHeight: '1.5', letterSpacing: '0.025em', fontWeight: '400' }],
         
         // Micro Interactions
         'badge': ['11px', { lineHeight: '1.2', letterSpacing: '0.05em', fontWeight: '600' }],
@@ -493,7 +493,7 @@ module.exports = {
         'elevation-5': '0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22)',
         
         // Focus Shadows
-        'focus-primary': '0 0 0 3px rgba(19, 49, 210, 0.1)',
+        'focus-primary': '0 0 0 3px rgba(0, 47, 166, 0.1)',
         'focus-error': '0 0 0 3px rgba(239, 68, 68, 0.1)',
         'focus-success': '0 0 0 3px rgba(34, 197, 94, 0.1)',
       },

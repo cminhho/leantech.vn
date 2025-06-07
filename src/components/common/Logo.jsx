@@ -109,7 +109,6 @@ const Logo = ({
         <div className={`${textSizeClasses[size]} transition-all duration-normal`}>
           <span className={`${colors.primary} transition-colors duration-normal font-bold tracking-tight`}>lean</span>
           <span className={`${colors.primary} transition-colors duration-normal font-bold tracking-tight`}>tech</span>
-          <span className={`${colors.accent} transition-colors duration-normal ${colors.hover} font-bold tracking-normal`}>co.</span>
         </div>
       )}
     </div>

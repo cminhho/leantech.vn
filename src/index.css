@@ -140,7 +140,7 @@
     font-size: theme('fontSize.body-md');
     font-weight: theme('fontWeight.normal');
     color: var(--text-primary);
-    background-color: var(--bg-primary);
+    background-color: white;
     line-height: 1.5;
     letter-spacing: 0;
     -webkit-font-smoothing: antialiased;
@@ -159,7 +159,7 @@
   }
   
   h1 { font-size: theme('fontSize.display-lg'); font-weight: theme('fontWeight.bold'); }
-  h2 { font-size: theme('fontSize.display-md'); font-weight: theme('fontWeight.semibold'); }
+  h2 { font-size: 38px; font-weight: theme('fontWeight.semibold'); }
   h3 { font-size: theme('fontSize.display-sm'); font-weight: theme('fontWeight.semibold'); }
   h4 { font-size: theme('fontSize.heading-lg'); font-weight: theme('fontWeight.semibold'); }
   h5 { font-size: theme('fontSize.heading-md'); font-weight: theme('fontWeight.semibold'); }
@@ -239,6 +239,7 @@
   .section-header { @apply heading-lg text-gray-900 text-center mb-4; }
   .section-subheader { @apply body-md text-gray-600 text-center max-w-3xl mx-auto mb-12; }
   .section-badge { @apply caption text-primary font-semibold uppercase tracking-wide mb-4; }
+  .section-title-sm { font-size: 32px; font-weight: theme('fontWeight.semibold'); line-height: 1.2; letter-spacing: -0.025em; }
   
   /* Card Typography */
   .card-header { @apply heading-sm text-gray-900 mb-3; }
@@ -836,12 +837,19 @@
  * RESPONSIVE DESIGN TOKENS
  * =========================================== */
 @media (max-width: 768px) {
-  .section-title { font-size: theme('fontSize.heading-lg'); }
+  .section-title { font-size: 34px; }
+  .section-title-sm { font-size: 28px; }
+  h2 { font-size: 34px; }
   .display-lg { font-size: theme('fontSize.display-md'); }
   .display-md { font-size: theme('fontSize.display-sm'); }
   
   video.object-cover {
-    object-position: center;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 }
 
@@ -926,4 +934,776 @@ video.object-cover {
 .font-display { font-family: theme('fontFamily.display'); font-weight: theme('fontWeight.bold'); }
 .font-heading { font-family: theme('fontFamily.sans'); font-weight: theme('fontWeight.semibold'); }
 .font-body { font-family: theme('fontFamily.sans'); font-weight: theme('fontWeight.normal'); }
-.font-caption { font-family: theme('fontFamily.sans'); font-weight: theme('fontWeight.normal'); font-size: theme('fontSize.caption'); } 
+.font-caption { font-family: theme('fontFamily.sans'); font-weight: theme('fontWeight.normal'); font-size: theme('fontSize.caption'); }
+
+/* Custom animations for professional UX */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-delay {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float-delay 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Smooth scrolling for modern browsers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus states for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Professional gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover glow effect */
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Professional card hover */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Professional button styles */
+.btn-professional {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-professional::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-professional:hover::before {
+  left: 100%;
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5a67d8, #6b46c1);
+}
+
+/* ===========================================
+ * VIETNAMESE TYPOGRAPHY OPTIMIZATION
+ * =========================================== */
+
+/* Vietnamese-specific font rendering */
+.font-vietnamese {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+               'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 
+               'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Hero Typography for Vietnamese */
+.hero-title-vietnamese {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-spacing: 0.05em;
+}
+
+.hero-subtitle-vietnamese {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  word-spacing: 0.02em;
+}
+
+/* Vietnamese body text optimization */
+.body-vietnamese {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.005em;
+  word-spacing: 0.01em;
+}
+
+/* Professional heading system for Vietnamese */
+.heading-vietnamese-lg {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  word-spacing: 0.02em;
+}
+
+.heading-vietnamese-md {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  word-spacing: 0.015em;
+}
+
+.heading-vietnamese-sm {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0;
+  word-spacing: 0.01em;
+}
+
+/* ===========================================
+ * ENHANCED SEMANTIC TYPOGRAPHY CLASSES
+ * =========================================== */
+
+/* Professional Vietnamese Hero Typography */
+.hero-title-pro {
+  @apply font-vietnamese hero-title-vietnamese;
+  font-size: clamp(32px, 5.5vw, 64px);
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 25%, #2563eb 50%, #1d4ed8 75%, #1e40af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.hero-subtitle-pro {
+  @apply font-vietnamese hero-subtitle-vietnamese;
+  font-size: clamp(28px, 4vw, 48px);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Professional Feature List Typography */
+.feature-text-pro {
+  @apply font-vietnamese body-vietnamese;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Enhanced Badge Typography */
+.badge-text-pro {
+  @apply font-vietnamese;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Professional Button Typography */
+.btn-text-pro {
+  @apply font-vietnamese;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+}
+
+/* ===========================================
+ * PROFESSIONAL NAVIGATION STYLES
+ * =========================================== */
+
+/* Desktop Navigation Links */
+.nav-link-pro {
+  @apply font-vietnamese;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.nav-link-pro:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+}
+
+.nav-link-pro:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 4px;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-link-pro {
+  @apply font-vietnamese;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-link-pro:hover {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+.mobile-nav-link-pro:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 2px;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Enhanced Mobile Menu Animation */
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Professional Logo Hover Effects */
+.logo-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-hover:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+/* Enhanced CTA Button in Header */
+.header-cta {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-cta:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.header-cta:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Professional CTA Button for Header */
+.btn-cta {
+  @apply bg-secondary border-secondary text-white;
+  @apply hover:bg-secondary/90 hover:border-secondary/90;
+  @apply active:bg-secondary/80 active:border-secondary/80;
+  @apply focus:ring-4 focus:ring-secondary/20;
+  box-shadow: var(--shadow-elevation-1);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-cta:hover {
+  box-shadow: var(--shadow-elevation-2);
+  transform: translateY(-1px);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-elevation-1);
+}
+
+/* Animated Hamburger Menu */
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.hamburger-line:nth-child(1) {
+  transform-origin: top left;
+}
+
+.hamburger-line:nth-child(3) {
+  transform-origin: bottom left;
+}
+
+.hamburger.open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===========================================
+ * ENHANCED CTA STYLES (Professional Appearance)
+ * =========================================== */
+
+/* Floating elements animation */
+@keyframes float-elegant {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+@keyframes float-elegant-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-3deg);
+  }
+}
+
+/* Button glow effect */
+@keyframes button-glow {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Stats counter animation */
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced underline animation */
+@keyframes draw-underline {
+  from {
+    stroke-dasharray: 0 200;
+  }
+  to {
+    stroke-dasharray: 200 0;
+  }
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+  }
+}
+
+/* Advanced button shine effect */
+@keyframes button-shine {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+  }
+}
+
+/* CTA specific classes */
+.cta-floating-element:nth-child(1) {
+  animation: float-elegant 6s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.cta-floating-element:nth-child(2) {
+  animation: float-elegant-reverse 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.cta-floating-element:nth-child(3) {
+  animation: float-elegant 7s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.cta-button-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  color: var(--interactive-default);
+  border: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 14px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.cta-button-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: skewX(-15deg);
+}
+
+.cta-button-primary:hover::before {
+  left: 100%;
+}
+
+.cta-button-primary:hover::after {
+  left: 120%;
+}
+
+.cta-button-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.2),
+    0 5px 15px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.cta-button-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 3px 8px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.cta-button-secondary {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 14px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.cta-button-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.cta-button-secondary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button-secondary:hover::before {
+  width: 100%;
+}
+
+.cta-button-secondary:hover::after {
+  left: 100%;
+}
+
+.cta-button-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.2),
+    0 8px 20px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+}
+
+.cta-button-secondary:active {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    0 4px 10px rgba(255, 255, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.cta-stats-item {
+  animation: count-up 0.8s ease-out forwards;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-stats-item:nth-child(1) { animation-delay: 0.2s; }
+.cta-stats-item:nth-child(3) { animation-delay: 0.4s; }
+.cta-stats-item:nth-child(5) { animation-delay: 0.6s; }
+
+.cta-stats-item:hover {
+  transform: translateY(-2px);
+}
+
+.cta-badge {
+  backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 14px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.cta-badge:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Grid pattern enhancement with parallax */
+.cta-grid-pattern {
+  opacity: 0.03;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-section:hover .cta-grid-pattern {
+  opacity: 0.06;
+  transform: translateY(-2px);
+}
+
+/* Enhanced heading gradient effect */
+.cta-heading-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 30%, #c7d2fe 60%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+/* SVG underline animation */
+.cta-underline {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw-underline 1.5s ease-out forwards;
+}
+
+/* Advanced client logo animations */
+.cta-client-logo {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-client-logo::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-client-logo:hover::before {
+  opacity: 1;
+}
+
+.cta-client-logo:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Advanced mobile responsiveness */
+@media (max-width: 768px) {
+  .cta-button-primary,
+  .cta-button-secondary {
+    padding: 16px 32px;
+    font-size: 16px;
+    min-width: 280px;
+  }
+  
+  .cta-stats-item {
+    padding: 12px;
+  }
+  
+  .cta-floating-element {
+    display: none; /* Hide on mobile for performance */
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cta-button-primary {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+  }
+  
+  .cta-button-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .cta-floating-element,
+  .cta-underline,
+  .cta-heading-gradient {
+    animation: none;
+  }
+  
+  .cta-button-primary::before,
+  .cta-button-primary::after,
+  .cta-button-secondary::before,
+  .cta-button-secondary::after {
+    transition: none;
+  }
+} 

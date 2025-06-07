@@ -1,0 +1,19 @@
+{
+  "title": "LeanTech Blog",
+  "description": "Insights, trends, and expertise from the LeanTech team",
+  "postsPerPage": 6,
+  "featuredPostsCount": 3,
+  "categories": [
+    "Technology",
+    "Digital Transformation",
+    "Software Development",
+    "Business Strategy",
+    "Industry Insights",
+    "Case Studies"
+  ],
+  "defaultAuthor": "LeanTech Team",
+  "socialMedia": {
+    "twitter": "@leantech",
+    "linkedin": "company/leantech"
+  }
+} 
